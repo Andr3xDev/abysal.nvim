@@ -12,12 +12,12 @@ return {
   fg_gutter     = "#8c8c8c", -- line numbers, gutter (visible on light bg)
 
   -- Grays
-  comment       = "#8c8c8c", -- comments (subdued, similar to gutter)
-  dark3         = "#8c8c8c", -- NonText, SpecialKey
+  comment       = "#737373", -- comments (equal contrast in both variants)
+  dark3         = "#737373", -- NonText, SpecialKey
   dark5         = "#555555", -- Conceal, qfLineNr (dark gray secondary)
 
   -- Blue family (color5: steel blue, darkened for light bg)
-  blue          = "#2c9279", -- constants, numbers, properties (medium contrast on light bg)
+  blue          = "#365ca8", -- constants, properties, numbers, booleans
   blue0         = "#4a6dc0", -- bg_visual source, bg_search
   blue1         = "#2a4d94", -- Special, Type, border highlight
   blue2         = "#2c9279", -- info diagnostics
@@ -26,7 +26,7 @@ return {
   blue7         = "#bfcce0", -- diff change bg source, inlay hints (very light)
 
   -- Teal/green family (color1: turquoise, darkened for light bg)
-  cyan          = "#365ca8", -- functions, methods, YAML/JSON keys (high contrast on light bg)
+  cyan          = "#2c9279", -- functions, methods, tags, headings, YAML/JSON root keys
   teal          = "#2c9279", -- markup links
   green         = "#2c9279", -- strings, characters
   green1        = "#2c9279", -- @property, @variable.member, healthSuccess
