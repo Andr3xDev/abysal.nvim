@@ -19,6 +19,7 @@ function M.get(c, opts)
     ["@comment.note"]               = { fg = c.hint },
     ["@comment.todo"]               = { fg = c.todo },
     ["@comment.warning"]            = { fg = c.warning },
+    ["@comment.documentation"]      = { fg = c.fg_dark, style = opts.styles.comments }, -- Javadoc, doc comments
     ["@constant"]                   = "Constant",
     ["@constant.builtin"]           = "Special",
     ["@constant.macro"]             = "Define",
@@ -48,6 +49,9 @@ function M.get(c, opts)
     ["@keyword.repeat"]             = "Repeat",
     ["@keyword.return"]             = "@keyword",
     ["@keyword.storage"]            = "StorageClass",
+    ["@keyword.type"]               = { fg = c.orange, style = opts.styles.keywords }, -- class, interface, enum, record
+    ["@keyword.modifier"]           = { fg = c.orange }, -- public, private, static, final
+    ["@keyword.conditional.ternary"] = { fg = c.orange }, -- ? : ternary
     ["@label"]                      = { fg = c.blue }, -- For labels: `label:` in C and `:label:` in Lua.
     ["@markup"]                     = "@none",
     ["@markup.emphasis"]            = { italic = true },
