@@ -188,6 +188,9 @@ function M.get(c, opts)
     ["@keyword.astro"]                = { fg = c.orange },
     -- ───────────────────────────────────
     -- Python
+    ["@constructor.python"]           = { fg = c.cyan }, -- __init__/__new__ are functions (cyan, not purple)
+    ["@function.method.python"]       = { fg = c.cyan }, -- method definitions: cyan
+    ["@function.method.call.python"]  = { fg = c.cyan }, -- method calls: cyan
     ["@keyword.coroutine.python"]     = { fg = c.orange }, -- async/await
     ["@type.python"]                  = { fg = c.red, italic = true },
     ["@attribute.python"]             = { fg = c.purple, italic = true }, -- @decorators
@@ -222,9 +225,6 @@ function M.get(c, opts)
     ["@constant.builtin.lua"]         = { fg = c.blue }, -- true/false/nil: blue
     ["@field.lua"]                    = { fg = c.blue }, -- table.field: blue
     ["@variable.builtin.lua"]         = { fg = c.fg }, -- vim: plain text, no color
-    -- ───────────────────────────────────
-    -- Python
-    ["@constructor.python"]         = { fg = c.purple, italic = true }, -- __init__, __new__
     -- ───────────────────────────────────
     -- Lua
     ["@constructor.lua"]            = { fg = c.purple, italic = true }, -- table constructors
