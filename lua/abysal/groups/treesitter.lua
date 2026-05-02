@@ -198,7 +198,7 @@ function M.get(c, opts)
     ["@type.java"]                    = { fg = c.red, italic = true },
     ["@keyword.java"]                 = { fg = c.orange },
     ["@attribute.java"]               = { fg = c.purple, italic = true }, -- annotations @Override
-    ["@keyword.modifier.java"]        = { fg = c.purple, italic = true }, -- public/private/static: purple italic
+    ["@keyword.modifier.java"]        = { fg = c.orange }, -- public/private/static: orange (decisions)
     ["@type.builtin.java"]            = { fg = c.red, italic = true }, -- String, int: red italic
     ["@constant.java"]                = { fg = c.blue },
     -- ───────────────────────────────────
