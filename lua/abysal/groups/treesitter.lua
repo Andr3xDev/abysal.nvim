@@ -23,8 +23,8 @@ function M.get(c, opts)
     ["@constant"]                   = "Constant",
     ["@constant.builtin"]           = { fg = c.blue }, -- true/false/null/None
     ["@constant.macro"]             = "Define",
-    ["@constructor"]                = { fg = c.purple, italic = true }, -- fn keyword: describes what something is
-    ["@constructor.tsx"]            = { fg = c.purple, italic = true }, -- TSX constructor: purple like fn keyword
+    ["@constructor"]                = { fg = c.cyan }, -- instanciar es llamar: cyan, no purple
+    ["@constructor.tsx"]            = { fg = c.cyan }, -- TSX constructor: cyan (DOM instanciation)
     ["@decorator"]                  = { fg = c.purple, italic = true }, -- decorators (Python, TypeScript)
     ["@diff.delta"]                 = "DiffChange",
     ["@diff.minus"]                 = "DiffDelete",
@@ -110,7 +110,7 @@ function M.get(c, opts)
     ["@tag.tsx"]                    = { fg = c.cyan }, -- TSX tags: cyan (DOM functions)
     ["@tag.javascript"]             = { fg = c.cyan }, -- JS tags: cyan
     ["@type"]                       = { fg = c.red, italic = true }, -- type annotations: italic subordina visualmente
-    ["@type.builtin"]               = { fg = c.red, italic = true }, -- builtin types: string, int, bool
+    ["@type.builtin"]               = { fg = c.blue, italic = true }, -- builtin types: string, int, bool (blue, not red)
     ["@type.css"]                    = { fg = c.orange }, -- CSS selectors: orange like control keywords
     ["@type.definition"]            = { fg = c.red, italic = true }, -- type aliases / definitions
     ["@type.qualifier"]             = { fg = c.red, italic = true }, -- type qualifiers: red italic
