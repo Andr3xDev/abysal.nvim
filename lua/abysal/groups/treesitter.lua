@@ -44,7 +44,11 @@ function M.get(c, opts)
     ["@keyword.directive"]          = "PreProc",
     ["@keyword.directive.define"]   = "Define",
     ["@keyword.exception"]          = "Exception",
-    ["@keyword.function"]           = { fg = c.orange }, -- def/fn/function: orange (control keyword that 'decides' to start a function)
+    ["@keyword.function"]           = { fg = c.orange }, -- def/fn/function: orange (control keyword)
+    ["@keyword.function.python"]    = { fg = c.orange }, -- def: Neovim scoped variant
+    ["@keyword.function.javascript"]= { fg = c.orange }, -- function: Neovim scoped variant
+    ["@keyword.function.typescript"]= { fg = c.orange }, -- function: Neovim scoped variant
+    ["@keyword.function.lua"]       = { fg = c.orange }, -- function: Neovim scoped variant
     ["@keyword.import"]             = "Include", -- imports: orange (control keywords)
     ["@keyword.operator"]           = { fg = c.orange }, -- what decides: `and`, `or`, `not`
     ["@keyword.repeat"]             = "Repeat",
