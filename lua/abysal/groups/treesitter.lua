@@ -49,7 +49,7 @@ function M.get(c, opts)
     ["@keyword.function.javascript"]= { fg = c.orange }, -- function: Neovim scoped variant
     ["@keyword.function.typescript"]= { fg = c.orange }, -- function: Neovim scoped variant
     ["@keyword.function.lua"]       = { fg = c.orange }, -- function: Neovim scoped variant
-    ["@keyword.import"]             = "Include", -- imports: orange (control keywords)
+    ["@keyword.import"]             = { fg = c.cyan }, -- import/include/require/from: cyan (structural)
     ["@keyword.operator"]           = { fg = c.orange }, -- what decides: `and`, `or`, `not`
     ["@keyword.repeat"]             = "Repeat",
     ["@keyword.return"]             = "@keyword",
@@ -83,7 +83,7 @@ function M.get(c, opts)
     ["@markup.underline"]           = { underline = true },
     ["@method"]                     = { fg = c.cyan }, -- method definitions
     ["@method.call"]                = "@method", -- method calls
-    ["@module"]                     = "Include",
+    ["@module"]                     = { fg = c.orange }, -- module names: orange (details)
     ["@module.builtin"]             = { fg = c.red }, -- built-in modules: like builtin variables
     ["@namespace.builtin"]          = "@variable.builtin",
     ["@none"]                       = {},

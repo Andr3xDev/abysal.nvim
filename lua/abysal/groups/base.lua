@@ -88,7 +88,7 @@ function M.get(c, opts)
     Float                       = { fg = c.blue }, -- floating point numbers
     Function                    = { fg = c.cyan, style = opts.styles.functions }, -- PRIMARY: function names
     Identifier                  = { fg = c.fg, style = opts.styles.variables }, -- (preferred) any variable name — fg puro, sin color de acento (guía: variables = text)
-    Include                     = { fg = c.orange }, -- import, require, use
+    Include                     = { fg = c.cyan }, -- import, require, use
     Italic                      = { italic = true, fg = c.fg }, -- (preferred) any italic text
     Keyword                     = { fg = c.orange, style = opts.styles.keywords }, -- PRIMARY: flow keywords
     Label                       = { fg = c.blue }, -- labels in C/Lua
