@@ -45,7 +45,7 @@ function M.get(c, opts)
     ["@keyword.directive.define"]   = "Define",
     ["@keyword.exception"]          = "Exception",
     ["@keyword.function"]           = { fg = c.purple, italic = true }, -- fn keyword: describes what something is
-    ["@keyword.import"]             = "Include",
+    ["@keyword.import"]             = { fg = c.cyan }, -- imports: cyan (module references)
     ["@keyword.operator"]           = { fg = c.orange }, -- what decides: `and`, `or`, `not`
     ["@keyword.repeat"]             = "Repeat",
     ["@keyword.return"]             = "@keyword",
@@ -110,8 +110,8 @@ function M.get(c, opts)
     ["@variable"]                   = { fg = c.fg, style = opts.styles.variables }, -- Any variable name that does not have another highlight.
     ["@variable.builtin"]           = { fg = c.red }, -- Variable names that are defined by the languages, like `this` or `self`.
     ["@variable.member"]            = { fg = c.blue }, -- member access: field/property values
-    ["@variable.parameter"]         = { fg = c.fg }, -- function params: plain text, no color (mirror: same as obsidian)
-    ["@variable.parameter.builtin"] = { fg = c.fg }, -- builtin params like `...`: plain text
+    ["@variable.parameter"]         = { fg = c.blue1 }, -- function params: subtle blue, distinct from variables
+    ["@variable.parameter.builtin"] = { fg = c.blue1 }, -- builtin params like `...`
 
     -- ───────────────────────────────────
     -- Config file languages (YAML / JSON / HCL / Bash)
