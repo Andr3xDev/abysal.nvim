@@ -116,7 +116,7 @@ function M.get(c, opts)
     ["@type.qualifier"]             = { fg = c.red, italic = true }, -- type qualifiers: red italic
     ["@variable"]                   = { fg = c.fg, style = opts.styles.variables }, -- Any variable name that does not have another highlight.
     ["@variable.builtin"]           = { fg = c.fg }, -- self/this/super: plain text, no color
-    ["@variable.member"]            = { fg = c.blue }, -- member access: field/property values
+    ["@variable.member"]            = { fg = c.fg }, -- member access values: fg (not a declaration)
     ["@variable.parameter"]         = { fg = c.fg }, -- function params: plain text, no color
     ["@variable.parameter.builtin"] = { fg = c.fg }, -- builtin params like `...`: plain text
 
