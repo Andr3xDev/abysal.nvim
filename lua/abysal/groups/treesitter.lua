@@ -83,7 +83,7 @@ function M.get(c, opts)
     ["@markup.underline"]           = { underline = true },
     ["@method"]                     = { fg = c.cyan }, -- method definitions
     ["@method.call"]                = "@method", -- method calls
-    ["@module"]                     = { fg = c.orange }, -- module names: orange (details)
+    ["@module"]                     = { fg = c.fg }, -- module names: white (plain, no accent)
     ["@module.builtin"]             = { fg = c.red }, -- built-in modules: like builtin variables
     ["@namespace.builtin"]          = "@variable.builtin",
     ["@none"]                       = {},
