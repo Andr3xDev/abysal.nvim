@@ -1,0 +1,40 @@
+{
+  "name": "Abysal Obsidian",
+  "type": "custom",
+  "text": {
+    "primary": "#d4d4d4",
+    "secondary": "#8c8c8c",
+    "response": "#d4d4d4"
+  },
+  "background": {
+    "primary": "#1c1c1c",
+    "diff": {
+      "added": "#253f3b",
+      "removed": "#462525"
+    }
+  },
+  "border": {
+    "default": "#333333",
+    "focused": "#6b92e3"
+  },
+  "ui": {
+    "comment": "#737373",
+    "symbol": "#8c8c8c",
+    "gradient": ["#6b92e3", "#b87bce", "#52c9b0"]
+  },
+  "Background": "#1c1c1c",
+  "Foreground": "#d4d4d4",
+  "LightBlue": "#89aae8",
+  "AccentBlue": "#b87bce",
+  "AccentPurple": "#b87bce",
+  "AccentCyan": "#52c9b0",
+  "AccentGreen": "#e28e5a",
+  "AccentYellow": "#52c9b0",
+  "AccentRed": "#d47779",
+  "DiffAdded": "#253f3b",
+  "DiffRemoved": "#462525",
+  "Comment": "#737373",
+  "Gray": "#8c8c8c",
+  "DarkGray": "#262626",
+  "GradientColors": ["#6b92e3", "#b87bce", "#52c9b0"]
+}

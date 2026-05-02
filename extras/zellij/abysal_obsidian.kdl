@@ -1,0 +1,22 @@
+// Abysal Zellij Colors
+// Add this file to your `CONFIG_DIR/themes` directory as described here:
+// https://zellij.dev/documentation/themes#getting-zellij-to-pick-up-the-theme
+
+themes {
+    abysal_obsidian {
+        fg "#d4d4d4"
+        bg "#333333"
+        // Black should match the terminal background color
+        // This ensures the top and bottom bars are transparent
+        black "#1c1c1c"
+        red "#d47779"
+        green "#52c9b0"
+        yellow "#d1b171"
+        blue "#6b92e3"
+        magenta "#b87bce"
+        cyan "#52c9b0"
+        white "#8c8c8c"
+        orange "#e28e5a"
+    }
+}
+

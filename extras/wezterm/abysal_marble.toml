@@ -1,0 +1,45 @@
+[colors]
+foreground = "#2f2f2f"
+background = "#dcdcdc"
+cursor_bg = "#2f2f2f"
+cursor_border = "#2f2f2f"
+cursor_fg = "#dcdcdc"
+selection_bg = "#a2b0d1"
+selection_fg = "#2f2f2f"
+split = "#365ca8"
+compose_cursor = "#a04e1e"
+scrollbar_thumb = "#c4c4c4"
+
+ansi = ["#b0b0b0", "#a8474a", "#2c9279", "#7a6020", "#365ca8", "#824699", "#2c9279", "#555555"]
+brights = ["#bcbcbc", "#cf3d43", "#00a284", "#8c6b00", "#1767d3", "#a13cc2", "#00a284", "#2f2f2f"]
+
+[colors.tab_bar]
+inactive_tab_edge = "#cfcfcf"
+background = "#dcdcdc"
+
+[colors.tab_bar.active_tab]
+fg_color = "#cfcfcf"
+bg_color = "#365ca8"
+
+[colors.tab_bar.inactive_tab]
+fg_color = "#737373"
+bg_color = "#c4c4c4"
+
+[colors.tab_bar.inactive_tab_hover]
+fg_color = "#365ca8"
+bg_color = "#c4c4c4"
+# intensity = "Bold"
+
+[colors.tab_bar.new_tab_hover]
+fg_color = "#365ca8"
+bg_color = "#dcdcdc"
+intensity = "Bold"
+
+[colors.tab_bar.new_tab]
+fg_color = "#365ca8"
+bg_color = "#dcdcdc"
+
+[metadata]
+aliases = []
+author = "folke"
+name = "abysal_marble"

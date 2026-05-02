@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rtk grep *)",
+      "Bash(xargs sed *)",
+      "Bash(rtk sed *)"
+    ]
+  }
+}

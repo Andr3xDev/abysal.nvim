@@ -1,0 +1,23 @@
+! Abysal colors for Xresources
+
+*background: #dcdcdc
+*foreground: #2f2f2f
+
+*color0: #b0b0b0
+*color1: #a8474a
+*color2: #2c9279
+*color3: #7a6020
+*color4: #365ca8
+*color5: #824699
+*color6: #2c9279
+*color7: #555555
+
+*color8: #bcbcbc
+*color9: #a8474a
+*color10: #2c9279
+*color11: #7a6020
+*color12: #365ca8
+*color13: #824699
+*color14: #2c9279
+*color15: #2f2f2f
+ 

@@ -1,0 +1,25 @@
+# Abysal
+
+# Syntax Highlighting Colors
+fish_color_normal 2f2f2f
+fish_color_command 2c9279
+fish_color_keyword 824699
+fish_color_quote 7a6020
+fish_color_redirection 2f2f2f
+fish_color_end a04e1e
+fish_color_option 824699
+fish_color_error a8474a
+fish_color_param 824699
+fish_color_comment 666666
+fish_color_selection --background=a2b0d1
+fish_color_search_match --background=a2b0d1
+fish_color_operator 2c9279
+fish_color_escape 824699
+fish_color_autosuggestion 666666
+
+# Completion Pager Colors
+fish_pager_color_progress 666666
+fish_pager_color_prefix 2c9279
+fish_pager_color_completion 2f2f2f
+fish_pager_color_description 666666
+fish_pager_color_selected_background --background=a2b0d1

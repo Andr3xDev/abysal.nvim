@@ -1,0 +1,18 @@
+# Import this theme as follows:
+# 1. Create a new profile for GNOME Terminal
+# 2. Copy the UUID of the new profile (bottom right corner of the preferences window)
+# 3. Replace <PROFILE_UUID> below with the copied UUID
+# 4. Execute `dconf load /org/gnome/terminal/legacy/profiles:/ < abysal_obsidian.dconf`
+
+[:<PROFILE_UUID>]
+background-color='rgb(28, 28, 28)'
+cursor-background-color='rgb(212, 212, 212)'
+cursor-colors-set=true
+cursor-foreground-color='rgb(28, 28, 28)'
+foreground-color='rgb(212, 212, 212)'
+highlight-background-color='rgb(212, 212, 212)'
+highlight-colors-set=true
+highlight-foreground-color='rgb(28, 28, 28)'
+palette=['rgb(46, 46, 46)', 'rgb(212, 119, 121)', 'rgb(82, 201, 176)', 'rgb(209, 177, 113)', 'rgb(107, 146, 227)', 'rgb(184, 123, 206)', 'rgb(82, 201, 176)', 'rgb(212, 212, 212)', 'rgb(46, 46, 46)', 'rgb(212, 119, 121)', 'rgb(82, 201, 176)', 'rgb(209, 177, 113)', 'rgb(107, 146, 227)', 'rgb(184, 123, 206)', 'rgb(82, 201, 176)', 'rgb(212, 212, 212)']
+use-theme-colors=false
+visible-name='Abysal Obsidian'

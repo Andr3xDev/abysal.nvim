@@ -1,0 +1,40 @@
+{
+  "name": "Abysal Marble",
+  "type": "custom",
+  "text": {
+    "primary": "#2f2f2f",
+    "secondary": "#555555",
+    "response": "#2f2f2f"
+  },
+  "background": {
+    "primary": "#dcdcdc",
+    "diff": {
+      "added": "#aec3be",
+      "removed": "#c8b0b1"
+    }
+  },
+  "border": {
+    "default": "#c4c4c4",
+    "focused": "#365ca8"
+  },
+  "ui": {
+    "comment": "#666666",
+    "symbol": "#555555",
+    "gradient": ["#365ca8", "#824699", "#2c9279"]
+  },
+  "Background": "#dcdcdc",
+  "Foreground": "#2f2f2f",
+  "LightBlue": "#2a4d94",
+  "AccentBlue": "#824699",
+  "AccentPurple": "#824699",
+  "AccentCyan": "#2c9279",
+  "AccentGreen": "#a04e1e",
+  "AccentYellow": "#2c9279",
+  "AccentRed": "#a8474a",
+  "DiffAdded": "#aec3be",
+  "DiffRemoved": "#c8b0b1",
+  "Comment": "#666666",
+  "Gray": "#555555",
+  "DarkGray": "#cfcfcf",
+  "GradientColors": ["#365ca8", "#824699", "#2c9279"]
+}

@@ -1,0 +1,16 @@
+assistant-output-color: "#2f2f2f"
+
+# see the aider extra README for more information about setting the `code-theme`
+# https://github.com/folke/abysal.nvim/blob/extras/aider/README.md
+# code-theme: abysal-marble
+
+completion-menu-color: "#2f2f2f"
+completion-menu-bg-color: "#cfcfcf"
+completion-menu-current-color: "#2f2f2f"
+completion-menu-current-bg-color: "#c4c4c4"
+
+tool-error-color: "#8c2d30"
+tool-output-color: "#365ca8"
+tool-warning-color: "#7a6020"
+
+user-input-color: "#2c9279"

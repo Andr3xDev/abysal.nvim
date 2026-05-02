@@ -1,0 +1,26 @@
+{
+    "name": "Abysal Marble",
+    "comment": "",
+    "use-theme-colors": false,
+    "foreground-color": "#2f2f2f",
+    "background-color": "#dcdcdc",
+    "palette": [
+        "#b0b0b0",
+        "#a8474a",
+        "#2c9279",
+        "#7a6020",
+        "#365ca8",
+        "#824699",
+        "#2c9279",
+        "#555555",
+        "#bcbcbc",
+        "#a8474a",
+        "#2c9279",
+        "#7a6020",
+        "#365ca8",
+        "#824699",
+        "#2c9279",
+        "#2f2f2f"
+    ]
+}
+  

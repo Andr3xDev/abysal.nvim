@@ -1,0 +1,63 @@
+{
+  "$schema": "https://raw.githubusercontent.com/badlogic/pi-mono/main/packages/coding-agent/src/modes/interactive/theme/theme-schema.json",
+  "name": "Abysal Marble",
+  "colors": {
+    "accent": "#365ca8",
+    "border": "#4e6aa2",
+    "borderAccent": "#2c9279",
+    "borderMuted": "#b0b0b0",
+    "success": "#2c9279",
+    "error": "#8c2d30",
+    "warning": "#7a6020",
+    "muted": "#555555",
+    "dim": "#555555",
+    "text": "",
+    "thinkingText": "#666666",
+
+    "selectedBg": "#a2b0d1",
+    "userMessageBg": "#cfcfcf",
+    "userMessageText": "",
+    "customMessageBg": "#cfcfcf",
+    "customMessageText": "",
+    "customMessageLabel": "#824699",
+    "toolPendingBg": "#c4c4c4",
+    "toolSuccessBg": "#c4c4c4",
+    "toolErrorBg": "#d8d3d3",
+    "toolTitle": "",
+    "toolOutput": "#555555",
+
+    "mdHeading": "#365ca8",
+    "mdLink": "#2c9279",
+    "mdLinkUrl": "#666666",
+    "mdCode": "#365ca8",
+    "mdCodeBlock": "#cfcfcf",
+    "mdCodeBlockBorder": "#666666",
+    "mdQuote": "#666666",
+    "mdQuoteBorder": "#666666",
+    "mdHr": "#a04e1e",
+    "mdListBullet": "#a04e1e",
+
+    "toolDiffAdded": "#aec3be",
+    "toolDiffRemoved": "#c8b0b1",
+    "toolDiffContext": "#bfcce0",
+
+    "syntaxComment": "#666666",
+    "syntaxKeyword": "#824699",
+    "syntaxFunction": "#365ca8",
+    "syntaxVariable": "#2f2f2f",
+    "syntaxString": "#2c9279",
+    "syntaxNumber": "#a04e1e",
+    "syntaxType": "#2a4d94",
+    "syntaxOperator": "#5878b8",
+    "syntaxPunctuation": "#5878b8",
+
+    "thinkingOff": "#737373",
+    "thinkingMinimal": "#555555",
+    "thinkingLow": "#bfcce0",
+    "thinkingMedium": "#365ca8",
+    "thinkingHigh": "#824699",
+    "thinkingXhigh": "#824699",
+
+    "bashMode": "#a04e1e"
+  }
+}

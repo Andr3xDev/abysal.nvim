@@ -1,0 +1,38 @@
+# Abysal color theme for Zathura
+# Swaps Foreground for Background to get a light version if the user prefers
+#
+# Abysal color theme
+#
+set notification-error-bg "#a8474a"
+set notification-error-fg "#2f2f2f"
+set notification-warning-bg "#7a6020"
+set notification-warning-fg "#bcbcbc"
+set notification-bg "#dcdcdc"
+set notification-fg "#2f2f2f"
+set completion-bg "#dcdcdc"
+set completion-fg "#555555"
+set completion-group-bg "#dcdcdc"
+set completion-group-fg "#555555"
+set completion-highlight-bg "#bcbcbc"
+set completion-highlight-fg "#2f2f2f"
+set index-bg "#dcdcdc"
+set index-fg "#2f2f2f"
+set index-active-bg "#bcbcbc"
+set index-active-fg "#2f2f2f"
+set inputbar-bg "#dcdcdc"
+set inputbar-fg "#2f2f2f"
+set statusbar-bg "#dcdcdc"
+set statusbar-fg "#2f2f2f"
+set highlight-color "#7a6020"
+set highlight-active-color "#2c9279"
+set default-bg "#dcdcdc"
+set default-fg "#2f2f2f"
+set render-loading true
+set render-loading-fg "#dcdcdc"
+set render-loading-bg "#2f2f2f"
+#
+# Recolor mode settings
+# <C-r> to switch modes
+#
+set recolor-lightcolor "#dcdcdc"
+set recolor-darkcolor "#2f2f2f"

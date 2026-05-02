@@ -1,0 +1,17 @@
+# Abysal colors for dunst
+# For more configuration options see https://github.com/dunst-project/dunst/blob/master/dunstrc
+
+[urgency_low]
+    background = "#cfcfcf"
+    foreground = "#2f2f2f"
+    frame_color = "#2f2f2f"
+
+[urgency_normal]
+    background = "#dcdcdc"
+    foreground = "#2f2f2f"
+    frame_color = "#2f2f2f"
+
+[urgency_critical]
+    background = "#c4c4c4"
+    foreground = "#8c2d30"
+    frame_color = "#8c2d30"

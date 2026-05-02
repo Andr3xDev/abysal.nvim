@@ -1,0 +1,63 @@
+{
+  "$schema": "https://raw.githubusercontent.com/badlogic/pi-mono/main/packages/coding-agent/src/modes/interactive/theme/theme-schema.json",
+  "name": "Abysal Obsidian",
+  "colors": {
+    "accent": "#6b92e3",
+    "border": "#738ebf",
+    "borderAccent": "#52c9b0",
+    "borderMuted": "#161616",
+    "success": "#52c9b0",
+    "error": "#c44040",
+    "warning": "#d1b171",
+    "muted": "#8c8c8c",
+    "dim": "#8c8c8c",
+    "text": "",
+    "thinkingText": "#737373",
+
+    "selectedBg": "#232b4e",
+    "userMessageBg": "#262626",
+    "userMessageText": "",
+    "customMessageBg": "#262626",
+    "customMessageText": "",
+    "customMessageLabel": "#b87bce",
+    "toolPendingBg": "#333333",
+    "toolSuccessBg": "#333333",
+    "toolErrorBg": "#241e1e",
+    "toolTitle": "",
+    "toolOutput": "#8c8c8c",
+
+    "mdHeading": "#6b92e3",
+    "mdLink": "#52c9b0",
+    "mdLinkUrl": "#737373",
+    "mdCode": "#6b92e3",
+    "mdCodeBlock": "#262626",
+    "mdCodeBlockBorder": "#737373",
+    "mdQuote": "#737373",
+    "mdQuoteBorder": "#737373",
+    "mdHr": "#e28e5a",
+    "mdListBullet": "#e28e5a",
+
+    "toolDiffAdded": "#253f3b",
+    "toolDiffRemoved": "#462525",
+    "toolDiffContext": "#2c4470",
+
+    "syntaxComment": "#737373",
+    "syntaxKeyword": "#b87bce",
+    "syntaxFunction": "#6b92e3",
+    "syntaxVariable": "#d4d4d4",
+    "syntaxString": "#52c9b0",
+    "syntaxNumber": "#e28e5a",
+    "syntaxType": "#89aae8",
+    "syntaxOperator": "#8ca8e0",
+    "syntaxPunctuation": "#8ca8e0",
+
+    "thinkingOff": "#737373",
+    "thinkingMinimal": "#8c8c8c",
+    "thinkingLow": "#2c4470",
+    "thinkingMedium": "#6b92e3",
+    "thinkingHigh": "#b87bce",
+    "thinkingXhigh": "#b87bce",
+
+    "bashMode": "#e28e5a"
+  }
+}

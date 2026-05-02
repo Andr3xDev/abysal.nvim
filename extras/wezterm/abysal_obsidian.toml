@@ -1,0 +1,45 @@
+[colors]
+foreground = "#d4d4d4"
+background = "#1c1c1c"
+cursor_bg = "#d4d4d4"
+cursor_border = "#d4d4d4"
+cursor_fg = "#1c1c1c"
+selection_bg = "#232b4e"
+selection_fg = "#d4d4d4"
+split = "#6b92e3"
+compose_cursor = "#e28e5a"
+scrollbar_thumb = "#333333"
+
+ansi = ["#161616", "#d47779", "#52c9b0", "#d1b171", "#6b92e3", "#b87bce", "#52c9b0", "#8c8c8c"]
+brights = ["#2e2e2e", "#e98183", "#00dcbc", "#e8bd56", "#739ff9", "#cd82e7", "#00dcbc", "#d4d4d4"]
+
+[colors.tab_bar]
+inactive_tab_edge = "#262626"
+background = "#1c1c1c"
+
+[colors.tab_bar.active_tab]
+fg_color = "#262626"
+bg_color = "#6b92e3"
+
+[colors.tab_bar.inactive_tab]
+fg_color = "#737373"
+bg_color = "#333333"
+
+[colors.tab_bar.inactive_tab_hover]
+fg_color = "#6b92e3"
+bg_color = "#333333"
+# intensity = "Bold"
+
+[colors.tab_bar.new_tab_hover]
+fg_color = "#6b92e3"
+bg_color = "#1c1c1c"
+intensity = "Bold"
+
+[colors.tab_bar.new_tab]
+fg_color = "#6b92e3"
+bg_color = "#1c1c1c"
+
+[metadata]
+aliases = []
+author = "folke"
+name = "abysal_obsidian"

@@ -1,0 +1,15 @@
+# Dependencies / tests
+.tests/
+
+# Lua rocks
+lua/
+*.rock
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*.swo
+*~

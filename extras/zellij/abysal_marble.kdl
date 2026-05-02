@@ -1,0 +1,22 @@
+// Abysal Zellij Colors
+// Add this file to your `CONFIG_DIR/themes` directory as described here:
+// https://zellij.dev/documentation/themes#getting-zellij-to-pick-up-the-theme
+
+themes {
+    abysal_marble {
+        fg "#2f2f2f"
+        bg "#c4c4c4"
+        // Black should match the terminal background color
+        // This ensures the top and bottom bars are transparent
+        black "#dcdcdc"
+        red "#a8474a"
+        green "#2c9279"
+        yellow "#7a6020"
+        blue "#365ca8"
+        magenta "#824699"
+        cyan "#2c9279"
+        white "#555555"
+        orange "#a04e1e"
+    }
+}
+

@@ -1,0 +1,32 @@
+# -----------------------------------------------------------------------------
+# Abysal Alacritty Colors
+# Theme: Abysal Marble
+# Upstream: ${_upstream_url}
+# -----------------------------------------------------------------------------
+
+# Default colors
+[colors.primary]
+background = '#dcdcdc'
+foreground = '#2f2f2f'
+
+# Normal colors
+[colors.normal]
+black = '#b0b0b0'
+red = '#a8474a'
+green = '#2c9279'
+yellow = '#7a6020'
+blue = '#365ca8'
+magenta = '#824699'
+cyan = '#2c9279'
+white = '#555555'
+
+# Bright colors
+[colors.bright]
+black = '#bcbcbc'
+red = '#cf3d43'
+green = '#00a284'
+yellow = '#8c6b00'
+blue = '#1767d3'
+magenta = '#a13cc2'
+cyan = '#00a284'
+white = '#2f2f2f'

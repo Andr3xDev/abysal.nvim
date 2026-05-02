@@ -1,0 +1,36 @@
+style:
+  name: abysal_marble
+  body:
+    fgColor: '#2f2f2f'
+    bgColor: '#cfcfcf'
+    secondaryTextColor: '#555555'
+    tertiaryTextColor: '${fg_visual}'
+    borderColor: '#8c8c8c'
+  stat_table:
+    keyFgColor: '#7a6020'
+    valueFgColor: '#2f2f2f'
+    logoColor: '#7a6020'
+  proc_table:
+    fgColor: '#365ca8'
+    fgWarning: '#7a6020'
+    fgPending: '#737373'
+    fgCompleted: '#2c9279'
+    fgError: '#8c2d30'
+    headerFgColor: '#2f2f2f'
+  help:
+    fgColor: '#2a4d94'
+    keyColor: '#2f2f2f'
+    hlColor: '#2c9279'
+    categoryFgColor: '#5878b8'
+  dialog:
+    fgColor: '#2a4d94'
+    bgColor: '#b0b0b0'
+    contrastBgColor: '#dcdcdc'
+    attentionBgColor: '#8c2d30'
+    buttonFgColor: '#b0b0b0'
+    buttonBgColor: '#c4c4c4'
+    buttonFocusFgColor: '#b0b0b0'
+    buttonFocusBgColor: '#365ca8'
+    labelFgColor: '#7a6020'
+    fieldFgColor: '#b0b0b0'
+    fieldBgColor: '#bfcce0'

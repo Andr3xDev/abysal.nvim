@@ -1,0 +1,32 @@
+# -----------------------------------------------------------------------------
+# Abysal Alacritty Colors
+# Theme: Abysal Obsidian
+# Upstream: ${_upstream_url}
+# -----------------------------------------------------------------------------
+
+# Default colors
+[colors.primary]
+background = '#1c1c1c'
+foreground = '#d4d4d4'
+
+# Normal colors
+[colors.normal]
+black = '#161616'
+red = '#d47779'
+green = '#52c9b0'
+yellow = '#d1b171'
+blue = '#6b92e3'
+magenta = '#b87bce'
+cyan = '#52c9b0'
+white = '#8c8c8c'
+
+# Bright colors
+[colors.bright]
+black = '#2e2e2e'
+red = '#e98183'
+green = '#00dcbc'
+yellow = '#e8bd56'
+blue = '#739ff9'
+magenta = '#cd82e7'
+cyan = '#00dcbc'
+white = '#d4d4d4'

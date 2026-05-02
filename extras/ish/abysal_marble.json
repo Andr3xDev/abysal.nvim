@@ -1,0 +1,28 @@
+{
+  "name": "Abysal Marble",
+  "version": 1,
+  "shared": {
+    "backgroundColor": "#dcdcdc",
+    "colorPaletteOverrides": [
+      "#b0b0b0",
+      "#a8474a",
+      "#2c9279",
+      "#7a6020",
+      "#365ca8",
+      "#824699",
+      "#2c9279",
+      "#555555",
+      "#bcbcbc",
+      "#cf3d43",
+      "#00a284",
+      "#8c6b00",
+      "#1767d3",
+      "#a13cc2",
+      "#00a284",
+      "#2f2f2f",
+    ],
+    "cursorColor": "#2f2f2f",
+    "foregroundColor": "#2f2f2f"
+  }
+}
+
