@@ -12,12 +12,12 @@ return {
   fg_gutter     = "#8c8c8c", -- line numbers, gutter (visible on light bg)
 
   -- Grays
-  comment       = "#666666", -- comments (enough contrast on light bg)
-  dark3         = "#737373", -- NonText, SpecialKey
+  comment       = "#8c8c8c", -- comments (subdued, similar to gutter)
+  dark3         = "#8c8c8c", -- NonText, SpecialKey
   dark5         = "#555555", -- Conceal, qfLineNr (dark gray secondary)
 
   -- Blue family (color5: steel blue, darkened for light bg)
-  blue          = "#365ca8", -- functions, titles, labels
+  blue          = "#2c9279", -- constants, numbers, properties (medium contrast on light bg)
   blue0         = "#4a6dc0", -- bg_visual source, bg_search
   blue1         = "#2a4d94", -- Special, Type, border highlight
   blue2         = "#2c9279", -- info diagnostics
@@ -26,22 +26,22 @@ return {
   blue7         = "#bfcce0", -- diff change bg source, inlay hints (very light)
 
   -- Teal/green family (color1: turquoise, darkened for light bg)
-  cyan          = "#2c9279", -- keywords, preprocessor
+  cyan          = "#365ca8", -- functions, methods, YAML/JSON keys (high contrast on light bg)
   teal          = "#2c9279", -- markup links
   green         = "#2c9279", -- strings, characters
   green1        = "#2c9279", -- @property, @variable.member, healthSuccess
   green2        = "#237864", -- diff add bg source (slightly muted)
 
   -- Warm colors
-  orange        = "#a04e1e", -- constants, MatchParen, IncSearch bg
-  yellow        = "#7a6020", -- warnings, @variable.parameter (dark sand)
+  orange        = "#a04e1e", -- keywords, control flow, MatchParen
+  yellow        = "#7a6020", -- strings, warnings (dark sand)
 
   -- Red family (color4: soft red, darkened for light bg)
   red           = "#a8474a", -- @tag, @variable.builtin
   red1          = "#8c2d30", -- errors, diff delete bg source
 
   -- Purple family (color6: lavender, darkened for light bg)
-  magenta       = "#824699", -- identifiers, statements, @keyword.function
+  magenta       = "#824699", -- constructors, @keyword.function
   magenta2      = "#a83280", -- vivid accent (rarely seen)
   purple        = "#824699", -- @keyword
 

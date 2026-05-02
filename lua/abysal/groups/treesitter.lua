@@ -105,7 +105,7 @@ function M.get(c, opts)
     ["@variable"]                   = { fg = c.fg, style = opts.styles.variables }, -- Any variable name that does not have another highlight.
     ["@variable.builtin"]           = { fg = c.red }, -- Variable names that are defined by the languages, like `this` or `self`.
     ["@variable.member"]            = { fg = c.blue }, -- member access: field/property values
-    ["@variable.parameter"]         = { fg = c.fg }, -- function params: plain text, no color noise
+    ["@variable.parameter"]         = { fg = c.fg_dark }, -- function params: subtly distinct from variables
     ["@variable.parameter.builtin"] = { fg = c.fg_dark }, -- builtin params like `...`
 
     -- ───────────────────────────────────
