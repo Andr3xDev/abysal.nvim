@@ -156,6 +156,16 @@ function M.setup(colors, opts)
         ret[k] = v
       end
     end
+
+    -- Apply variant-specific overrides (marble redistributes
+    -- collapsed colors for better visual variety on light bg)
+    if opts.style == "marble" then
+      local overrides = M.get("marble", colors, opts)
+      for k, v in pairs(overrides) do
+        ret[k] = v
+      end
+    end
+
     Util.resolve(ret)
     if opts.cache then
       Util.cache.write(cache_key, { groups = ret, inputs = inputs })
