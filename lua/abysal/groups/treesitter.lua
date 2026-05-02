@@ -193,6 +193,7 @@ function M.get(c, opts)
     ["@function.call.python"]         = { fg = c.cyan }, -- function calls: cyan
     ["@function.method.python"]       = { fg = c.cyan }, -- method definitions: cyan
     ["@function.method.call.python"]  = { fg = c.cyan }, -- method calls: cyan
+    ["@keyword.function.python"]      = { fg = c.orange }, -- def: orange (control keyword)
     ["@keyword.coroutine.python"]     = { fg = c.orange }, -- async/await
     ["@type.python"]                  = { fg = c.red, italic = true },
     ["@attribute.python"]             = { fg = c.purple, italic = true }, -- @decorators
