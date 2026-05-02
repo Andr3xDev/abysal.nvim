@@ -45,7 +45,7 @@ function M.get(c, opts)
     ["@keyword.directive.define"]   = "Define",
     ["@keyword.exception"]          = "Exception",
     ["@keyword.function"]           = { fg = c.purple, italic = true }, -- fn keyword: describes what something is
-    ["@keyword.import"]             = { fg = c.cyan }, -- imports: cyan (module references)
+    ["@keyword.import"]             = "Include", -- imports: orange (control keywords)
     ["@keyword.operator"]           = { fg = c.orange }, -- what decides: `and`, `or`, `not`
     ["@keyword.repeat"]             = "Repeat",
     ["@keyword.return"]             = "@keyword",
@@ -65,15 +65,17 @@ function M.get(c, opts)
     ["@markup.link.label.symbol"]   = "Identifier",
     ["@markup.link.url"]            = { fg = c.yellow, underline = true }, -- URLs: sand
     ["@markup.list"]                = { fg = c.fg_dark }, -- For special punctutation that does not fall in the categories before.
-    ["@markup.list.checked"]        = { fg = c.green1 }, -- For brackets and parens.
+    ["@markup.list.checked"]        = { fg = c.cyan }, -- [x]: cyan
     ["@markup.list.markdown"]       = { fg = c.orange, bold = true },
-    ["@markup.list.unchecked"]      = { fg = c.blue }, -- For brackets and parens.
+    ["@markup.list.unchecked"]      = { fg = c.fg_dark }, -- [ ]: fg_dark
     ["@markup.math"]                = "Special",
     ["@markup.raw"]                 = { fg = c.red }, -- inline code: red
+    ["@markup.raw.block"]           = { fg = c.fg }, -- code blocks: fg
     ["@markup.raw.markdown_inline"] = { bg = c.terminal_black, fg = c.fg },
     ["@markup.quote"]               = { fg = c.fg_dark, italic = true }, -- blockquotes
     ["@markup.strikethrough"]       = { strikethrough = true },
     ["@markup.strong"]              = { bold = true },
+    ["@markup.bold"]                = { fg = c.fg, bold = true }, -- bold text
     ["@markup.underline"]           = { underline = true },
     ["@method"]                     = { fg = c.cyan }, -- method definitions
     ["@method.call"]                = "@method", -- method calls
@@ -84,6 +86,7 @@ function M.get(c, opts)
     ["@number"]                     = "Number",
     ["@number.float"]               = "Float",
     ["@operator"]                   = { fg = c.fg_dark }, -- For any operator: `+`, but also `->` and `*` in C.
+    ["@parameter"]                  = { fg = c.fg }, -- function parameters: plain text
     ["@property"]                   = { fg = c.blue }, -- field access, properties
     ["@punctuation.bracket"]        = { fg = c.fg_dark }, -- For brackets and parens.
     ["@punctuation.delimiter"]      = { fg = c.fg_dark }, -- For delimiters ie: `.`
@@ -92,8 +95,8 @@ function M.get(c, opts)
     ["@string"]                     = "String",
     ["@string.documentation"]       = { fg = c.yellow },
     ["@string.escape"]              = { fg = c.yellow }, -- For escape characters within a string.
-    ["@string.regex"]               = { fg = c.blue6 }, -- For regexes (some parsers use @string.regex)
-    ["@string.regexp"]              = { fg = c.blue6 }, -- For regexes.
+    ["@string.regex"]               = { fg = c.yellow }, -- regex strings: yellow (string family)
+    ["@string.regexp"]              = { fg = c.yellow }, -- regex patterns: yellow
     ["@string.special"]             = { fg = c.yellow }, -- special strings (paths, URLs)
     ["@symbol"]                      = { fg = c.blue }, -- Ruby/Elixir symbols: like constants
     ["@tag"]                        = "Label",
@@ -106,12 +109,12 @@ function M.get(c, opts)
     ["@type.builtin"]               = { fg = c.red, italic = true }, -- builtin types: string, int, bool
     ["@type.css"]                    = { fg = c.orange }, -- CSS selectors: orange like control keywords
     ["@type.definition"]            = { fg = c.red, italic = true }, -- type aliases / definitions
-    ["@type.qualifier"]             = "@keyword",
+    ["@type.qualifier"]             = { fg = c.red, italic = true }, -- type qualifiers: red italic
     ["@variable"]                   = { fg = c.fg, style = opts.styles.variables }, -- Any variable name that does not have another highlight.
-    ["@variable.builtin"]           = { fg = c.red }, -- Variable names that are defined by the languages, like `this` or `self`.
+    ["@variable.builtin"]           = { fg = c.fg }, -- self/this/super: plain text, no color
     ["@variable.member"]            = { fg = c.blue }, -- member access: field/property values
-    ["@variable.parameter"]         = { fg = c.blue1 }, -- function params: subtle blue, distinct from variables
-    ["@variable.parameter.builtin"] = { fg = c.blue1 }, -- builtin params like `...`
+    ["@variable.parameter"]         = { fg = c.fg }, -- function params: plain text, no color
+    ["@variable.parameter.builtin"] = { fg = c.fg }, -- builtin params like `...`: plain text
 
     -- ───────────────────────────────────
     -- Config file languages (YAML / JSON / HCL / Bash)
@@ -123,6 +126,7 @@ function M.get(c, opts)
     ["@string.yaml"]                = { fg = c.yellow }, -- string values: sand
     ["@number.yaml"]                = { fg = c.blue }, -- numbers: blue
     ["@boolean.yaml"]               = { fg = c.blue }, -- booleans: blue
+    ["@comment.yaml"]               = { fg = c.comment, style = opts.styles.comments }, -- yaml comments
     -- JSON: keys get cyan accent, values use standard rules
     ["@property.json"]              = { fg = c.cyan }, -- keys: cyan
     ["@string.json"]                = { fg = c.yellow }, -- values: sand
@@ -143,6 +147,7 @@ function M.get(c, opts)
     ["@number.hcl"]                 = { fg = c.blue }, -- numbers: blue
     -- Bash
     ["@function.bash"]              = { fg = c.cyan }, -- external commands: cyan
+    ["@function.call.bash"]         = { fg = c.cyan }, -- command calls: cyan
     ["@keyword.bash"]               = { fg = c.orange }, -- builtins (set, local, export): orange
     ["@variable.bash"]              = { fg = c.blue }, -- $VARIABLES in uppercase: blue
     ["@string.bash"]                = { fg = c.yellow }, -- strings: sand
@@ -173,6 +178,8 @@ function M.get(c, opts)
     ["@keyword.css"]                  = { fg = c.orange }, -- @media @import: orange
     ["@keyword.scss"]                 = { fg = c.orange },
     ["@variable.scss"]                = { fg = c.blue }, -- $variables SCSS: blue
+    ["@function.css"]                 = { fg = c.cyan }, -- calc() var() rgb(): cyan
+    ["@function.scss"]                = { fg = c.cyan }, -- SCSS functions: cyan
     -- ───────────────────────────────────
     -- Astro
     ["@tag.astro"]                    = { fg = c.cyan },
@@ -185,11 +192,14 @@ function M.get(c, opts)
     ["@type.python"]                  = { fg = c.red, italic = true },
     ["@attribute.python"]             = { fg = c.purple, italic = true }, -- @decorators
     ["@string.documentation.python"]  = { fg = c.comment, italic = true }, -- docstrings
+    ["@variable.builtin.python"]      = { fg = c.fg }, -- self/cls: plain text
     -- ───────────────────────────────────
     -- Java
     ["@type.java"]                    = { fg = c.red, italic = true },
     ["@keyword.java"]                 = { fg = c.orange },
     ["@attribute.java"]               = { fg = c.purple, italic = true }, -- annotations @Override
+    ["@keyword.modifier.java"]        = { fg = c.purple, italic = true }, -- public/private/static: purple italic
+    ["@type.builtin.java"]            = { fg = c.red, italic = true }, -- String, int: red italic
     ["@constant.java"]                = { fg = c.blue },
     -- ───────────────────────────────────
     -- SQL
@@ -211,6 +221,7 @@ function M.get(c, opts)
     ["@function.builtin.lua"]         = { fg = c.cyan }, -- print/require/pairs: cyan
     ["@constant.builtin.lua"]         = { fg = c.blue }, -- true/false/nil: blue
     ["@field.lua"]                    = { fg = c.blue }, -- table.field: blue
+    ["@variable.builtin.lua"]         = { fg = c.fg }, -- vim: plain text, no color
     -- ───────────────────────────────────
     -- Python
     ["@constructor.python"]         = { fg = c.purple, italic = true }, -- __init__, __new__
@@ -238,6 +249,7 @@ function M.get(c, opts)
   ret["@markup.heading.1.markdown"] = { fg = c.cyan, bold = true }
   ret["@markup.heading.2.markdown"] = { fg = c.blue, bold = true }
   ret["@markup.heading.3.markdown"] = { fg = c.purple, bold = true }
+  ret["@markup.heading.4.markdown"] = { fg = c.red, bold = true }
 
   return ret
 end
