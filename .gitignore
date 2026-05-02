@@ -2,7 +2,6 @@
 .tests/
 
 # Lua rocks
-lua/
 *.rock
 
 # OS
@@ -13,3 +12,5 @@ Thumbs.db
 *.swp
 *.swo
 *~
+
+.claude/
