@@ -189,6 +189,8 @@ function M.get(c, opts)
     -- ───────────────────────────────────
     -- Python
     ["@constructor.python"]           = { fg = c.cyan }, -- __init__/__new__ are functions (cyan, not purple)
+    ["@function.python"]              = { fg = c.cyan }, -- function names: cyan
+    ["@function.call.python"]         = { fg = c.cyan }, -- function calls: cyan
     ["@function.method.python"]       = { fg = c.cyan }, -- method definitions: cyan
     ["@function.method.call.python"]  = { fg = c.cyan }, -- method calls: cyan
     ["@keyword.coroutine.python"]     = { fg = c.orange }, -- async/await
