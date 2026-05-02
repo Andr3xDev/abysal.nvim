@@ -21,7 +21,7 @@ function M.get(c, opts)
     ["@comment.warning"]            = { fg = c.warning },
     ["@comment.documentation"]      = { fg = c.comment, style = opts.styles.comments }, -- Javadoc, doc comments: same as regular comments
     ["@constant"]                   = "Constant",
-    ["@constant.builtin"]           = "Special",
+    ["@constant.builtin"]           = { fg = c.blue1 }, -- true/false/null/None: dark blue (preserves contrast)
     ["@constant.macro"]             = "Define",
     ["@constructor"]                = { fg = c.purple, italic = true }, -- fn keyword: describes what something is
     ["@constructor.tsx"]            = { fg = c.purple, italic = true }, -- TSX constructor: purple like fn keyword
