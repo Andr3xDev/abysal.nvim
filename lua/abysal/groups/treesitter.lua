@@ -233,7 +233,7 @@ function M.get(c, opts)
     ["@variable.builtin.lua"]         = { fg = c.fg }, -- vim: plain text, no color
     -- ───────────────────────────────────
     -- Lua
-    ["@constructor.lua"]            = { fg = c.cyan }, -- table constructors {}: cyan (instanciation)
+    ["@constructor.lua"]            = {}, -- {} in tables: no color, just text
     ["@punctuation.bracket.lua"]   = { fg = c.fg }, -- () {} [] in lua: text color
     -- ───────────────────────────────────
     -- Markdown / text (fallback for @text.* convention)
