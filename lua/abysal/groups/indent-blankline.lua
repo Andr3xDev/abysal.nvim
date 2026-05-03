@@ -6,10 +6,10 @@ M.url = "https://github.com/lukas-reineke/indent-blankline.nvim"
 function M.get(c, opts)
   -- stylua: ignore
   return {
-    IndentBlanklineChar        = { fg = c.fg_gutter, nocombine = true },
-    IndentBlanklineContextChar = { fg = c.blue1, nocombine = true },
-    IblIndent                  = { fg = c.fg_gutter, nocombine = true },
-    IblScope                   = { fg = c.blue1, nocombine = true },
+    IndentBlanklineChar        = { fg = c.dark3, nocombine = true }, -- indent lines: same gray in both variants
+    IndentBlanklineContextChar = { fg = c.dark3, nocombine = true }, -- context line: same gray
+    IblIndent                  = { fg = c.dark3, nocombine = true },
+    IblScope                   = { fg = c.dark3, nocombine = true },
   }
 end
 
