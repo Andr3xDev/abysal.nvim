@@ -52,8 +52,8 @@ function M.get(c, opts)
     SnacksPickerInputBorder   = { fg = c.cyan, bg = c.bg_float }, -- border: cyan
     SnacksPickerInputTitle    = { fg = c.orange, bg = c.bg_float }, -- title: orange
     SnacksPickerBoxTitle      = { fg = c.orange, bg = c.bg_float }, -- title: orange
-    SnacksPickerSelected      = { fg = c.fg, bg = c.yellow, bold = true }, -- selected: yellow bg, fg text
-    SnacksPickerPickWinCurrent= { fg = c.fg, bg = c.yellow, bold = true }, -- current win: yellow
+    SnacksPickerSelected      = { fg = c.bg, bg = c.yellow, bold = true }, -- selected: yellow bg, dark text
+    SnacksPickerPickWinCurrent= { fg = c.bg, bg = c.yellow, bold = true }, -- current win: yellow
     SnacksPickerPickWin       = { fg = c.fg, bg = c.bg_search, bold = true },
 
     -- ============================================

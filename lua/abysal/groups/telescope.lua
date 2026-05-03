@@ -12,8 +12,8 @@ function M.get(c, opts)
     TelescopePreviewBorder   = { fg = c.cyan, bg = c.bg_float },
     TelescopePromptBorder    = { fg = c.cyan, bg = c.bg_float },
     TelescopeNormal          = { fg = c.fg, bg = c.bg_float },
-    TelescopeSelection       = { fg = c.fg, bg = c.yellow }, -- selected: yellow bg, fg text
-    TelescopeMultiSelection  = { fg = c.fg, bg = c.yellow }, -- multi-select: yellow bg, fg text
+    TelescopeSelection       = { fg = c.bg, bg = c.yellow }, -- selected: yellow bg, dark text
+    TelescopeMultiSelection  = { fg = c.bg, bg = c.yellow }, -- multi-select: yellow bg, dark text
     -- Details: orange
     TelescopePromptTitle     = { fg = c.orange, bg = c.bg_float }, -- prompt title: orange
     TelescopeResultsTitle     = { fg = c.orange, bg = c.bg_float },
