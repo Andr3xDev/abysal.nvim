@@ -9,8 +9,8 @@ function M.get(c, opts)
   -- stylua: ignore
   local ret = {
     -- General
-    RenderMarkdownBullet       = { fg = c.cyan },                         -- list bullets (* -)
-    RenderMarkdownDash         = { fg = c.orange },                       -- horizontal rule (---)
+    RenderMarkdownBullet       = { fg = c.fg_dark },                      -- list bullets (* -)
+    RenderMarkdownDash         = { fg = c.fg_dark },                      -- horizontal rule (---)
     RenderMarkdownSign         = { fg = c.fg_dark },                      -- sign column indicator
     RenderMarkdownIndent       = { fg = c.bg_highlight },                 -- indentation guides
     RenderMath                 = { fg = c.purple },                       -- math blocks
