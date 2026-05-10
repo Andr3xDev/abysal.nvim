@@ -23,10 +23,10 @@ function M.get(c, opts)
     RenderMarkdownCodeFallback = { fg = c.fg, bg = c.bg_dark },           -- code block fallback
     RenderMarkdownCodeInline   = { bg = c.terminal_black, fg = c.fg },    -- inline code span
 
-    -- Tables
-    RenderMarkdownTableHead    = { fg = c.orange, bold = true },          -- table header row
+    -- Tables (borders are cyan uniformly; header text is bold cyan)
+    RenderMarkdownTableHead    = { fg = c.cyan, bold = true },            -- table header row
     RenderMarkdownTableRow     = { fg = c.cyan },                         -- table body rows
-    RenderMarkdownTableFill    = { fg = c.fg_dark },                      -- table filler cells
+    RenderMarkdownTableFill    = { fg = c.cyan },                         -- table filler cells
 
     -- Links
     RenderMarkdownLink         = { fg = c.blue, underline = true },       -- link text
@@ -50,7 +50,7 @@ function M.get(c, opts)
   -- Headings: custom order (H1 orange → H2 cyan → H3 yellow → H4 red → H5 blue → H6 purple)
   local headings = { c.orange, c.cyan, c.yellow, c.red, c.blue, c.purple }
   for i, color in ipairs(headings) do
-    ret["RenderMarkdownH" .. i .. "Bg"] = { bg = Util.blend_bg(color, 0.10) }
+    ret["RenderMarkdownH" .. i .. "Bg"] = { bg = Util.blend_bg(color, 0.08) }
     ret["RenderMarkdownH" .. i .. "Fg"] = { fg = color, bold = true }
   end
 

@@ -248,15 +248,12 @@ function M.get(c, opts)
     ["@text.uri"]                   = "Underlined",
   }
 
-  for i, color in ipairs(c.rainbow) do
-    ret["@markup.heading." .. i .. ".markdown"] = { fg = color, bold = true, bg = Util.blend_bg(color, 0.1) }
+  -- Markdown headings: H1 orange → H2 cyan → H3 yellow → H4 red → H5 blue → H6 purple
+  -- (bg matches text color blended into background for subtle highlight)
+  local md_headings = { c.orange, c.cyan, c.yellow, c.red, c.blue, c.purple }
+  for i, color in ipairs(md_headings) do
+    ret["@markup.heading." .. i .. ".markdown"] = { fg = color, bold = true, bg = Util.blend_bg(color, 0.08) }
   end
-
-  -- Explicit markdown heading hierarchy (mirror: same roles as obsidian)
-  ret["@markup.heading.1.markdown"] = { fg = c.cyan, bold = true }
-  ret["@markup.heading.2.markdown"] = { fg = c.blue, bold = true }
-  ret["@markup.heading.3.markdown"] = { fg = c.purple, bold = true }
-  ret["@markup.heading.4.markdown"] = { fg = c.red, bold = true }
 
   return ret
 end
