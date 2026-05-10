@@ -4,141 +4,16 @@ local M = {}
 
 --- @param colors ColorScheme
 function M.generate(colors)
-  colors.search_bg = util.blend_bg(colors.info, 0.1)
-  colors.pmenusel = util.blend_bg(colors.fg_gutter, 0.8)
   local yazi = util.template(
     [[
-[mgr]
-# NOTE: can be combined with tmTheme (sublime colorshceme file) for preview code highlight
-# syntect_theme = "path/to/tmTheme"
-
-cwd = { fg = "${fg_dark}", italic = true }
-
-# Hovered
-hovered         = { bg = "${bg}" }
-preview_hovered = { bg = "${bg}" }
-
-# Find
-find_keyword  = { fg = "${bg_dark}", bg = "${orange}", bold = true }
-find_position = { fg = "${info}", bg = "${search_bg}", bold = true }
-
-# Marker
-marker_copied   = { fg = "${green}", bg = "${green}" }
-marker_cut      = { fg = "${red}", bg = "${red}" }
-marker_marked   = { fg = "${magenta}", bg = "${magenta}" }
-marker_selected = { fg = "${blue}", bg = "${blue}" }
-
-# Count
-count_copied   = { fg = "${bg}", bg = "${green}" }
-count_cut      = { fg = "${bg}", bg = "${red}" }
-count_selected = { fg = "${bg}", bg = "${blue}" }
-
-# Border
+[manager]
 border_symbol = "│"
 border_style  = { fg = "${cyan}" }
-
-# Tab
-[tabs]
-active   = { fg = "${black}", bg = "${blue}" }
-inactive = { fg = "${blue}", bg = "${fg_gutter}" }
-
-[mode]
-normal_main = { fg = "${black}", bg = "${blue}", bold = true }
-normal_alt  = { fg = "${blue}", bg = "${fg_gutter}" }
-
-select_main = { fg = "${black}", bg = "${magenta}", bold = true }
-select_alt  = { fg = "${magenta}", bg = "${fg_gutter}" }
-
-unset_main  = { fg = "${black}", bg = "${purple}", bold = true }
-unset_alt   = { fg = "${purple}", bg = "${fg_gutter}" }
 
 [status]
 overall   = { fg = "${fg}", bg = "${bg}" }
 sep_left  = { open = "", close = "" }
 sep_right = { open = "", close = "" }
-
-# Progress
-progress_label  = { fg = "${fg}", bold = true }
-progress_normal = { fg = "${blue0}", bg = "${bg}" }
-progress_error  = { fg = "${red1}", bg = "${bg}" }
-
-# Permissions
-perm_type  = { fg = "${blue}" }
-perm_read  = { fg = "${yellow}" }
-perm_write = { fg = "${red}" }
-perm_exec  = { fg = "${green}" }
-perm_sep   = { fg = "${terminal_black}" }
-
-[pick]
-border   = { fg = "${cyan}" }
-active   = { fg = "${fg}",  bg = "${bg}" }
-inactive = { fg = "${fg}", bg = "${bg}" }
-
-# Input
-[input]
-border   = { fg = "${cyan}" }
-title    = { fg = "${cyan}" }
-value    = { fg = "${purple}" }
-selected = { bg = "${bg}" }
-
-# Completion
-[cmp]
-border   = { fg = "${cyan}" }
-active   = { fg = "${fg}", bg = "${bg}" }
-inactive = { fg = "${fg}", bg = "${bg}" }
-
-icon_file    = ""
-icon_folder  = ""
-icon_command = ""
-
-# Tasks
-[tasks]
-border  = { fg = "${cyan}" }
-title   = { fg = "${cyan}" }
-hovered = { fg = "${fg}", bg = "${bg}" }
-
-# Which
-[which]
-cols            = 3
-mask            = { bg = "${bg}" }
-cand            = { fg = "${cyan}" }
-rest            = { fg = "${blue}" }
-desc            = { fg = "${magenta}" }
-separator       = " ➜ "
-separator_style = { fg = "${comment}" }
-
-# Confirm
-[confirm]
-border  = { fg = "${cyan}" }
-title   = { fg = "${cyan}" }
-content = {}
-list    = {}
-btn_yes = { bg = "${bg}" }
-btn_no  = {}
-btn_labels = [ "  [Y]es  ", "  (N)o  " ]
-
-# Spot
-[spot]
-border  = { fg = "${cyan}" }
-title   = { fg = "${cyan}" }
-
-# Notify
-[notify]
-title_info  = { fg = "${info}" }
-title_warn  = { fg = "${warning}" }
-title_error = { fg = "${error}" }
-
-icon_error = ""
-icon_warn = ""
-icon_info = ""
-
-# Help
-[help]
-on      = { fg = "${green}" }
-run     = { fg = "${magenta}" }
-desc    = { fg = "${cyan}" }
-hovered = { bg = "${bg}" }
-footer  = { fg = "${fg}", bg = "${bg}" }
 
 [filetype]
 
