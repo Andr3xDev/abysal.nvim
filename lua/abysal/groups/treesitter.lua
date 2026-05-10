@@ -70,7 +70,7 @@ function M.get(c, opts)
     ["@markup.link.url"]            = { fg = c.yellow, underline = true }, -- URLs: sand
     ["@markup.list"]                = { fg = c.fg_dark }, -- For special punctutation that does not fall in the categories before.
     ["@markup.list.checked"]        = { fg = c.cyan }, -- [x]: cyan
-    ["@markup.list.markdown"]       = { fg = c.orange, bold = true },
+    ["@markup.list.markdown"]       = { fg = c.cyan, bold = true },
     ["@markup.list.unchecked"]      = { fg = c.fg_dark }, -- [ ]: fg_dark
     ["@markup.math"]                = "Special",
     ["@markup.raw"]                 = { fg = c.red }, -- inline code: red
@@ -95,7 +95,7 @@ function M.get(c, opts)
     ["@punctuation.bracket"]        = { fg = c.fg_dark }, -- For brackets and parens.
     ["@punctuation.delimiter"]      = { fg = c.fg_dark }, -- For delimiters ie: `.`
     ["@punctuation.special"]        = { fg = c.fg_dark }, -- For special symbols (e.g. `{}` in string interpolation)
-    ["@punctuation.special.markdown"] = { fg = c.orange }, -- For special symbols (e.g. `{}` in string interpolation)
+    ["@punctuation.special.markdown"] = { fg = c.cyan }, -- markdown bullets/special punctuation
     ["@string"]                     = "String",
     ["@string.documentation"]       = { fg = c.yellow },
     ["@string.escape"]              = { fg = c.yellow }, -- For escape characters within a string.
