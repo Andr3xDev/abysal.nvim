@@ -49,7 +49,6 @@ function M.setup(opts)
     or colors.bg
 
   colors.bg_float = opts.styles.floats == "transparent" and colors.none
-    or opts.styles.floats == "dark" and colors.bg_dark
     or colors.bg
 
   colors.bg_visual = Util.blend_bg(colors.blue0, 0.4)
