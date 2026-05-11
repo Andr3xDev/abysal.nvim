@@ -7,16 +7,15 @@ function M.get(c, opts)
   -- stylua: ignore
   return {
     -- Structure: cyan
-    WhichKey           = { fg = c.cyan }, -- top-level label
-    WhichKeyNormal    = { fg = c.fg, bg = c.bg_sidebar },
-    WhichKeyBorder    = { fg = c.cyan, bg = c.bg_sidebar }, -- border: cyan
-    WhichKeyFloat     = { fg = c.cyan, bg = c.bg_float }, -- floating: cyan border
-    -- Separator
-    WhichKeySeparator = { fg = c.border_highlight },
-    -- Details: orange
-    WhichKeyGroup     = { fg = c.orange }, -- group name: orange
-    WhichKeyDesc       = { fg = c.orange }, -- key-binding description: orange
-    WhichKeyValue     = { fg = c.fg_dark }, -- value hint: subdued
+    WhichKey           = { fg = c.orange }, -- label principal: iconos y numeros en naranja
+    WhichKeyNormal     = { fg = c.fg, bg = c.bg_float },
+    WhichKeyBorder     = { fg = c.cyan, bg = c.bg_float }, -- borde cyan, fondo base
+    WhichKeyFloat      = { fg = c.cyan, bg = c.bg_float }, -- floating window
+    WhichKeySeparator = { fg = c.cyan }, -- separador: cyan
+    -- Details: blue
+    WhichKeyGroup     = { fg = c.blue }, -- nombre de grupo/opciones: azul
+    WhichKeyDesc      = { fg = c.blue }, -- descripcion del keybinding: azul
+    WhichKeyValue     = { fg = c.fg }, -- value hint: texto principal
   }
 end
 
