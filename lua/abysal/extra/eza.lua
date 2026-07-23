@@ -10,103 +10,103 @@ colourful: true
 filekinds:
   normal: { foreground: "${fg}" }
   directory: { foreground: "${blue}" }
-  symlink: { foreground: "${blue1}" }
-  pipe: { foreground: "${terminal_black}" }
-  block_device: { foreground: "${yellow}" }
-  char_device: { foreground: "${yellow}" }
-  socket: { foreground: "${terminal_black}" }
-  special: { foreground: "${purple}" }
+  symlink: { foreground: "${primary_anchor}" }
+  pipe: { foreground: "${bg_elevated}" }
+  block_device: { foreground: "${amber}" }
+  char_device: { foreground: "${amber}" }
+  socket: { foreground: "${bg_elevated}" }
+  special: { foreground: "${blue}" }
   executable: { foreground: "${green}" }
-  mount_point: { foreground: "${blue6}" }
+  mount_point: { foreground: "${blue}" }
 
 perms:
-  user_read: { foreground: "${blue1}" }
-  user_write: { foreground: "${magenta}" }
+  user_read: { foreground: "${primary_anchor}" }
+  user_write: { foreground: "${primary}" }
   user_execute_file: { foreground: "${green}" }
   user_execute_other: { foreground: "${green}" }
-  group_read: { foreground: "${blue1}" }
-  group_write: { foreground: "${orange}" }
+  group_read: { foreground: "${primary_anchor}" }
+  group_write: { foreground: "${primary}" }
   group_execute: { foreground: "${green}" }
-  other_read: { foreground: "${blue1}" }
-  other_write: { foreground: "${magenta2}" }
+  other_read: { foreground: "${primary_anchor}" }
+  other_write: { foreground: "${primary_anchor}" }
   other_execute: { foreground: "${green}" }
-  special_user_file: { foreground: "${magenta2}" }
-  special_other: { foreground: "${red1}" }
-  attribute: { foreground: "${dark5}" }
+  special_user_file: { foreground: "${primary_anchor}" }
+  special_other: { foreground: "${red}" }
+  attribute: { foreground: "${fg_secondary}" }
 
 size:
-  major: { foreground: "${blue1}" }
-  minor: { foreground: "${purple}" }
-  number_byte: { foreground: "${fg_dark}" }
-  number_kilo: { foreground: "${blue5}" }
-  number_mega: { foreground: "${blue1}" }
-  number_giga: { foreground: "${orange}" }
-  number_huge: { foreground: "${magenta2}" }
-  unit_byte: { foreground: "${fg_dark}" }
-  unit_kilo: { foreground: "${blue5}" }
-  unit_mega: { foreground: "${blue1}" }
-  unit_giga: { foreground: "${orange}" }
-  unit_huge: { foreground: "${magenta2}" }
+  major: { foreground: "${primary_anchor}" }
+  minor: { foreground: "${blue}" }
+  number_byte: { foreground: "${fg_secondary}" }
+  number_kilo: { foreground: "${fg_muted}" }
+  number_mega: { foreground: "${primary_anchor}" }
+  number_giga: { foreground: "${primary}" }
+  number_huge: { foreground: "${primary_anchor}" }
+  unit_byte: { foreground: "${fg_secondary}" }
+  unit_kilo: { foreground: "${fg_muted}" }
+  unit_mega: { foreground: "${primary_anchor}" }
+  unit_giga: { foreground: "${primary}" }
+  unit_huge: { foreground: "${primary_anchor}" }
 
 users:
-  user_you: { foreground: "${blue0}" }
-  user_root: { foreground: "${magenta}" }
-  user_other: { foreground: "${blue1}" }
-  group_yours: { foreground: "${blue5}" }
-  group_root: { foreground: "${magenta}" }
+  user_you: { foreground: "${selection_bg}" }
+  user_root: { foreground: "${primary}" }
+  user_other: { foreground: "${primary_anchor}" }
+  group_yours: { foreground: "${fg_muted}" }
+  group_root: { foreground: "${primary}" }
   group_other: { foreground: "${fg}" }
 
 links:
-  normal: { foreground: "${blue5}" }
-  multi_link_file: { foreground: "${blue1}" }
+  normal: { foreground: "${fg_muted}" }
+  multi_link_file: { foreground: "${primary_anchor}" }
 
 git:
   new: { foreground: "${green}" }
-  modified: { foreground: "${magenta}" }
-  deleted: { foreground: "${red1}" }
-  renamed: { foreground: "${blue1}" }
-  typechange: { foreground: "${blue1}" }
-  ignored: { foreground: "${dark3}" }
-  conflicted: { foreground: "${orange}" }
+  modified: { foreground: "${primary}" }
+  deleted: { foreground: "${red}" }
+  renamed: { foreground: "${primary_anchor}" }
+  typechange: { foreground: "${primary_anchor}" }
+  ignored: { foreground: "${fg_muted}" }
+  conflicted: { foreground: "${primary}" }
 
 git_repo:
-  branch_main: { foreground: "${dark5}" }
-  branch_other: { foreground: "${blue6}" }
+  branch_main: { foreground: "${fg_secondary}" }
+  branch_other: { foreground: "${blue}" }
   git_clean: { foreground: "${bg_highlight}" }
-  git_dirty: { foreground: "${magenta}" }
+  git_dirty: { foreground: "${primary}" }
 
 security_context:
-  colon: { foreground: "${dark3}" }
-  user: { foreground: "${dark5}" }
-  role: { foreground: "${blue1}" }
+  colon: { foreground: "${fg_muted}" }
+  user: { foreground: "${fg_secondary}" }
+  role: { foreground: "${primary_anchor}" }
   typ: { foreground: "${bg_search}" }
-  range: { foreground: "${purple}" }
+  range: { foreground: "${blue}" }
 
 file_type:
-  image: { foreground: "${blue5}" }
-  video: { foreground: "${blue6}" }
-  music: { foreground: "${green1}" }
-  lossless: { foreground: "${green2}" }
-  crypto: { foreground: "${red1}" }
-  document: { foreground: "${fg_dark}" }
-  compressed: { foreground: "${orange}" }
-  temp: { foreground: "${dark5}" }
-  compiled: { foreground: "${dark5}" }
-  build: { foreground: "${teal}" }
-  source: { foreground: "${magenta}" }
+  image: { foreground: "${fg_muted}" }
+  video: { foreground: "${blue}" }
+  music: { foreground: "${green_anchor}" }
+  lossless: { foreground: "${green}" }
+  crypto: { foreground: "${red}" }
+  document: { foreground: "${fg_secondary}" }
+  compressed: { foreground: "${primary}" }
+  temp: { foreground: "${fg_secondary}" }
+  compiled: { foreground: "${fg_secondary}" }
+  build: { foreground: "${primary_anchor}" }
+  source: { foreground: "${primary}" }
 
 punctuation: { foreground: "${bg_highlight}" }
-date: { foreground: "${yellow}" }
-inode: { foreground: "${dark5}" }
-blocks: { foreground: "${dark5}" }
-header: { foreground: "${fg_dark}" }
-octal: { foreground: "${orange}" }
-flags: { foreground: "${purple}" }
+date: { foreground: "${amber}" }
+inode: { foreground: "${fg_secondary}" }
+blocks: { foreground: "${fg_secondary}" }
+header: { foreground: "${fg_secondary}" }
+octal: { foreground: "${primary}" }
+flags: { foreground: "${blue}" }
 
-symlink_path: { foreground: "${blue5}" }
-control_char: { foreground: "${orange}" }
-broken_symlink: { foreground: "${magenta2}" }
-broken_path_overlay: { foreground: "${magenta2}" }]],
+symlink_path: { foreground: "${fg_muted}" }
+control_char: { foreground: "${primary}" }
+broken_symlink: { foreground: "${primary_anchor}" }
+broken_path_overlay: { foreground: "${primary_anchor}" }]],
     colors
   )
 

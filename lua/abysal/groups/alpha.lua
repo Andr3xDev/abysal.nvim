@@ -6,11 +6,11 @@ M.url = "https://github.com/goolord/alpha-nvim"
 function M.get(c, opts)
   -- stylua: ignore
   return {
-    AlphaShortcut    = { fg = c.orange },
+    AlphaShortcut    = { fg = c.primary },
     AlphaHeader      = { fg = c.blue },
-    AlphaHeaderLabel = { fg = c.orange },
-    AlphaFooter      = { fg = c.blue1 },
-    AlphaButtons     = { fg = c.cyan },
+    AlphaHeaderLabel = { fg = c.primary },
+    AlphaFooter      = { fg = c.primary_anchor },
+    AlphaButtons     = { fg = c.blue },
   }
 end
 

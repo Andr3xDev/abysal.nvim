@@ -15,31 +15,31 @@ function M.generate(colors)
 *.default=true
 *.normal=true
 
-border.fg=${fg_gutter}
+border.fg=${fg_muted}
 border.bg=${bg}
 
 title.fg=${black}
 title.bg=${blue}
 title.bold=true
 
-header.fg=${red}
+header.fg=${gold}
 #header.bg=${bg}
 header.bold=true
 
-tab.fg=${fg_gutter}
+tab.fg=${fg_muted}
 tab.bg=${bg_statusline}
 tab.selected.fg=${black}
 tab.selected.bg=${blue}
 
 statusline_default.fg=${fg}
-statusline_default.bg=${bg_dark}
+statusline_default.bg=${bg_elevated}
 statusline_error.fg=${error}
-statusline_success.fg=${green1}
+statusline_success.fg=${green_anchor}
 
 *error.bold=true
 *error.fg=${error}
 *warning.fg=${warning}
-*success.fg=${green1}
+*success.fg=${green_anchor}
 
 dirlist_*.bg=${bg}
 dirlist_*.fg=${fg}
@@ -52,24 +52,24 @@ msglist_*.selected.bg=${bg_visual}
 #msglist_*.selected.fg=${fg}
 msglist_unread.bold=true
 msglist_unread.fg=${blue}
-msglist_marked.fg=${orange}
+msglist_marked.fg=${primary}
 msglist_thread_folded.italic=true
 msglist_thread_folded.underline=true
 msglist_gutter.bg=${bg_highlight}
-msglist_pill.bg=${fg_gutter}
+msglist_pill.bg=${fg_muted}
 msglist_pill.reverse=false
 
 part_*.fg=${fg}
 part_*.bg=${bg_popup}
 part_*.selected.fg=${fg}
-part_*.selected.bg=${fg_gutter}
+part_*.selected.bg=${fg_muted}
 
 completion_default.bg=${bg_popup}
 completion_default.fg=${fg}
-completion_default.selected.bg=${fg_gutter}
+completion_default.selected.bg=${fg_muted}
 completion_default.selected.fg=${fg}
 completion_gutter.bg=${bg_highlight}
-completion_pill.bg=${fg_gutter}
+completion_pill.bg=${fg_muted}
 completion_pill.reverse=false
 
 spinner.bg=${bg}
@@ -87,20 +87,20 @@ default.selected.bg=${bg_visual}
 
 [viewer]
 url.underline=true
-url.fg=${dark5}
-header.fg=${purple}
-signature.fg=${magenta}
+url.fg=${fg_secondary}
+header.fg=${blue}
+signature.fg=${primary}
 diff_add.fg=${diff.add}
 diff_del.fg=${diff.delete}
 diff_meta.bold=true
 diff_chunk.dim=true
-quote_1.fg=${yellow}
+quote_1.fg=${amber}
 quote_2.fg=${green}
-quote_3.fg=${teal}
+quote_3.fg=${primary_anchor}
 quote_3.dim=true
 quote_4.fg=${blue}
 quote_4.dim=true
-quote_x.fg=${comment}
+quote_x.fg=${fg_muted}
 quote_x.dim=true
 
 ]],

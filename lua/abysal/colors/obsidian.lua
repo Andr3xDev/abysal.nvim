@@ -1,57 +1,51 @@
 ---@type Palette
 return {
   -- Backgrounds
-  bg            = "#1c1c1c", -- base: main editor background
-  bg_dark       = "#262626", -- surface: secondary background (sidebars/panels)
-  bg_dark1      = "#0f0f0f", -- darkest layer
-  bg_highlight  = "#333333", -- cursor line, medium selection (highlight2)
+  bg              = "#0E161A", -- base: main editor background
+  bg_dark         = "#0A0F11", -- darkest layer
+  bg_elevated     = "#152025", -- surface: panels, popups, statusline
+  bg_highlight    = "#19262C", -- cursor line, medium selection
 
-  -- Foregrounds
-  fg            = "#d4d4d4", -- main text
-  fg_dark       = "#8c8c8c", -- secondary text, statusline
-  fg_gutter     = "#525252", -- line numbers, gutter
+  -- Borders
+  border_subtle   = "#19262C", -- barely visible separators
+  border          = "#1D2C34", -- default window borders
+  border_strong   = "#324A54", -- emphasized borders
+  border_emphasis = "#516E7A", -- focused/active borders
 
-  -- Grays
-  comment       = "#737373", -- color8: comments (always dimmer than fg_dark)
-  dark3         = "#737373", -- NonText, SpecialKey
-  dark5         = "#8c8c8c", -- Conceal, qfLineNr
+  -- Text
+  fg              = "#E3EBEA", -- main text
+  fg_secondary    = "#7A8B8E", -- secondary text, statusline
+  fg_muted        = "#5B6E72", -- comments, gutter, disabled text
 
-  -- Blue family (color5: steel blue)
-  blue          = "#6b92e3", -- functions, titles, labels
-  blue0         = "#2d4299", -- bg_visual source, bg_search
-  blue1         = "#89aae8", -- Special, Type, border highlight
-  blue2         = "#52c9b0", -- info diagnostics
-  blue5         = "#8ca8e0", -- operators, punctuation (muted blue)
-  blue6         = "#b0ccf0", -- regex strings (light blue)
-  blue7         = "#2c4470", -- diff change bg source, inlay hints
+  -- Identity turquoise
+  primary         = "#2DD4BF", -- keywords, functions: primary accent
+  primary_text    = "#2DD4BF", -- primary accent on text
+  primary_anchor  = "#14B8A6", -- links, deeper turquoise anchor
+  primary_muted   = "#1F8F82", -- structural/secondary turquoise accent
+  mauve           = "#AB8AB7", -- mauve: property/field/member access (distinct hue, ~285°, unused territory)
 
-  -- Teal/green family (color1: turquoise)
-  cyan          = "#52c9b0", -- keywords, preprocessor
-  teal          = "#52c9b0", -- markup links
-  green         = "#52c9b0", -- strings, characters
-  green1        = "#52c9b0", -- @property, @variable.member, healthSuccess
-  green2        = "#3ea897", -- diff add bg source (slightly muted)
+  -- Functional
+  amber           = "#F5B84D", -- warnings
+  amber_mid       = "#D9973A", -- numbers, constants, booleans
+  coral           = "#FF6B52", -- vivid warm accent
+  red             = "#FF6369", -- errors, tags, builtins
+  red_anchor      = "#E5484D", -- deeper red anchor
+  green           = "#5FD988", -- success, diagnostics ok
+  green_anchor    = "#3DB667", -- deeper green anchor
+  seafoam         = "#6EB99A", -- seafoam: numbers/booleans/constants (distinct from strings/types on gold)
+  blue            = "#6C93E8", -- generic detail accent
+  gold            = "#E8C468", -- strings, types
 
-  -- Warm colors
-  orange        = "#e28e5a", -- constants, MatchParen, IncSearch bg
-  yellow        = "#d1b171", -- warnings, @variable.parameter (sand)
+  -- Detail
+  text_on_solid   = "#0C1214", -- text painted on solid accent backgrounds
 
-  -- Red family (color4: soft red)
-  red           = "#d47779", -- @tag, @variable.builtin
-  red1          = "#c44040", -- errors, diff delete bg source
-
-  -- Purple family (color6: lavender)
-  magenta       = "#b87bce", -- identifiers, statements, @keyword.function
-  magenta2      = "#d45daa", -- vivid accent (rarely seen, Foo test highlight)
-  purple        = "#b87bce", -- @keyword
-
-  -- Terminal
-  terminal_black = "#2e2e2e", -- terminal black, markdown inline code bg
+  -- Selection
+  selection_bg    = "#17393B", -- visual selection background
 
   -- Git indicators (shown in gutter)
   git = {
-    add    = "#52c9b0", -- color1: turquoise
-    change = "#6b92e3", -- color5: steel blue
-    delete = "#d47779", -- color4: soft red
+    add    = "#5FD988", -- green
+    change = "#F5B84D", -- amber (doc: git modified = amber, not blue)
+    delete = "#FF6369", -- red
   },
 }

@@ -8,20 +8,20 @@ function M.get(c, opts)
   return {
     -- General
     DashboardHeader           = { fg = c.blue },
-    DashboardFooter           = { fg = c.blue1 },
+    DashboardFooter           = { fg = c.primary_anchor },
     -- Hyper theme
-    DashboardProjectTitle     = { fg = c.cyan },
-    DashboardProjectTitleIcon = { fg = c.orange },
-    DashboardProjectIcon      = { fg = c.yellow },
-    DashboardMruTitle         = { fg = c.cyan },
-    DashboardMruIcon          = { fg = c.purple },
+    DashboardProjectTitle     = { fg = c.blue },
+    DashboardProjectTitleIcon = { fg = c.primary },
+    DashboardProjectIcon      = { fg = c.amber },
+    DashboardMruTitle         = { fg = c.blue },
+    DashboardMruIcon          = { fg = c.blue },
     DashboardFiles            = { fg = c.blue },
-    DashboardShortCutIcon     = { fg = c.magenta },
+    DashboardShortCutIcon     = { fg = c.primary },
     -- Doome theme
-    DashboardDesc             = { fg = c.cyan },
-    DashboardKey              = { fg = c.orange },
-    DashboardIcon             = { fg = c.cyan },
-    DashboardShortCut         = { fg = c.cyan },
+    DashboardDesc             = { fg = c.blue },
+    DashboardKey              = { fg = c.primary },
+    DashboardIcon             = { fg = c.blue },
+    DashboardShortCut         = { fg = c.blue },
   }
 end
 

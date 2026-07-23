@@ -9,72 +9,72 @@ function M.get(c, opts)
   -- stylua: ignore
   local ret = {
     -- ============================================
-    -- NOTIFIER: borders cyan, icons by severity
+    -- NOTIFIER: borders normal, icons by severity
     -- ============================================
     SnacksNotifierDebug       = { fg = c.fg, bg = opts.transparent and c.none or c.bg },
-    SnacksNotifierBorderDebug = { fg = c.cyan, bg = opts.transparent and c.none or c.bg }, -- border: cyan
-    SnacksNotifierIconDebug   = { fg = c.comment },
-    SnacksNotifierTitleDebug  = { fg = c.comment },
+    SnacksNotifierBorderDebug = { fg = c.border, bg = opts.transparent and c.none or c.bg }, -- border: normal
+    SnacksNotifierIconDebug   = { fg = c.fg_muted },
+    SnacksNotifierTitleDebug  = { fg = c.fg_muted },
     SnacksNotifierError       = { fg = c.fg, bg = opts.transparent and c.none or c.bg },
-    SnacksNotifierBorderError = { fg = c.cyan, bg = opts.transparent and c.none or c.bg }, -- border: cyan
+    SnacksNotifierBorderError = { fg = c.border, bg = opts.transparent and c.none or c.bg }, -- border: normal
     SnacksNotifierIconError   = { fg = c.error },
     SnacksNotifierTitleError  = { fg = c.error },
     SnacksNotifierInfo        = { fg = c.fg, bg = opts.transparent and c.none or c.bg },
-    SnacksNotifierBorderInfo  = { fg = c.cyan, bg = opts.transparent and c.none or c.bg }, -- border: cyan
+    SnacksNotifierBorderInfo  = { fg = c.border, bg = opts.transparent and c.none or c.bg }, -- border: normal
     SnacksNotifierIconInfo    = { fg = c.info },
     SnacksNotifierTitleInfo   = { fg = c.info },
     SnacksNotifierTrace       = { fg = c.fg, bg = opts.transparent and c.none or c.bg },
-    SnacksNotifierBorderTrace = { fg = c.cyan, bg = opts.transparent and c.none or c.bg }, -- border: cyan
-    SnacksNotifierIconTrace   = { fg = c.purple },
-    SnacksNotifierTitleTrace  = { fg = c.purple },
+    SnacksNotifierBorderTrace = { fg = c.border, bg = opts.transparent and c.none or c.bg }, -- border: normal
+    SnacksNotifierIconTrace   = { fg = c.blue },
+    SnacksNotifierTitleTrace  = { fg = c.blue },
     SnacksNotifierWarn        = { fg = c.fg, bg = opts.transparent and c.none or c.bg },
-    SnacksNotifierBorderWarn  = { fg = c.cyan, bg = opts.transparent and c.none or c.bg }, -- border: cyan
+    SnacksNotifierBorderWarn  = { fg = c.border, bg = opts.transparent and c.none or c.bg }, -- border: normal
     SnacksNotifierIconWarn    = { fg = c.warning },
     SnacksNotifierTitleWarn   = { fg = c.warning },
 
     -- ============================================
     -- DASHBOARD: cyan for structure, orange for keys
     -- ============================================
-    SnacksDashboardHeader     = { fg = c.cyan }, -- header: cyan
-    SnacksDashboardFooter     = { fg = c.cyan },
+    SnacksDashboardHeader     = { fg = c.blue }, -- header: cyan
+    SnacksDashboardFooter     = { fg = c.blue },
     SnacksDashboardDesc       = { fg = c.blue }, -- description: blue
-    SnacksDashboardIcon       = { fg = c.blue1 },
-    SnacksDashboardKey        = { fg = c.orange }, -- key: orange
-    SnacksDashboardSpecial    = { fg = c.purple },
-    SnacksDashboardDir        = { fg = c.dark3 },
+    SnacksDashboardIcon       = { fg = c.primary_anchor },
+    SnacksDashboardKey        = { fg = c.primary }, -- key: orange
+    SnacksDashboardSpecial    = { fg = c.blue },
+    SnacksDashboardDir        = { fg = c.fg_muted },
 
     -- ============================================
-    -- INPUT / PICKER: borders cyan, titles orange
+    -- INPUT / PICKER: borders strong (active input), titles orange
     -- ============================================
-    SnacksInputBorder         = { fg = c.cyan, bg = c.bg_float }, -- input border: cyan
-    SnacksInputTitle         = { fg = c.orange, bg = c.bg_float }, -- title: orange
-    SnacksInputIcon           = { fg = c.blue1 },
-    SnacksPickerInputBorder   = { fg = c.cyan, bg = c.bg_float }, -- border: cyan
-    SnacksPickerInputTitle    = { fg = c.orange, bg = c.bg_float }, -- title: orange
-    SnacksPickerBoxTitle      = { fg = c.orange, bg = c.bg_float }, -- title: orange
-    SnacksPickerSelected      = { fg = c.bg, bg = c.yellow, bold = true }, -- selected: yellow bg, dark text
-    SnacksPickerPickWinCurrent= { fg = c.bg, bg = c.yellow, bold = true }, -- current win: yellow
+    SnacksInputBorder         = { fg = c.border_strong, bg = c.bg_float }, -- input border: strong
+    SnacksInputTitle         = { fg = c.primary, bg = c.bg_float }, -- title: orange
+    SnacksInputIcon           = { fg = c.primary_anchor },
+    SnacksPickerInputBorder   = { fg = c.border_strong, bg = c.bg_float }, -- border: strong
+    SnacksPickerInputTitle    = { fg = c.primary, bg = c.bg_float }, -- title: orange
+    SnacksPickerBoxTitle      = { fg = c.primary, bg = c.bg_float }, -- title: orange
+    SnacksPickerSelected      = { fg = c.bg, bg = c.amber, bold = true }, -- selected: yellow bg, dark text
+    SnacksPickerPickWinCurrent= { fg = c.bg, bg = c.amber, bold = true }, -- current win: yellow
     SnacksPickerPickWin       = { fg = c.fg, bg = c.bg_search, bold = true },
 
     -- ============================================
     -- PROFILER
     -- ============================================
-    SnacksProfilerIconInfo    = { fg = c.cyan },
-    SnacksProfilerBadgeInfo   = { fg = c.cyan },
-    SnacksProfilerIconTrace   = { fg = c.purple },
-    SnacksProfilerBadgeTrace  = { fg = c.purple },
+    SnacksProfilerIconInfo    = { fg = c.blue },
+    SnacksProfilerBadgeInfo   = { fg = c.blue },
+    SnacksProfilerIconTrace   = { fg = c.blue },
+    SnacksProfilerBadgeTrace  = { fg = c.blue },
     SnacksFooterKey           = "SnacksProfilerIconInfo",
     SnacksFooterDesc          = "SnacksProfilerBadgeInfo",
 
     -- ============================================
     -- INDIENTS / MISC
     -- ============================================
-    SnacksIndent              = { fg = c.fg_gutter, nocombine = true },
-    SnacksIndentScope         = { fg = c.blue1, nocombine = true },
-    SnacksZenIcon             = { fg = c.purple },
-    SnacksGhLabel             = { fg = c.blue1, bold = true },
-    SnacksDiffLabel           = { fg = c.blue1, bold = true },
-    SnacksGhDiffHeader        = { fg = c.blue1 },
+    SnacksIndent              = { fg = c.fg_muted, nocombine = true },
+    SnacksIndentScope         = { fg = c.primary_anchor, nocombine = true },
+    SnacksZenIcon             = { fg = c.blue },
+    SnacksGhLabel             = { fg = c.primary_anchor, bold = true },
+    SnacksDiffLabel           = { fg = c.primary_anchor, bold = true },
+    SnacksGhDiffHeader        = { fg = c.primary_anchor },
   }
   for i, color in ipairs(c.rainbow) do
     ret["SnacksIndent" .. i] = { fg = color, nocombine = true }

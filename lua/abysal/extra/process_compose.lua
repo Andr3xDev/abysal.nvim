@@ -9,38 +9,38 @@ style:
   name: ${_name}
   body:
     fgColor: '${fg}'
-    bgColor: '${bg_dark}'
-    secondaryTextColor: '${fg_dark}'
+    bgColor: '${bg_elevated}'
+    secondaryTextColor: '${fg_secondary}'
     tertiaryTextColor: '${fg_visual}'
-    borderColor: '${fg_gutter}'
+    borderColor: '${fg_muted}'
   stat_table:
-    keyFgColor: '${yellow}'
+    keyFgColor: '${amber}'
     valueFgColor: '${fg}'
-    logoColor: '${yellow}'
+    logoColor: '${amber}'
   proc_table:
     fgColor: '${blue}'
-    fgWarning: '${yellow}'
-    fgPending: '${dark3}'
+    fgWarning: '${amber}'
+    fgPending: '${fg_muted}'
     fgCompleted: '${green}'
-    fgError: '${red1}'
+    fgError: '${red}'
     headerFgColor: '${fg}'
   help:
-    fgColor: '${blue1}'
+    fgColor: '${primary_anchor}'
     keyColor: '${fg}'
     hlColor: '${green}'
-    categoryFgColor: '${blue5}'
+    categoryFgColor: '${fg_muted}'
   dialog:
-    fgColor: '${blue1}'
+    fgColor: '${primary_anchor}'
     bgColor: '${black}'
     contrastBgColor: '${bg}'
-    attentionBgColor: '${red1}'
+    attentionBgColor: '${red}'
     buttonFgColor: '${black}'
     buttonBgColor: '${bg_highlight}'
     buttonFocusFgColor: '${black}'
     buttonFocusBgColor: '${blue}'
-    labelFgColor: '${yellow}'
+    labelFgColor: '${amber}'
     fieldFgColor: '${black}'
-    fieldBgColor: '${blue7}'
+    fieldBgColor: '${blue}'
 ]=],
     colors
   )

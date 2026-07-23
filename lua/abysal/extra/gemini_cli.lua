@@ -12,7 +12,7 @@ function M.generate(colors)
   "type": "custom",
   "text": {
     "primary": "${fg}",
-    "secondary": "${fg_dark}",
+    "secondary": "${fg_secondary}",
     "response": "${fg}"
   },
   "background": {
@@ -27,25 +27,25 @@ function M.generate(colors)
     "focused": "${blue}"
   },
   "ui": {
-    "comment": "${comment}",
-    "symbol": "${fg_dark}",
-    "gradient": ["${blue}", "${magenta}", "${cyan}"]
+    "comment": "${fg_muted}",
+    "symbol": "${fg_secondary}",
+    "gradient": ["${blue}", "${primary}", "${blue}"]
   },
   "Background": "${bg}",
   "Foreground": "${fg}",
-  "LightBlue": "${blue1}",
-  "AccentBlue": "${magenta}",
-  "AccentPurple": "${purple}",
-  "AccentCyan": "${cyan}",
-  "AccentGreen": "${orange}",
+  "LightBlue": "${primary_anchor}",
+  "AccentBlue": "${primary}",
+  "AccentPurple": "${blue}",
+  "AccentCyan": "${blue}",
+  "AccentGreen": "${primary}",
   "AccentYellow": "${green}",
-  "AccentRed": "${red}",
+  "AccentRed": "${gold}",
   "DiffAdded": "${diff.add}",
   "DiffRemoved": "${diff.delete}",
-  "Comment": "${comment}",
-  "Gray": "${fg_dark}",
-  "DarkGray": "${bg_dark}",
-  "GradientColors": ["${blue}", "${magenta}", "${cyan}"]
+  "Comment": "${fg_muted}",
+  "Gray": "${fg_secondary}",
+  "DarkGray": "${bg_elevated}",
+  "GradientColors": ["${blue}", "${primary}", "${blue}"]
 }
 ]],
     colors

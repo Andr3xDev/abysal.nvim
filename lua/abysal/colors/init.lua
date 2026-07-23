@@ -28,69 +28,68 @@ function M.setup(opts)
   colors.none = "NONE"
 
   colors.diff = {
-    add = Util.blend_bg(colors.green2, 0.25),
-    delete = Util.blend_bg(colors.red1, 0.25),
-    change = Util.blend_bg(colors.blue7, 0.15),
-    text = colors.blue7,
+    add = Util.blend_bg(colors.green, 0.25),
+    delete = Util.blend_bg(colors.red, 0.25),
+    change = Util.blend_bg(colors.blue, 0.15),
+    text = colors.blue,
   }
 
-  colors.git.ignore = colors.dark3
-  colors.black = Util.blend_bg(colors.bg, 0.8, "#000000")
-  colors.border_highlight = Util.blend_bg(colors.blue1, 0.8)
-  colors.border = colors.black
+  colors.git.ignore = colors.fg_muted
+  colors.black = colors.bg_dark
+  colors.border_highlight = colors.border_emphasis
 
-  -- Popups and statusline always get a dark background
-  colors.bg_popup = colors.bg_dark
-  colors.bg_statusline = colors.bg_dark
+  -- Popups and statusline always get an elevated background
+  colors.bg_popup = colors.bg_elevated
+  colors.bg_statusline = colors.bg_elevated
 
   -- Sidebar and Floats are configurable
   colors.bg_sidebar = opts.styles.sidebars == "transparent" and colors.none
-    or opts.styles.sidebars == "dark" and colors.bg_dark
+    or opts.styles.sidebars == "dark" and colors.bg_elevated
     or colors.bg
 
   colors.bg_float = opts.styles.floats == "transparent" and colors.none
     or colors.bg
 
-  colors.bg_visual = Util.blend_bg(colors.blue0, 0.4)
-  colors.bg_search = colors.blue0
-  colors.fg_sidebar = colors.fg_dark
+  colors.bg_visual = colors.selection_bg
+  colors.bg_search = Util.blend_bg(colors.primary, 0.35)
+  colors.fg_sidebar = colors.fg_secondary
   colors.fg_float = colors.fg
 
-  colors.error = colors.red1
-  colors.todo = colors.blue
-  colors.warning = colors.yellow
-  colors.info = colors.blue2
-  colors.hint = colors.teal
+  colors.error = colors.red
+  colors.todo = colors.amber
+  colors.warning = colors.amber
+  colors.info = colors.blue
+  colors.hint = colors.fg_muted
 
   colors.rainbow = {
-    colors.blue,
-    colors.yellow,
+    colors.primary,
+    colors.amber,
     colors.green,
-    colors.teal,
-    colors.magenta,
-    colors.purple,
-    colors.orange,
+    colors.blue,
+    colors.gold,
     colors.red,
+    colors.primary_muted,
+    colors.amber_mid,
   }
 
   -- stylua: ignore
   --- @class TerminalColors
   colors.terminal = {
-    black          = colors.black,
-    black_bright   = colors.terminal_black,
-    red            = colors.red,
-    red_bright     = Util.brighten(colors.red),
-    green          = colors.green,
-    green_bright   = Util.brighten(colors.green),
-    yellow         = colors.yellow,
-    yellow_bright  = Util.brighten(colors.yellow),
-    blue           = colors.blue,
-    blue_bright    = Util.brighten(colors.blue),
-    magenta        = colors.magenta,
-    magenta_bright = Util.brighten(colors.magenta),
-    cyan           = colors.cyan,
-    cyan_bright    = Util.brighten(colors.cyan),
-    white          = colors.fg_dark,
+    black          = colors.border,
+    black_bright   = colors.fg_muted,
+    red            = colors.red_anchor,
+    red_bright     = colors.red,
+    green          = colors.primary_anchor,
+    green_bright   = colors.primary,
+    yellow         = colors.amber,
+    yellow_bright  = Util.brighten(colors.amber),
+    blue           = colors.amber_mid,
+    blue_bright    = Util.brighten(colors.amber_mid),
+    magenta        = colors.primary_anchor,
+    magenta_bright = colors.primary,
+    cyan           = colors.blue,
+    cyan_bright    = Util.brighten(colors.blue),
+    white          = colors.fg_secondary,
     white_bright   = colors.fg,
   }
 

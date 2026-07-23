@@ -58,6 +58,96 @@ function M.get(c)
     ["@lsp.typemod.variable.injected"]         = "@variable",
     ["@lsp.typemod.variable.static"]           = "@constant",
 
+    -- Language-scoped overrides (mirror treesitter.lua per-language captures)
+    ["@lsp.type.function.python"]              = "@function.python",
+    ["@lsp.type.method.python"]                = "@function.method.python",
+    ["@lsp.type.type.python"]                  = "@type.python",
+    ["@lsp.type.class.python"]                 = "@type.python",
+    ["@lsp.type.enum.python"]                  = "@type.python",
+    ["@lsp.type.interface.python"]             = "@type.python",
+    ["@lsp.type.struct.python"]                = "@type.python",
+    ["@lsp.type.typeParameter.python"]         = "@type.python",
+    ["@lsp.type.selfKeyword.python"]           = "@variable.builtin.python",
+
+    ["@lsp.type.type.typescript"]              = "@type.typescript",
+    ["@lsp.type.class.typescript"]             = "@type.typescript",
+    ["@lsp.type.enum.typescript"]              = "@type.typescript",
+    ["@lsp.type.interface.typescript"]         = "@type.typescript",
+    ["@lsp.type.struct.typescript"]            = "@type.typescript",
+    ["@lsp.type.typeParameter.typescript"]     = "@type.typescript",
+    ["@lsp.type.builtinType.typescript"]       = "@type.builtin.typescript",
+
+    ["@lsp.type.type.java"]                    = "@type.java",
+    ["@lsp.type.class.java"]                   = "@type.java",
+    ["@lsp.type.enum.java"]                    = "@type.java",
+    ["@lsp.type.interface.java"]               = "@type.java",
+    ["@lsp.type.struct.java"]                  = "@type.java",
+    ["@lsp.type.typeParameter.java"]           = "@type.java",
+    ["@lsp.type.builtinType.java"]             = "@type.builtin.java",
+    ["@lsp.type.modifier.java"]                = "@keyword.modifier.java",
+    ["@lsp.type.enumMember.java"]              = "@constant.java",
+
+    ["@lsp.type.type.sql"]                     = "@type.sql",
+    ["@lsp.type.class.sql"]                    = "@type.sql",
+    ["@lsp.type.enum.sql"]                     = "@type.sql",
+    ["@lsp.type.interface.sql"]                = "@type.sql",
+    ["@lsp.type.struct.sql"]                   = "@type.sql",
+    ["@lsp.type.typeParameter.sql"]            = "@type.sql",
+    ["@lsp.type.function.sql"]                 = "@function.sql",
+    ["@lsp.type.number.sql"]                   = "@number.sql",
+    ["@lsp.type.operator.sql"]                 = "@operator.sql",
+    ["@lsp.type.string.sql"]                   = "@string.sql",
+
+    ["@lsp.type.type.hcl"]                     = "@type.hcl",
+    ["@lsp.type.class.hcl"]                    = "@type.hcl",
+    ["@lsp.type.enum.hcl"]                      = "@type.hcl",
+    ["@lsp.type.interface.hcl"]                = "@type.hcl",
+    ["@lsp.type.struct.hcl"]                   = "@type.hcl",
+    ["@lsp.type.typeParameter.hcl"]            = "@type.hcl",
+    ["@lsp.type.number.hcl"]                   = "@number.hcl",
+    ["@lsp.type.string.hcl"]                   = "@string.hcl",
+
+    ["@lsp.type.type.toml"]                    = "@type.toml",
+    ["@lsp.type.class.toml"]                   = "@type.toml",
+    ["@lsp.type.enum.toml"]                    = "@type.toml",
+    ["@lsp.type.interface.toml"]               = "@type.toml",
+    ["@lsp.type.struct.toml"]                  = "@type.toml",
+    ["@lsp.type.typeParameter.toml"]           = "@type.toml",
+    ["@lsp.type.number.toml"]                  = "@number.toml",
+    ["@lsp.type.property.toml"]                = "@property.toml",
+    ["@lsp.type.string.toml"]                  = "@string.toml",
+
+    ["@lsp.type.property.yaml"]                = "@property.yaml",
+    ["@lsp.type.number.yaml"]                  = "@number.yaml",
+    ["@lsp.type.string.yaml"]                  = "@string.yaml",
+    ["@lsp.type.comment.yaml"]                 = "@comment.yaml",
+
+    ["@lsp.type.property.json"]                = "@property.json",
+    ["@lsp.type.number.json"]                  = "@number.json",
+    ["@lsp.type.string.json"]                  = "@string.json",
+
+    ["@lsp.type.function.bash"]                = "@function.bash",
+    ["@lsp.type.keyword.bash"]                 = "@keyword.bash",
+    ["@lsp.type.variable.bash"]                = "@variable.bash",
+    ["@lsp.type.string.bash"]                  = "@string.bash",
+    ["@lsp.type.number.bash"]                  = "@number.bash",
+    ["@lsp.type.operator.bash"]                = "@operator.bash",
+
+    ["@lsp.type.string.html"]                  = "@string.html",
+
+    ["@lsp.type.property.css"]                 = "@property.css",
+    ["@lsp.type.number.css"]                   = "@number.css",
+    ["@lsp.type.string.css"]                   = "@string.css",
+    ["@lsp.type.function.css"]                 = "@function.css",
+
+    ["@lsp.type.property.scss"]                = "@property.scss",
+    ["@lsp.type.function.scss"]                = "@function.scss",
+    ["@lsp.type.variable.scss"]                = "@variable.scss",
+
+    ["@lsp.type.function.dockerfile"]          = "@function.dockerfile",
+    ["@lsp.type.string.dockerfile"]            = "@string.dockerfile",
+    ["@lsp.type.number.dockerfile"]            = "@number.dockerfile",
+
   }
 end
 

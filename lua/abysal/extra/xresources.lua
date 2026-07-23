@@ -12,21 +12,21 @@ function M.generate(colors)
 *foreground: ${fg}
 
 *color0: ${black}
-*color1: ${red}
+*color1: ${gold}
 *color2: ${green}
-*color3: ${yellow}
+*color3: ${amber}
 *color4: ${blue}
-*color5: ${magenta}
-*color6: ${cyan}
-*color7: ${fg_dark}
+*color5: ${primary}
+*color6: ${blue}
+*color7: ${fg_secondary}
 
-*color8: ${terminal_black}
-*color9: ${red}
+*color8: ${bg_elevated}
+*color9: ${gold}
 *color10: ${green}
-*color11: ${yellow}
+*color11: ${amber}
 *color12: ${blue}
-*color13: ${magenta}
-*color14: ${cyan}
+*color13: ${primary}
+*color14: ${blue}
 *color15: ${fg}
  
 ]],

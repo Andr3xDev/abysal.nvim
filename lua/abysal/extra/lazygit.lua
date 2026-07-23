@@ -10,12 +10,12 @@ gui:
   nerdFontsVersion: "3"
   theme:
     activeBorderColor:
-      - "${orange}"
+      - "${primary}"
       - "bold"
     inactiveBorderColor:
       - "${border_highlight}"
     searchingActiveBorderColor:
-      - "${orange}"
+      - "${primary}"
       - "bold"
     optionsTextColor:
       - "${blue}"
@@ -24,13 +24,13 @@ gui:
     cherryPickedCommitFgColor:
       - "${blue}"
     cherryPickedCommitBgColor:
-      - "${magenta}"
+      - "${primary}"
     markedBaseCommitFgColor:
       - "${blue}"
     markedBaseCommitBgColor:
-      - "${yellow}"
+      - "${amber}"
     unstagedChangesColor:
-      - "${red1}"
+      - "${red}"
     defaultFgColor:
       - "${fg}"
 ]],

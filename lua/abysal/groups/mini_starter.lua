@@ -7,14 +7,14 @@ function M.get(c, opts)
   -- stylua: ignore
   return {
     MiniStarterCurrent    = { nocombine = true },
-    MiniStarterFooter     = { fg = c.yellow, italic = true },
+    MiniStarterFooter     = { fg = c.amber, italic = true },
     MiniStarterHeader     = { fg = c.blue },
-    MiniStarterInactive   = { fg = c.comment, style = opts.styles.comments },
+    MiniStarterInactive   = { fg = c.fg_muted, style = opts.styles.comments },
     MiniStarterItem       = { fg = c.fg, bg = opts.transparent and c.none or c.bg },
     MiniStarterItemBullet = { fg = c.border_highlight },
     MiniStarterItemPrefix = { fg = c.warning },
     MiniStarterQuery      = { fg = c.info },
-    MiniStarterSection    = { fg = c.blue1 },
+    MiniStarterSection    = { fg = c.primary_anchor },
   }
 end
 

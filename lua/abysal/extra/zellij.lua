@@ -17,14 +17,14 @@ themes {
         // Black should match the terminal background color
         // This ensures the top and bottom bars are transparent
         black "${bg}"
-        red "${red}"
+        red "${gold}"
         green "${green}"
-        yellow "${yellow}"
+        yellow "${amber}"
         blue "${blue}"
-        magenta "${magenta}"
-        cyan "${cyan}"
-        white "${fg_dark}"
-        orange "${orange}"
+        magenta "${primary}"
+        cyan "${blue}"
+        white "${fg_secondary}"
+        orange "${primary}"
     }
 }
 

@@ -6,20 +6,23 @@ M.url = "https://github.com/folke/noice.nvim"
 function M.get(c, opts)
   -- stylua: ignore
   local ret = {
-    -- Borders: cyan (structural)
-    NoiceCmdlinePopupBorderInput   = { fg = c.cyan }, -- input cmdline border: cyan
-    NoiceCmdlinePopupBorderLua     = { fg = c.cyan }, -- lua cmdline border: cyan
-    -- Icons: details in orange/yellow
-    NoiceCmdlineIconInput          = { fg = c.orange }, -- input icon: orange
-    NoiceCmdlineIconLua            = { fg = c.yellow }, -- lua icon: yellow (detail)
+    -- Borders: strong (active cmdline input)
+    NoiceCmdlinePopupBorder        = { fg = c.border_strong }, -- default ":" cmdline border: matches Input variant
+    NoiceCmdlinePopupBorderInput   = { fg = c.border_strong }, -- input cmdline border: strong
+    NoiceCmdlinePopupBorderLua     = { fg = c.border_strong }, -- lua cmdline border: strong
+    -- Icons: details in orange/gold
+    NoiceCmdlineIcon               = { fg = c.primary }, -- default ":" cmdline icon: turquoise
+    NoiceCmdlineIconInput          = { fg = c.primary }, -- input icon: orange
+    NoiceCmdlineIconLua            = { fg = c.gold }, -- lua icon: gold (detail, non-alert variant)
     -- Titles
-    NoiceCmdlinePopupTitleInput    = { fg = c.orange },
-    NoiceCmdlinePopupTitleLua      = { fg = c.yellow },
+    NoiceCmdlinePopupTitle         = { fg = c.primary }, -- default ":" cmdline title: turquoise
+    NoiceCmdlinePopupTitleInput    = { fg = c.primary },
+    NoiceCmdlinePopupTitleLua      = { fg = c.gold }, -- lua title: gold (detail, non-alert variant)
     -- Completion
-    NoiceCompletionItemKindDefault = { fg = c.fg_dark, bg = c.none },
+    NoiceCompletionItemKindDefault = { fg = c.fg_secondary, bg = c.none },
     -- Scrollbar
-    NoiceScrollbar                 = { fg = c.cyan },
-    NoiceScrollbarThumb           = { fg = c.orange },
+    NoiceScrollbar                 = { fg = c.primary_muted }, -- scrollbar track: muted turquoise
+    NoiceScrollbarThumb           = { fg = c.primary },
   }
   require("abysal.groups.kinds").kinds(ret, "NoiceCompletionItemKind%s")
   return ret

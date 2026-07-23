@@ -6,11 +6,11 @@ local M = {}
 function M.get(c, opts)
   -- stylua: ignore
   return {
-    Foo                         = { bg = c.magenta2, fg = c.fg },
+    Foo                         = { bg = c.primary_anchor, fg = c.fg },
 
-    Comment                     = { fg = c.comment, style = opts.styles.comments }, -- any comment
+    Comment                     = { fg = c.fg_muted, style = opts.styles.comments }, -- any comment
     ColorColumn                 = { bg = c.black }, -- used for the columns set with 'colorcolumn'
-    Conceal                     = { fg = c.dark5 }, -- placeholder characters substituted for concealed text (see 'conceallevel')
+    Conceal                     = { fg = c.fg_secondary }, -- placeholder characters substituted for concealed text (see 'conceallevel')
     Cursor                      = { fg = c.bg, bg = c.fg }, -- character under the cursor
     lCursor                     = { fg = c.bg, bg = c.fg }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
     CursorIM                    = { fg = c.bg, bg = c.fg }, -- like Cursor, but used when in IME mode |CursorIM|
@@ -25,106 +25,106 @@ function M.get(c, opts)
     ErrorMsg                    = { fg = c.error }, -- error messages on the command line
     VertSplit                   = { fg = c.border }, -- the column separating vertically split windows
     WinSeparator                = { fg = c.border, bold = true }, -- the column separating vertically split windows
-    Folded                      = { fg = c.blue, bg = c.fg_gutter }, -- line used for closed folds
-    FoldColumn                  = { bg = opts.transparent and c.none or c.bg, fg = c.comment }, -- 'foldcolumn'
-    SignColumn                  = { bg = opts.transparent and c.none or c.bg, fg = c.fg_gutter }, -- column where |signs| are displayed
-    SignColumnSB                = { bg = c.bg_sidebar, fg = c.fg_gutter }, -- column where |signs| are displayed
+    Folded                      = { fg = c.blue, bg = c.fg_muted }, -- line used for closed folds
+    FoldColumn                  = { bg = opts.transparent and c.none or c.bg, fg = c.fg_muted }, -- 'foldcolumn'
+    SignColumn                  = { bg = opts.transparent and c.none or c.bg, fg = c.fg_muted }, -- column where |signs| are displayed
+    SignColumnSB                = { bg = c.bg_sidebar, fg = c.fg_muted }, -- column where |signs| are displayed
     Substitute                  = { bg = c.red, fg = c.black }, -- |:substitute| replacement text highlighting
-    LineNr                      = { fg = c.fg_gutter }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-    CursorLineNr                = { fg = c.orange, bold = true }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
-    LineNrAbove                 = { fg = c.fg_gutter },
-    LineNrBelow                 = { fg = c.fg_gutter },
-    MatchParen                  = { fg = c.orange, bold = true }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
-    ModeMsg                     = { fg = c.fg_dark, bold = true }, -- 'showmode' message (e.g., "-- INSERT -- ")
-    MsgArea                     = { fg = c.fg_dark }, -- Area for messages and cmdline
+    LineNr                      = { fg = c.fg_muted }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+    CursorLineNr                = { fg = c.primary, bold = true }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+    LineNrAbove                 = { fg = c.fg_muted },
+    LineNrBelow                 = { fg = c.fg_muted },
+    MatchParen                  = { fg = c.primary, bold = true }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+    ModeMsg                     = { fg = c.fg_muted, bold = true }, -- 'showmode' message (e.g., "-- INSERT -- ")
+    MsgArea                     = { fg = c.fg_muted }, -- Area for messages and cmdline
     MoreMsg                     = { fg = c.blue }, -- |more-prompt|
-    NonText                     = { fg = c.dark3 }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+    NonText                     = { fg = c.fg_muted }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
     Normal                      = { fg = c.fg, bg = opts.transparent and c.none or c.bg }, -- normal text
     NormalNC                    = { fg = c.fg, bg = opts.transparent and c.none or opts.dim_inactive and c.bg_dark or c.bg }, -- normal text in non-current windows
     NormalSB                    = { fg = c.fg_sidebar, bg = c.bg_sidebar }, -- normal text in sidebar
     NormalFloat                 = { fg = c.fg_float, bg = c.bg_float }, -- Normal text in floating windows.
-    FloatBorder                 = { fg = c.cyan, bg = c.bg_float },
-    FloatTitle                  = { fg = c.orange, bg = c.bg_float },
+    FloatBorder                 = { fg = c.border, bg = c.bg_float },
+    FloatTitle                  = { fg = c.primary, bg = c.bg_float },
     Pmenu                       = { bg = c.bg_popup, fg = c.fg }, -- Popup menu: normal item.
-    PmenuMatch                  = { bg = c.bg_popup, fg = c.blue1 }, -- Popup menu: Matched text in normal item.
-    PmenuSel                    = { bg = Util.blend_bg(c.fg_gutter, 0.8) }, -- Popup menu: selected item.
-    PmenuMatchSel               = { bg = Util.blend_bg(c.fg_gutter, 0.8), fg = c.blue1 }, -- Popup menu: Matched text in selected item.
+    PmenuMatch                  = { bg = c.bg_popup, fg = c.primary_anchor }, -- Popup menu: Matched text in normal item.
+    PmenuSel                    = { bg = Util.blend_bg(c.fg_muted, 0.8) }, -- Popup menu: selected item.
+    PmenuMatchSel               = { bg = Util.blend_bg(c.fg_muted, 0.8), fg = c.primary_anchor }, -- Popup menu: Matched text in selected item.
     PmenuSbar                   = { bg = Util.blend_fg(c.bg_popup, 0.95) }, -- Popup menu: scrollbar.
-    PmenuThumb                  = { bg = c.fg_gutter }, -- Popup menu: Thumb of the scrollbar.
+    PmenuThumb                  = { bg = c.fg_muted }, -- Popup menu: Thumb of the scrollbar.
     Question                    = { fg = c.blue }, -- |hit-enter| prompt and yes/no questions
     QuickFixLine                = { bg = c.bg_visual, bold = true }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
     Search                      = { bg = c.bg_search, fg = c.fg }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
-    IncSearch                   = { bg = c.orange, fg = c.black }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+    IncSearch                   = { bg = c.primary, fg = c.black }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     CurSearch                   =  "IncSearch",
-    SpecialKey                  = { fg = c.dark3 }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
+    SpecialKey                  = { fg = c.fg_muted }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
     SpellBad                    = { sp = c.error, undercurl = true }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
     SpellCap                    = { sp = c.warning, undercurl = true }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
     SpellLocal                  = { sp = c.info, undercurl = true }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
     SpellRare                   = { sp = c.hint, undercurl = true }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
     StatusLine                  = { fg = c.fg_sidebar, bg = c.bg_statusline }, -- status line of current window
-    StatusLineNC                = { fg = c.fg_gutter, bg = c.bg_statusline }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
-    TabLine                     = { bg = c.bg_statusline, fg = c.fg_gutter }, -- tab pages line, not active tab page label
+    StatusLineNC                = { fg = c.fg_muted, bg = c.bg_statusline }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+    TabLine                     = { bg = c.bg_statusline, fg = c.fg_muted }, -- tab pages line, not active tab page label
     TabLineFill                 = { bg = opts.transparent and c.none or c.black }, -- tab pages line, where there are no labels
     TabLineSel                  = { fg = c.black, bg = c.blue }, -- tab pages line, active tab page label
     Title                       = { fg = c.blue, bold = true }, -- titles for output from ":set all", ":autocmd" etc.
     Visual                      = { bg = c.bg_visual }, -- Visual mode selection
     VisualNOS                   = { bg = c.bg_visual }, -- Visual mode selection when vim is "Not Owning the Selection".
     WarningMsg                  = { fg = c.warning }, -- warning messages
-    Whitespace                  = { fg = c.fg_gutter }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
+    Whitespace                  = { fg = c.fg_muted }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
     WildMenu                    = { bg = c.bg_visual }, -- current match in 'wildmenu' completion
     WinBar                      = "StatusLine" , -- window bar
     WinBarNC                    = "StatusLineNC", -- window bar in inactive windows
 
     Bold                        = { bold = true, fg = c.fg }, -- (preferred) any bold text
-    Boolean                     = { fg = c.blue }, -- true, false, nil
-    Character                   = { fg = c.yellow }, --  a character constant: 'c', '\n'
-    Conditional                 = { fg = c.orange }, -- if, else, switch
-    Constant                    = { fg = c.blue }, -- (preferred) any constant
-    Debug                       = { fg = c.orange }, --    debugging statements
-    Define                      = { fg = c.orange }, -- preprocessor defines
+    Boolean                     = { fg = c.seafoam }, -- true, false, nil
+    Character                   = { fg = c.gold }, --  a character constant: 'c', '\n'
+    Conditional                 = { fg = c.primary }, -- if, else, switch
+    Constant                    = { fg = c.seafoam }, -- (preferred) any constant
+    Debug                       = { fg = c.primary }, --    debugging statements
+    Define                      = { fg = c.primary }, -- preprocessor defines
     Delimiter                   =  "Special", --  character that needs attention
     Error                       = { fg = c.error }, -- (preferred) any erroneous construct
-    Exception                   = { fg = c.orange }, -- try, catch, throw
-    Float                       = { fg = c.blue }, -- floating point numbers
-    Function                    = { fg = c.cyan, style = opts.styles.functions }, -- PRIMARY: function names
+    Exception                   = { fg = c.primary }, -- try, catch, throw
+    Float                       = { fg = c.seafoam }, -- floating point numbers
+    Function                    = { fg = c.blue, style = opts.styles.functions }, -- PRIMARY: function names
     Identifier                  = { fg = c.fg, style = opts.styles.variables }, -- (preferred) any variable name — fg puro, sin color de acento (guía: variables = text)
-    Include                     = { fg = c.cyan }, -- import, require, use
+    Include                     = { fg = c.blue }, -- import, require, use
     Italic                      = { italic = true, fg = c.fg }, -- (preferred) any italic text
-    Keyword                     = { fg = c.orange, style = opts.styles.keywords }, -- PRIMARY: flow keywords
+    Keyword                     = { fg = c.primary, style = opts.styles.keywords }, -- PRIMARY: flow keywords
     Label                       = { fg = c.blue }, -- labels in C/Lua
-    Macro                       = { fg = c.orange }, -- macro definitions
-    Number                      = { fg = c.blue }, -- numeric constants
-    Operator                    = { fg = c.fg_dark }, -- "sizeof", "+", "*", etc.
-    PreProc                     = { fg = c.orange }, -- (preferred) generic Preprocessor
-    Repeat                      = { fg = c.orange }, -- for, while, loop
-    Special                     = { fg = c.blue }, -- (preferred) any special symbol
-    SpecialChar                 = { fg = c.blue }, -- special characters
-    Statement                   = { fg = c.orange }, -- (preferred) any statement
-    StorageClass                = { fg = c.orange }, -- static, extern, local
-    String                      = { fg = c.yellow }, -- SECONDARY: string constants
-    Todo                        = { bg = c.yellow, fg = c.bg }, -- TODO, FIXME, XXX
-    Type                        = { fg = c.red, italic = true }, -- SECONDARY: types — italic subordina visualmente
-    Typedef                     = { fg = c.red, italic = true }, -- type aliases
+    Macro                       = { fg = c.primary }, -- macro definitions
+    Number                      = { fg = c.seafoam }, -- numeric constants
+    Operator                    = { fg = c.fg_muted }, -- "sizeof", "+", "*", etc.
+    PreProc                     = { fg = c.primary }, -- (preferred) generic Preprocessor
+    Repeat                      = { fg = c.primary }, -- for, while, loop
+    Special                     = { fg = c.seafoam }, -- (preferred) any special symbol
+    SpecialChar                 = { fg = c.seafoam }, -- special characters
+    Statement                   = { fg = c.primary }, -- (preferred) any statement
+    StorageClass                = { fg = c.primary }, -- static, extern, local
+    String                      = { fg = c.gold }, -- SECONDARY: string constants
+    Todo                        = { bg = c.amber, fg = c.bg }, -- TODO, FIXME, XXX
+    Type                        = { fg = c.gold, italic = true }, -- SECONDARY: types — italic subordina visualmente
+    Typedef                     = { fg = c.gold, italic = true }, -- type aliases
     Underlined                  = { underline = true }, -- (preferred) text that stands out, HTML links
     debugBreakpoint             = { bg = Util.blend_bg(c.info, 0.1), fg = c.info }, -- used for breakpoint colors in terminal-debug
     debugPC                     = { bg = c.bg_sidebar }, -- used for highlighting the current line in terminal-debug
     dosIniLabel                 = "@property",
-    helpCommand                 = { bg = c.terminal_black, fg = c.blue },
-    htmlH1                      = { fg = c.cyan, bold = true },
+    helpCommand                 = { bg = c.bg_elevated, fg = c.blue },
+    htmlH1                      = { fg = c.primary_muted, bold = true },
     htmlH2                      = { fg = c.blue, bold = true },
     qfFileName                  = { fg = c.blue },
-    qfLineNr                    = { fg = c.dark5 },
+    qfLineNr                    = { fg = c.fg_secondary },
 
     -- These groups are for the native LSP client. Some other LSP clients may
     -- use these groups, or use their own.
-    LspReferenceText            = { bg = c.fg_gutter }, -- used for highlighting "text" references
-    LspReferenceRead            = { bg = c.fg_gutter }, -- used for highlighting "read" references
-    LspReferenceWrite           = { bg = c.fg_gutter }, -- used for highlighting "write" references
+    LspReferenceText            = { bg = c.fg_muted }, -- used for highlighting "text" references
+    LspReferenceRead            = { bg = c.fg_muted }, -- used for highlighting "read" references
+    LspReferenceWrite           = { bg = c.fg_muted }, -- used for highlighting "write" references
     LspSignatureActiveParameter = { bg = Util.blend_bg(c.bg_visual, 0.4), bold = true },
-    LspCodeLens                 = { fg = c.comment },
-    LspInlayHint                = { bg = Util.blend_bg(c.blue7, 0.1), fg = c.dark3 },
-    LspInfoBorder               = { fg = c.cyan, bg = c.bg_float },
-    ComplHint                   = { fg = c.terminal_black },
+    LspCodeLens                 = { fg = c.fg_muted },
+    LspInlayHint                = { bg = Util.blend_bg(c.blue, 0.1), fg = c.fg_muted },
+    LspInfoBorder               = { fg = c.border, bg = c.bg_float },
+    ComplHint                   = { fg = c.bg_elevated },
 
     -- diagnostics
     DiagnosticError             = { fg = c.error }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default
@@ -143,19 +143,19 @@ function M.get(c, opts)
 
     -- Health
     healthError                 = { fg = c.error },
-    healthSuccess               = { fg = c.green1 },
+    healthSuccess               = { fg = c.green_anchor },
     healthWarning               = { fg = c.warning },
 
     -- diff (not needed anymore?)
     diffAdded                   = { bg = c.diff.add, fg = c.git.add },
     diffRemoved                 = { bg = c.diff.delete, fg = c.git.delete },
     diffChanged                 = { bg = c.diff.change, fg = c.git.change },
-    diffOldFile                 = { fg = c.blue1, bg=c.diff.delete },
-    diffNewFile                 = { fg = c.blue1, bg=c.diff.add },
+    diffOldFile                 = { fg = c.primary_anchor, bg=c.diff.delete },
+    diffNewFile                 = { fg = c.primary_anchor, bg=c.diff.add },
     diffFile                    = { fg = c.blue },
-    diffLine                    = { fg = c.comment },
-    diffIndexLine               = { fg = c.magenta },
-    helpExample                 = { fg = c.comment },
+    diffLine                    = { fg = c.fg_muted },
+    diffIndexLine               = { fg = c.primary },
+    helpExample                 = { fg = c.fg_muted },
   }
 end
 

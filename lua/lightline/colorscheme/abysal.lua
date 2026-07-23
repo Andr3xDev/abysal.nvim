@@ -3,9 +3,9 @@ local colors = require("abysal.colors").setup()
 local abysal = {}
 
 abysal.normal = {
-  left = { { colors.black, colors.blue }, { colors.blue, colors.fg_gutter } },
+  left = { { colors.black, colors.blue }, { colors.blue, colors.fg_muted } },
   middle = { { colors.fg, colors.bg_statusline } },
-  right = { { colors.black, colors.blue }, { colors.blue, colors.fg_gutter } },
+  right = { { colors.black, colors.blue }, { colors.blue, colors.fg_muted } },
   error = { { colors.black, colors.error } },
   warning = { { colors.black, colors.warning } },
 }
@@ -15,24 +15,24 @@ abysal.insert = {
 }
 
 abysal.visual = {
-  left = { { colors.black, colors.magenta }, { colors.blue, colors.bg } },
+  left = { { colors.black, colors.primary }, { colors.blue, colors.bg } },
 }
 
 abysal.replace = {
-  left = { { colors.black, colors.red }, { colors.blue, colors.bg } },
+  left = { { colors.black, colors.gold }, { colors.blue, colors.bg } },
 }
 
 abysal.inactive = {
-  left = { { colors.blue, colors.bg_statusline }, { colors.dark3, colors.bg } },
-  middle = { { colors.fg_gutter, colors.bg_statusline } },
-  right = { { colors.fg_gutter, colors.bg_statusline }, { colors.dark3, colors.bg } },
+  left = { { colors.blue, colors.bg_statusline }, { colors.fg_muted, colors.bg } },
+  middle = { { colors.fg_muted, colors.bg_statusline } },
+  right = { { colors.fg_muted, colors.bg_statusline }, { colors.fg_muted, colors.bg } },
 }
 
 abysal.tabline = {
-  left = { { colors.dark3, colors.bg_highlight }, { colors.dark3, colors.bg } },
-  middle = { { colors.fg_gutter, colors.bg_statusline } },
-  right = { { colors.fg_gutter, colors.bg_statusline }, { colors.dark3, colors.bg } },
-  tabsel = { { colors.blue, colors.fg_gutter }, { colors.dark3, colors.bg } },
+  left = { { colors.fg_muted, colors.bg_highlight }, { colors.fg_muted, colors.bg } },
+  middle = { { colors.fg_muted, colors.bg_statusline } },
+  right = { { colors.fg_muted, colors.bg_statusline }, { colors.fg_muted, colors.bg } },
+  tabsel = { { colors.blue, colors.fg_muted }, { colors.fg_muted, colors.bg } },
 }
 
 return abysal

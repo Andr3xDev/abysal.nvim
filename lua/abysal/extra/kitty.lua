@@ -18,15 +18,15 @@ background ${bg}
 foreground ${fg}
 selection_background ${bg_visual}
 selection_foreground ${fg}
-url_color ${green1}
+url_color ${green_anchor}
 cursor ${fg}
 cursor_text_color ${bg}
 
 # Tabs
 active_tab_background ${blue}
-active_tab_foreground ${bg_dark}
+active_tab_foreground ${bg_elevated}
 inactive_tab_background ${bg_highlight}
-inactive_tab_foreground ${dark3}
+inactive_tab_foreground ${fg_muted}
 #tab_bar_background ${black}
 
 # Windows
@@ -54,8 +54,8 @@ color14 ${terminal.cyan_bright}
 color15 ${terminal.white_bright}
 
 # extended colors
-color16 ${orange}
-color17 ${red1}
+color16 ${primary}
+color17 ${red}
 ]],
     colors
   )

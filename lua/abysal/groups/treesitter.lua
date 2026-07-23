@@ -6,8 +6,8 @@ local M = {}
 function M.get(c, opts)
   -- stylua: ignore
   local ret = {
-    ["@annotation"]                 = { fg = c.purple, italic = true }, -- decorators/annotations: like @attribute
-    ["@attribute"]                  = { fg = c.purple, italic = true },
+    ["@annotation"]                 = { fg = c.blue, italic = true }, -- decorators/annotations: like @attribute
+    ["@attribute"]                  = { fg = c.blue, italic = true },
     ["@boolean"]                    = "Boolean",
     ["@character"]                  = "Character",
     ["@character.printf"]           = "SpecialChar",
@@ -19,104 +19,104 @@ function M.get(c, opts)
     ["@comment.note"]               = { fg = c.hint },
     ["@comment.todo"]               = { fg = c.todo },
     ["@comment.warning"]            = { fg = c.warning },
-    ["@comment.documentation"]      = { fg = c.comment, style = opts.styles.comments }, -- Javadoc, doc comments: same as regular comments
+    ["@comment.documentation"]      = { fg = c.fg_muted, style = opts.styles.comments }, -- Javadoc, doc comments: same as regular comments
     ["@constant"]                   = "Constant",
-    ["@constant.builtin"]           = { fg = c.blue }, -- true/false/null/None
+    ["@constant.builtin"]           = { fg = c.seafoam }, -- true/false/null/None
     ["@constant.macro"]             = "Define",
-    ["@constructor"]                = { fg = c.cyan }, -- instanciar es llamar: cyan, no purple
-    ["@constructor.tsx"]            = { fg = c.cyan }, -- TSX constructor: cyan (DOM instanciation)
-    ["@decorator"]                  = { fg = c.purple, italic = true }, -- decorators (Python, TypeScript)
+    ["@constructor"]                = { fg = c.blue }, -- instanciar es llamar: blue, no primary
+    ["@constructor.tsx"]            = { fg = c.blue }, -- TSX constructor: blue (DOM instanciation)
+    ["@decorator"]                  = { fg = c.blue, italic = true }, -- decorators (Python, TypeScript)
     ["@diff.delta"]                 = "DiffChange",
     ["@diff.minus"]                 = "DiffDelete",
     ["@diff.plus"]                  = "DiffAdd",
-    ["@field"]                       = { fg = c.blue }, -- struct/class fields: like properties
+    ["@field"]                       = { fg = c.mauve }, -- struct/class fields: like properties
     ["@function"]                   = "Function",
-    ["@function.builtin"]           = { fg = c.cyan }, -- built-in functions: still functions (print, len)
+    ["@function.builtin"]           = { fg = c.blue }, -- built-in functions: still functions (print, len)
     ["@function.call"]              = "@function",
     ["@function.macro"]             = "Macro",
-    ["@function.method"]            = "Function",
+    ["@function.method"]            = { fg = c.primary_muted }, -- method definitions (grammars without @method): primary_muted
     ["@function.method.call"]       = "@function.method",
-    ["@keyword"]                    = { fg = c.orange, style = opts.styles.keywords }, -- PRIMARY: flow keywords
+    ["@keyword"]                    = { fg = c.primary, style = opts.styles.keywords }, -- PRIMARY: flow keywords
     ["@keyword.conditional"]        = "Conditional",
-    ["@keyword.control"]            = { fg = c.orange }, -- control keywords: return, yield, await
+    ["@keyword.control"]            = { fg = c.primary }, -- control keywords: return, yield, await
     ["@keyword.coroutine"]          = "@keyword",
     ["@keyword.debug"]              = "Debug",
     ["@keyword.directive"]          = "PreProc",
     ["@keyword.directive.define"]   = "Define",
     ["@keyword.exception"]          = "Exception",
-    ["@keyword.function"]           = { fg = c.orange }, -- def/fn/function: orange (control keyword)
-    ["@keyword.function.python"]    = { fg = c.orange }, -- def: Neovim scoped variant
-    ["@keyword.function.javascript"]= { fg = c.orange }, -- function: Neovim scoped variant
-    ["@keyword.function.typescript"]= { fg = c.orange }, -- function: Neovim scoped variant
-    ["@keyword.function.lua"]       = { fg = c.orange }, -- function: Neovim scoped variant
-    ["@keyword.import"]             = { fg = c.cyan }, -- import/include/require/from: cyan (structural)
-    ["@keyword.operator"]           = { fg = c.orange }, -- what decides: `and`, `or`, `not`
+    ["@keyword.function"]           = { fg = c.primary }, -- def/fn/function: primary (control keyword)
+    ["@keyword.function.python"]    = { fg = c.primary }, -- def: Neovim scoped variant
+    ["@keyword.function.javascript"]= { fg = c.primary }, -- function: Neovim scoped variant
+    ["@keyword.function.typescript"]= { fg = c.primary }, -- function: Neovim scoped variant
+    ["@keyword.function.lua"]       = { fg = c.primary }, -- function: Neovim scoped variant
+    ["@keyword.import"]             = { fg = c.blue }, -- import/include/require/from: blue (structural)
+    ["@keyword.operator"]           = { fg = c.primary }, -- what decides: `and`, `or`, `not`
     ["@keyword.repeat"]             = "Repeat",
     ["@keyword.return"]             = "@keyword",
     ["@keyword.storage"]            = "StorageClass",
-    ["@keyword.type"]               = { fg = c.orange, style = opts.styles.keywords }, -- class, interface, enum, record
-    ["@keyword.modifier"]           = { fg = c.orange }, -- public, private, static, final
-    ["@keyword.conditional.ternary"] = { fg = c.orange }, -- ? : ternary
-    ["@label"]                      = { fg = c.blue }, -- For labels: `label:` in C and `:label:` in Lua.
+    ["@keyword.type"]               = { fg = c.primary, style = opts.styles.keywords }, -- class, interface, enum, record
+    ["@keyword.modifier"]           = { fg = c.primary }, -- public, private, static, final
+    ["@keyword.conditional.ternary"] = { fg = c.primary }, -- ? : ternary
+    ["@label"]                      = { fg = c.mauve }, -- For labels: `label:` in C and `:label:` in Lua.
     ["@markup"]                     = "@none",
     ["@markup.emphasis"]            = { italic = true },
     ["@markup.environment"]         = "Macro",
     ["@markup.environment.name"]    = "Type",
     ["@markup.heading"]             = "Title",
     ["@markup.italic"]              = { italic = true },
-    ["@markup.link"]                = { fg = c.teal },
+    ["@markup.link"]                = { fg = c.primary_anchor },
     ["@markup.link.label"]          = "SpecialChar",
     ["@markup.link.label.symbol"]   = "Identifier",
-    ["@markup.link.url"]            = { fg = c.yellow, underline = true }, -- URLs: sand
-    ["@markup.list"]                = { fg = c.fg_dark }, -- For special punctutation that does not fall in the categories before.
-    ["@markup.list.checked"]        = { fg = c.cyan }, -- [x]: cyan
-    ["@markup.list.markdown"]       = { fg = c.cyan, bold = true },
-    ["@markup.list.unchecked"]      = { fg = c.fg_dark }, -- [ ]: fg_dark
+    ["@markup.link.url"]            = { fg = c.gold, underline = true }, -- URLs: gold
+    ["@markup.list"]                = { fg = c.fg_secondary }, -- For special punctutation that does not fall in the categories before.
+    ["@markup.list.checked"]        = { fg = c.primary_muted }, -- [x]: primary_muted
+    ["@markup.list.markdown"]       = { fg = c.primary_muted, bold = true },
+    ["@markup.list.unchecked"]      = { fg = c.fg_secondary }, -- [ ]: fg_secondary
     ["@markup.math"]                = "Special",
-    ["@markup.raw"]                 = { fg = c.red }, -- inline code: red
+    ["@markup.raw"]                 = { fg = c.gold }, -- inline code: gold
     ["@markup.raw.block"]           = { fg = c.fg }, -- code blocks: fg
-    ["@markup.raw.markdown_inline"] = { bg = c.terminal_black, fg = c.fg },
-    ["@markup.quote"]               = { fg = c.fg_dark, italic = true }, -- blockquotes
+    ["@markup.raw.markdown_inline"] = { bg = c.bg_elevated, fg = c.fg },
+    ["@markup.quote"]               = { fg = c.fg_secondary, italic = true }, -- blockquotes
     ["@markup.strikethrough"]       = { strikethrough = true },
     ["@markup.strong"]              = { bold = true },
     ["@markup.bold"]                = { fg = c.fg, bold = true }, -- bold text
     ["@markup.underline"]           = { underline = true },
-    ["@method"]                     = { fg = c.cyan }, -- method definitions
+    ["@method"]                     = { fg = c.primary_muted }, -- method definitions (on object instance): primary_muted, distinct from plain function calls
     ["@method.call"]                = "@method", -- method calls
     ["@module"]                     = { fg = c.fg }, -- module names: white (plain, no accent)
-    ["@module.builtin"]             = { fg = c.red }, -- built-in modules: like builtin variables
+    ["@module.builtin"]             = { fg = c.blue }, -- built-in modules: blue (like other .builtin roles)
     ["@namespace.builtin"]          = "@variable.builtin",
     ["@none"]                       = {},
     ["@number"]                     = "Number",
     ["@number.float"]               = "Float",
-    ["@operator"]                   = { fg = c.fg_dark }, -- For any operator: `+`, but also `->` and `*` in C.
+    ["@operator"]                   = { fg = c.fg_muted }, -- For any operator: `+`, but also `->` and `*` in C.
     ["@parameter"]                  = { fg = c.fg }, -- function parameters: plain text
-    ["@property"]                   = { fg = c.blue }, -- field access, properties
-    ["@punctuation.bracket"]        = { fg = c.fg_dark }, -- For brackets and parens.
-    ["@punctuation.delimiter"]      = { fg = c.fg_dark }, -- For delimiters ie: `.`
-    ["@punctuation.special"]        = { fg = c.fg_dark }, -- For special symbols (e.g. `{}` in string interpolation)
-    ["@punctuation.special.markdown"] = { fg = c.cyan }, -- markdown bullets/special punctuation
+    ["@property"]                   = { fg = c.mauve }, -- field access, properties
+    ["@punctuation.bracket"]        = { fg = c.fg_secondary }, -- For brackets and parens.
+    ["@punctuation.delimiter"]      = { fg = c.fg_secondary }, -- For delimiters ie: `.`
+    ["@punctuation.special"]        = { fg = c.fg_secondary }, -- For special symbols (e.g. `{}` in string interpolation)
+    ["@punctuation.special.markdown"] = { fg = c.primary_muted }, -- markdown bullets/special punctuation
     ["@string"]                     = "String",
-    ["@string.documentation"]       = { fg = c.yellow },
-    ["@string.escape"]              = { fg = c.yellow }, -- For escape characters within a string.
-    ["@string.regex"]               = { fg = c.yellow }, -- regex strings: yellow (string family)
-    ["@string.regexp"]              = { fg = c.yellow }, -- regex patterns: yellow
-    ["@string.special"]             = { fg = c.yellow }, -- special strings (paths, URLs)
-    ["@symbol"]                      = { fg = c.blue }, -- Ruby/Elixir symbols: like constants
+    ["@string.documentation"]       = { fg = c.fg_muted, italic = true }, -- docstrings: matches @string.documentation.python
+    ["@string.escape"]              = { fg = c.gold }, -- For escape characters within a string.
+    ["@string.regex"]               = { fg = c.gold }, -- regex strings: gold (string family)
+    ["@string.regexp"]              = { fg = c.gold }, -- regex patterns: gold
+    ["@string.special"]             = { fg = c.gold }, -- special strings (paths, URLs)
+    ["@symbol"]                      = { fg = c.mauve }, -- Ruby/Elixir symbols: like constants
     ["@tag"]                        = "Label",
     ["@tag.attribute"]              = "@property",
     ["@tag.delimiter"]              = "Delimiter",
-    ["@tag.delimiter.tsx"]          = { fg = c.fg_dark }, -- < > /: fg_dark
-    ["@tag.tsx"]                    = { fg = c.cyan }, -- TSX tags: cyan (DOM functions)
-    ["@tag.javascript"]             = { fg = c.cyan }, -- JS tags: cyan
-    ["@type"]                       = { fg = c.red, italic = true }, -- type annotations: italic subordina visualmente
-    ["@type.builtin"]               = { fg = c.blue, italic = true }, -- builtin types: string, int, bool (blue, not red)
-    ["@type.css"]                    = { fg = c.orange }, -- CSS selectors: orange like control keywords
-    ["@type.definition"]            = { fg = c.red, italic = true }, -- type aliases / definitions
-    ["@type.qualifier"]             = { fg = c.red, italic = true }, -- type qualifiers: red italic
+    ["@tag.delimiter.tsx"]          = { fg = c.fg_muted }, -- < > /: fg_muted
+    ["@tag.tsx"]                    = { fg = c.primary_muted }, -- TSX tags: primary_muted (matches html/astro)
+    ["@tag.javascript"]             = { fg = c.primary_muted }, -- JS tags: primary_muted (matches html/astro)
+    ["@type"]                       = { fg = c.gold, italic = true }, -- type annotations: italic subordina visualmente
+    ["@type.builtin"]               = { fg = c.blue, italic = true }, -- builtin types: string, int, bool (blue, not gold)
+    ["@type.css"]                    = { fg = c.gold, italic = true }, -- CSS type-like tokens: gold italic (matches @type pattern across all languages)
+    ["@type.definition"]            = { fg = c.gold, italic = true }, -- type aliases / definitions
+    ["@type.qualifier"]             = { fg = c.gold, italic = true }, -- type qualifiers: gold italic
     ["@variable"]                   = { fg = c.fg, style = opts.styles.variables }, -- Any variable name that does not have another highlight.
-    ["@variable.builtin"]           = { fg = c.fg }, -- self/this/super: plain text, no color
-    ["@variable.member"]            = { fg = c.fg }, -- member access values: fg (not a declaration)
+    ["@variable.builtin"]           = { fg = c.fg_secondary, italic = true }, -- self/this/super: fg_secondary italic (distinct builtin ref)
+    ["@variable.member"]            = { fg = c.fg }, -- member access values: fg (matches plain variable, read easily)
     ["@variable.parameter"]         = { fg = c.fg }, -- function params: plain text, no color
     ["@variable.parameter.builtin"] = { fg = c.fg }, -- builtin params like `...`: plain text
 
@@ -124,113 +124,114 @@ function M.get(c, opts)
     -- Config file languages (YAML / JSON / HCL / Bash)
     -- ───────────────────────────────────
     -- YAML: structural hierarchy by depth
-    ["yaml.block_mapping_pair"]      = { fg = c.cyan }, -- root keys: cyan (L0)
-    ["@property.yaml"]              = { fg = c.blue }, -- nested keys: blue (L1+)
-    ["@tag.yaml"]                   = { fg = c.orange }, -- !! tags: orange
-    ["@string.yaml"]                = { fg = c.yellow }, -- string values: sand
-    ["@number.yaml"]                = { fg = c.blue }, -- numbers: blue
-    ["@boolean.yaml"]               = { fg = c.blue }, -- booleans: blue
-    ["@comment.yaml"]               = { fg = c.comment, style = opts.styles.comments }, -- yaml comments
-    -- JSON: keys get cyan accent, values use standard rules
-    ["@property.json"]              = { fg = c.cyan }, -- keys: cyan
-    ["@string.json"]                = { fg = c.yellow }, -- values: sand
-    ["@number.json"]                = { fg = c.blue }, -- numbers: blue
-    ["@boolean.json"]               = { fg = c.blue }, -- booleans: blue
-    ["@label.json"]                 = { fg = c.cyan }, -- jsonc comments: cyan
+    ["yaml.block_mapping_pair"]      = { fg = c.primary_muted }, -- root keys: primary_muted (L0)
+    ["@property.yaml"]              = { fg = c.mauve }, -- nested keys: mauve (L1+)
+    ["@tag.yaml"]                   = { fg = c.primary }, -- !! tags: primary
+    ["@string.yaml"]                = { fg = c.gold }, -- string values: gold
+    ["@number.yaml"]                = { fg = c.seafoam }, -- numbers: seafoam
+    ["@boolean.yaml"]               = { fg = c.seafoam }, -- booleans: seafoam
+    ["@comment.yaml"]               = { fg = c.fg_muted, style = opts.styles.comments }, -- yaml comments
+    -- JSON: keys get primary_muted accent, values use standard rules
+    ["@property.json"]              = { fg = c.mauve }, -- keys: mauve
+    ["@string.json"]                = { fg = c.gold }, -- values: gold
+    ["@number.json"]                = { fg = c.seafoam }, -- numbers: seafoam
+    ["@boolean.json"]               = { fg = c.seafoam }, -- booleans: seafoam
+    ["@label.json"]                 = { fg = c.primary_muted }, -- jsonc comments: primary_muted
     -- TOML
-    ["@property.toml"]              = { fg = c.blue }, -- keys: blue
-    ["@type.toml"]                  = { fg = c.cyan }, -- [sections]: cyan
-    ["@string.toml"]                = { fg = c.yellow },
-    ["@number.toml"]                = { fg = c.blue },
-    ["@boolean.toml"]               = { fg = c.blue },
+    ["@property.toml"]              = { fg = c.mauve }, -- keys: mauve
+    ["@type.toml"]                  = { fg = c.gold, italic = true }, -- [sections]: gold italic (matches @type pattern across all languages)
+    ["@string.toml"]                = { fg = c.gold },
+    ["@number.toml"]                = { fg = c.seafoam },
+    ["@boolean.toml"]               = { fg = c.seafoam },
     -- HCL / Terraform
-    ["@keyword.hcl"]                = { fg = c.orange }, -- resource/variable/module: orange
-    ["@property.hcl"]               = { fg = c.blue }, -- internal attributes: blue
-    ["@type.hcl"]                   = { fg = c.red, italic = true }, -- types: red italic
-    ["@string.hcl"]                 = { fg = c.yellow }, -- strings: sand
-    ["@number.hcl"]                 = { fg = c.blue }, -- numbers: blue
+    ["@keyword.hcl"]                = { fg = c.primary }, -- resource/variable/module: primary
+    ["@property.hcl"]               = { fg = c.mauve }, -- internal attributes: mauve
+    ["@type.hcl"]                   = { fg = c.gold, italic = true }, -- types: gold italic
+    ["@string.hcl"]                 = { fg = c.gold }, -- strings: gold
+    ["@number.hcl"]                 = { fg = c.seafoam }, -- numbers: seafoam
     -- Bash
-    ["@function.bash"]              = { fg = c.cyan }, -- external commands: cyan
-    ["@function.call.bash"]         = { fg = c.cyan }, -- command calls: cyan
-    ["@keyword.bash"]               = { fg = c.orange }, -- builtins (set, local, export): orange
-    ["@variable.bash"]              = { fg = c.blue }, -- $VARIABLES in uppercase: blue
-    ["@string.bash"]                = { fg = c.yellow }, -- strings: sand
-    ["@number.bash"]                = { fg = c.blue }, -- numbers: blue
-    ["@operator.bash"]              = { fg = c.fg_dark }, -- operators: fg_dark
+    ["@function.bash"]              = { fg = c.blue }, -- external commands: blue
+    ["@function.call.bash"]         = { fg = c.blue }, -- command calls: blue
+    ["@keyword.bash"]               = { fg = c.primary }, -- builtins (set, local, export): primary
+    ["@variable.bash"]              = { fg = c.fg_secondary }, -- $VARIABLES in uppercase: fg_secondary
+    ["@string.bash"]                = { fg = c.gold }, -- strings: gold
+    ["@number.bash"]                = { fg = c.seafoam }, -- numbers: seafoam
+    ["@operator.bash"]              = { fg = c.fg_muted }, -- operators: fg_muted
     -- ───────────────────────────────────
     -- JavaScript / TypeScript / TSX
-    ["@type.typescript"]              = { fg = c.red, italic = true },
-    ["@type.builtin.typescript"]      = { fg = c.red, italic = true },
-    ["@keyword.coroutine.typescript"] = { fg = c.orange }, -- async/await: orange
-    ["@tag.attribute.tsx"]            = { fg = c.blue }, -- props: blue
-    ["@keyword.coroutine.javascript"] = { fg = c.orange },
-    ["@tag.attribute.javascript"]     = { fg = c.blue },
-    ["@tag.delimiter.javascript"]     = { fg = c.fg_dark },
+    ["@type.typescript"]              = { fg = c.gold, italic = true },
+    ["@type.builtin.typescript"]      = { fg = c.blue, italic = true },
+    ["@keyword.coroutine.typescript"] = { fg = c.primary }, -- async/await: primary
+    ["@tag.attribute.tsx"]            = { fg = c.mauve }, -- props: mauve
+    ["@keyword.coroutine.javascript"] = { fg = c.primary },
+    ["@tag.attribute.javascript"]     = { fg = c.mauve },
+    ["@tag.delimiter.javascript"]     = { fg = c.fg_muted },
     -- ───────────────────────────────────
     -- HTML
-    ["@tag.html"]                     = { fg = c.cyan }, -- elements: cyan
-    ["@tag.attribute.html"]           = { fg = c.blue }, -- attributes: blue
-    ["@tag.delimiter.html"]           = { fg = c.fg_dark }, -- < > /: fg_dark
-    ["@string.html"]                  = { fg = c.yellow }, -- attribute values: sand
+    ["@tag.html"]                     = { fg = c.primary_muted }, -- elements: primary_muted
+    ["@tag.attribute.html"]           = { fg = c.mauve }, -- attributes: mauve
+    ["@tag.delimiter.html"]           = { fg = c.fg_muted }, -- < > /: fg_muted
+    ["@string.html"]                  = { fg = c.gold }, -- attribute values: gold
     -- ───────────────────────────────────
     -- CSS / SCSS
-    ["@selector"]                     = { fg = c.cyan }, -- selectors: cyan (CSS function names)
-    ["@property.css"]                 = { fg = c.blue }, -- properties: blue
-    ["@property.scss"]                = { fg = c.blue },
-    ["@string.css"]                   = { fg = c.yellow }, -- values: sand
-    ["@number.css"]                   = { fg = c.blue }, -- numeric values: blue
-    ["@keyword.css"]                  = { fg = c.orange }, -- @media @import: orange
-    ["@keyword.scss"]                 = { fg = c.orange },
-    ["@variable.scss"]                = { fg = c.blue }, -- $variables SCSS: blue
-    ["@function.css"]                 = { fg = c.cyan }, -- calc() var() rgb(): cyan
-    ["@function.scss"]                = { fg = c.cyan }, -- SCSS functions: cyan
+    ["@selector"]                     = { fg = c.primary_muted }, -- selectors: primary_muted (CSS function names)
+    ["@property.css"]                 = { fg = c.mauve }, -- properties: mauve
+    ["@property.scss"]                = { fg = c.mauve },
+    ["@string.css"]                   = { fg = c.gold }, -- values: gold
+    ["@number.css"]                   = { fg = c.seafoam }, -- numeric values: seafoam
+    ["@keyword.css"]                  = { fg = c.primary }, -- @media @import: primary
+    ["@keyword.scss"]                 = { fg = c.primary },
+    ["@variable.scss"]                = { fg = c.fg_secondary }, -- $variables SCSS: fg_secondary
+    ["@function.css"]                 = { fg = c.blue }, -- calc() var() rgb(): blue
+    ["@function.scss"]                = { fg = c.blue }, -- SCSS functions: blue
     -- ───────────────────────────────────
     -- Astro
-    ["@tag.astro"]                    = { fg = c.cyan },
-    ["@tag.attribute.astro"]          = { fg = c.blue },
-    ["@tag.delimiter.astro"]          = { fg = c.fg_dark },
-    ["@keyword.astro"]                = { fg = c.orange },
+    ["@tag.astro"]                    = { fg = c.primary_muted },
+    ["@tag.attribute.astro"]          = { fg = c.mauve },
+    ["@tag.delimiter.astro"]          = { fg = c.fg_muted },
+    ["@keyword.astro"]                = { fg = c.primary },
     -- ───────────────────────────────────
     -- Python
-    ["@constructor.python"]           = { fg = c.cyan }, -- __init__/__new__ are functions (cyan, not purple)
-    ["@function.python"]              = { fg = c.cyan }, -- function names: cyan
-    ["@function.call.python"]         = { fg = c.cyan }, -- function calls: cyan
-    ["@function.method.python"]       = { fg = c.cyan }, -- method definitions: cyan
-    ["@function.method.call.python"]  = { fg = c.cyan }, -- method calls: cyan
-    ["@keyword.coroutine.python"]     = { fg = c.orange }, -- async/await
-    ["@type.python"]                  = { fg = c.red, italic = true },
-    ["@attribute.python"]             = { fg = c.purple, italic = true }, -- @decorators
-    ["@string.documentation.python"]  = { fg = c.comment, italic = true }, -- docstrings
-    ["@variable.builtin.python"]      = { fg = c.fg }, -- self/cls: plain text
+    ["@constructor.python"]           = { fg = c.blue }, -- __init__/__new__ are functions (blue, not blue accent)
+    ["@function.python"]              = { fg = c.blue }, -- function names: blue
+    ["@function.call.python"]         = { fg = c.blue }, -- function calls: blue
+    ["@function.method.python"]       = { fg = c.primary_muted }, -- method definitions: primary_muted (distinct from function calls)
+    ["@function.method.call.python"]  = { fg = c.primary_muted }, -- method calls: primary_muted (distinct from function calls)
+    ["@keyword.coroutine.python"]     = { fg = c.primary }, -- async/await
+    ["@type.python"]                  = { fg = c.gold, italic = true },
+    ["@type.builtin.python"]          = { fg = c.amber, italic = true }, -- builtin exceptions (Exception, RuntimeError, etc) AND primitive type names (str, int, bool...) share this capture in tree-sitter-python's grammar, no way to split them: amber
+    ["@attribute.python"]             = { fg = c.blue, italic = true }, -- @decorators
+    ["@string.documentation.python"]  = { fg = c.fg_muted, italic = true }, -- docstrings
+    ["@variable.builtin.python"]      = { fg = c.fg_secondary, italic = true }, -- self/cls: fg_secondary italic (matches base @variable.builtin)
     -- ───────────────────────────────────
     -- Java
-    ["@type.java"]                    = { fg = c.red, italic = true },
-    ["@keyword.java"]                 = { fg = c.orange },
-    ["@attribute.java"]               = { fg = c.purple, italic = true }, -- annotations @Override
-    ["@keyword.modifier.java"]        = { fg = c.orange }, -- public/private/static: orange (decisions)
-    ["@type.builtin.java"]            = { fg = c.red, italic = true }, -- String, int: red italic
-    ["@constant.java"]                = { fg = c.blue },
+    ["@type.java"]                    = { fg = c.gold, italic = true },
+    ["@keyword.java"]                 = { fg = c.primary },
+    ["@attribute.java"]               = { fg = c.blue, italic = true }, -- annotations @Override
+    ["@keyword.modifier.java"]        = { fg = c.primary }, -- public/private/static: primary (decisions)
+    ["@type.builtin.java"]            = { fg = c.blue, italic = true }, -- String, int: blue italic
+    ["@constant.java"]                = { fg = c.seafoam },
     -- ───────────────────────────────────
     -- SQL
-    ["@keyword.sql"]                  = { fg = c.orange }, -- SELECT FROM WHERE: orange
-    ["@type.sql"]                     = { fg = c.red, italic = true }, -- INT VARCHAR: red
-    ["@function.sql"]                 = { fg = c.cyan }, -- COUNT() SUM(): cyan
-    ["@string.sql"]                   = { fg = c.yellow },
-    ["@number.sql"]                   = { fg = c.blue },
-    ["@operator.sql"]                 = { fg = c.fg_dark },
+    ["@keyword.sql"]                  = { fg = c.primary }, -- SELECT FROM WHERE: primary
+    ["@type.sql"]                     = { fg = c.gold, italic = true }, -- INT VARCHAR: gold
+    ["@function.sql"]                 = { fg = c.blue }, -- COUNT() SUM(): blue
+    ["@string.sql"]                   = { fg = c.gold },
+    ["@number.sql"]                   = { fg = c.seafoam },
+    ["@operator.sql"]                 = { fg = c.fg_muted },
     -- ───────────────────────────────────
     -- Dockerfile
-    ["@keyword.dockerfile"]           = { fg = c.orange }, -- FROM RUN COPY CMD: orange
-    ["@string.dockerfile"]            = { fg = c.yellow },
-    ["@number.dockerfile"]            = { fg = c.blue },
-    ["@function.dockerfile"]          = { fg = c.cyan }, -- stage name: cyan
+    ["@keyword.dockerfile"]           = { fg = c.primary }, -- FROM RUN COPY CMD: primary
+    ["@string.dockerfile"]            = { fg = c.gold },
+    ["@number.dockerfile"]            = { fg = c.seafoam },
+    ["@function.dockerfile"]          = { fg = c.blue }, -- stage name: blue
     -- ───────────────────────────────────
     -- Lua
-    ["@keyword.coroutine.lua"]        = { fg = c.orange },
-    ["@function.builtin.lua"]         = { fg = c.cyan }, -- print/require/pairs: cyan
-    ["@constant.builtin.lua"]         = { fg = c.blue }, -- true/false/nil: blue
-    ["@field.lua"]                    = { fg = c.blue }, -- table.field: blue
-    ["@variable.builtin.lua"]         = { fg = c.fg }, -- vim: plain text, no color
+    ["@keyword.coroutine.lua"]        = { fg = c.primary },
+    ["@function.builtin.lua"]         = { fg = c.blue }, -- print/require/pairs: blue
+    ["@constant.builtin.lua"]         = { fg = c.seafoam }, -- true/false/nil: seafoam
+    ["@field.lua"]                    = { fg = c.mauve }, -- table.field: mauve
+    ["@variable.builtin.lua"]         = { fg = c.fg_secondary, italic = true }, -- vim: fg_secondary italic (matches base @variable.builtin)
     -- ───────────────────────────────────
     -- Lua
     ["@constructor.lua"]            = {}, -- {} in tables: no color, just text
@@ -238,21 +239,27 @@ function M.get(c, opts)
     -- ───────────────────────────────────
     -- Markdown / text (fallback for @text.* convention)
     ["@text.emphasis"]              = { italic = true },
-    ["@text.literal"]               = { bg = c.terminal_black, fg = c.fg }, -- inline code
-    ["@text.literal.markdown_inline"] = { bg = c.terminal_black, fg = c.fg },
-    ["@text.quote"]                  = { fg = c.fg_dark, italic = true }, -- blockquotes
-    ["@text.reference"]             = { fg = c.teal }, -- link references
+    ["@text.literal"]               = { bg = c.bg_elevated, fg = c.fg }, -- inline code
+    ["@text.literal.markdown_inline"] = { bg = c.bg_elevated, fg = c.fg },
+    ["@text.quote"]                  = { fg = c.fg_secondary, italic = true }, -- blockquotes
+    ["@text.reference"]             = { fg = c.primary_anchor }, -- link references
     ["@text.strike"]                 = { strikethrough = true },
     ["@text.strong"]                 = { bold = true },
     ["@text.title"]                 = "Title",
     ["@text.uri"]                   = "Underlined",
   }
 
-  -- Markdown headings: H1 orange → H2 cyan → H3 yellow → H4 red → H5 blue → H6 purple
-  -- (bg matches text color blended into background for subtle highlight)
-  local md_headings = { c.orange, c.cyan, c.yellow, c.red, c.blue, c.purple }
-  for i, color in ipairs(md_headings) do
-    ret["@markup.heading." .. i .. ".markdown"] = { fg = color, bold = true, bg = Util.blend_bg(color, 0.08) }
+  -- Markdown headings: H1 primary → H2 blue → H3 mauve → H4 gold → H5 seafoam → H6 primary_muted (bg tint strongest on H1, fades by H6)
+  local md_headings = {
+    { color = c.primary,  alpha = 0.16 },
+    { color = c.blue,     alpha = 0.13 },
+    { color = c.mauve,    alpha = 0.11 },
+    { color = c.gold,     alpha = 0.09 },
+    { color = c.seafoam, alpha = 0.06 },
+    { color = c.primary_muted, alpha = 0.04 },
+  }
+  for i, heading in ipairs(md_headings) do
+    ret["@markup.heading." .. i .. ".markdown"] = { fg = heading.color, bold = true, bg = Util.blend_bg(heading.color, heading.alpha) }
   end
 
   return ret

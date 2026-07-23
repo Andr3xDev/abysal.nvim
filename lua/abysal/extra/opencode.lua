@@ -68,44 +68,44 @@ ${opencode_defs}
       "light": "blue"
     },
     "secondary": {
-      "dark": "purple",
-      "light": "purple"
+      "dark": "blue",
+      "light": "blue"
     },
     "accent": {
-      "dark": "orange",
-      "light": "orange"
+      "dark": "primary",
+      "light": "primary"
     },
     "error": {
-      "dark": "red1",
-      "light": "red1"
+      "dark": "red",
+      "light": "red"
     },
     "warning": {
-      "dark": "yellow",
-      "light": "yellow"
+      "dark": "amber",
+      "light": "amber"
     },
     "success": {
       "dark": "green",
       "light": "green"
     },
     "info": {
-      "dark": "blue2",
-      "light": "blue2"
+      "dark": "blue",
+      "light": "blue"
     },
     "text": {
       "dark": "fg",
       "light": "fg"
     },
     "textMuted": {
-      "dark": "fg_dark",
-      "light": "fg_dark"
+      "dark": "fg_secondary",
+      "light": "fg_secondary"
     },
     "background": {
       "dark": "bg",
       "light": "bg"
     },
     "backgroundPanel": {
-      "dark": "bg_dark",
-      "light": "bg_dark"
+      "dark": "bg_elevated",
+      "light": "bg_elevated"
     },
     "backgroundElement": {
       "dark": "bg_highlight",
@@ -120,24 +120,24 @@ ${opencode_defs}
       "light": "border_highlight"
     },
     "borderSubtle": {
-      "dark": "dark3",
-      "light": "dark3"
+      "dark": "fg_muted",
+      "light": "fg_muted"
     },
     "diffAdded": {
-      "dark": "green1",
-      "light": "green1"
+      "dark": "green_anchor",
+      "light": "green_anchor"
     },
     "diffRemoved": {
-      "dark": "red1",
-      "light": "red1"
+      "dark": "red",
+      "light": "red"
     },
     "diffContext": {
-      "dark": "fg_dark",
-      "light": "fg_dark"
+      "dark": "fg_secondary",
+      "light": "fg_secondary"
     },
     "diffHunkHeader": {
-      "dark": "comment",
-      "light": "comment"
+      "dark": "fg_muted",
+      "light": "fg_muted"
     },
     "diffHighlightAdded": {
       "dark": "git_add",
@@ -160,8 +160,8 @@ ${opencode_defs}
       "light": "bg_highlight"
     },
     "diffLineNumber": {
-      "dark": "fg_gutter",
-      "light": "fg_gutter"
+      "dark": "fg_muted",
+      "light": "fg_muted"
     },
     "diffAddedLineNumberBg": {
       "dark": "diff_add",
@@ -184,16 +184,16 @@ ${opencode_defs}
       "light": "blue"
     },
     "markdownLinkText": {
-      "dark": "teal",
-      "light": "teal"
+      "dark": "primary_anchor",
+      "light": "primary_anchor"
     },
     "markdownCode": {
       "dark": "green",
       "light": "green"
     },
     "markdownBlockQuote": {
-      "dark": "comment",
-      "light": "comment"
+      "dark": "fg_muted",
+      "light": "fg_muted"
     },
     "markdownEmph": {
       "dark": "fg",
@@ -204,36 +204,36 @@ ${opencode_defs}
       "light": "fg"
     },
     "markdownHorizontalRule": {
-      "dark": "fg_gutter",
-      "light": "fg_gutter"
+      "dark": "fg_muted",
+      "light": "fg_muted"
     },
     "markdownListItem": {
-      "dark": "blue5",
-      "light": "blue5"
+      "dark": "fg_muted",
+      "light": "fg_muted"
     },
     "markdownListEnumeration": {
-      "dark": "orange",
-      "light": "orange"
+      "dark": "primary",
+      "light": "primary"
     },
     "markdownImage": {
       "dark": "blue",
       "light": "blue"
     },
     "markdownImageText": {
-      "dark": "teal",
-      "light": "teal"
+      "dark": "primary_anchor",
+      "light": "primary_anchor"
     },
     "markdownCodeBlock": {
       "dark": "fg",
       "light": "fg"
     },
     "syntaxComment": {
-      "dark": "comment",
-      "light": "comment"
+      "dark": "fg_muted",
+      "light": "fg_muted"
     },
     "syntaxKeyword": {
-      "dark": "purple",
-      "light": "purple"
+      "dark": "blue",
+      "light": "blue"
     },
     "syntaxFunction": {
       "dark": "blue",
@@ -248,20 +248,20 @@ ${opencode_defs}
       "light": "green"
     },
     "syntaxNumber": {
-      "dark": "orange",
-      "light": "orange"
+      "dark": "primary",
+      "light": "primary"
     },
     "syntaxType": {
-      "dark": "blue1",
-      "light": "blue1"
+      "dark": "primary_anchor",
+      "light": "primary_anchor"
     },
     "syntaxOperator": {
-      "dark": "blue5",
-      "light": "blue5"
+      "dark": "fg_muted",
+      "light": "fg_muted"
     },
     "syntaxPunctuation": {
-      "dark": "fg_dark",
-      "light": "fg_dark"
+      "dark": "fg_secondary",
+      "light": "fg_secondary"
     }
   }
 }]],

@@ -21,28 +21,28 @@ foreground=${fg}
 background=${bg}
 selection-foreground=${fg}
 selection-background=${bg_visual}
-urls=${green1}
+urls=${green_anchor}
 
 regular0=${black}
-regular1=${red}
+regular1=${gold}
 regular2=${green}
-regular3=${yellow}
+regular3=${amber}
 regular4=${blue}
-regular5=${magenta}
-regular6=${cyan}
-regular7=${fg_dark}
+regular5=${primary}
+regular6=${blue}
+regular7=${fg_secondary}
 
-bright0=${terminal_black}
-bright1=${red}
+bright0=${bg_elevated}
+bright1=${gold}
 bright2=${green}
-bright3=${yellow}
+bright3=${amber}
 bright4=${blue}
-bright5=${magenta}
-bright6=${cyan}
+bright5=${primary}
+bright6=${blue}
 bright7=${fg}
 
-16=${orange}
-17=${red1}]],
+16=${primary}
+17=${red}]],
     footColors
   )
 

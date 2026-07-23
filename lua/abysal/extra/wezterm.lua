@@ -15,22 +15,22 @@ cursor_fg = "${bg}"
 selection_bg = "${bg_visual}"
 selection_fg = "${fg}"
 split = "${blue}"
-compose_cursor = "${orange}"
+compose_cursor = "${primary}"
 scrollbar_thumb = "${bg_highlight}"
 
 ansi = ["${terminal.black}", "${terminal.red}", "${terminal.green}", "${terminal.yellow}", "${terminal.blue}", "${terminal.magenta}", "${terminal.cyan}", "${terminal.white}"]
 brights = ["${terminal.black_bright}", "${terminal.red_bright}", "${terminal.green_bright}", "${terminal.yellow_bright}", "${terminal.blue_bright}", "${terminal.magenta_bright}", "${terminal.cyan_bright}", "${terminal.white_bright}"]
 
 [colors.tab_bar]
-inactive_tab_edge = "${bg_dark}"
+inactive_tab_edge = "${bg_elevated}"
 background = "${bg}"
 
 [colors.tab_bar.active_tab]
-fg_color = "${bg_dark}"
+fg_color = "${bg_elevated}"
 bg_color = "${blue}"
 
 [colors.tab_bar.inactive_tab]
-fg_color = "${dark3}"
+fg_color = "${fg_muted}"
 bg_color = "${bg_highlight}"
 
 [colors.tab_bar.inactive_tab_hover]

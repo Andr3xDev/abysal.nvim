@@ -6,15 +6,15 @@ M.url = "https://github.com/MagicDuck/grug-far.nvim"
 function M.get(c, opts)
   -- stylua: ignore
   return {
-    GrugFarHelpHeader             = { fg = c.comment },
-    GrugFarHelpHeaderKey          = { fg = c.cyan },
-    GrugFarInputLabel             = { fg = c.blue1 },
-    GrugFarInputPlaceholder       = { fg = c.dark3 },
+    GrugFarHelpHeader             = { fg = c.fg_muted },
+    GrugFarHelpHeaderKey          = { fg = c.blue },
+    GrugFarInputLabel             = { fg = c.primary_anchor },
+    GrugFarInputPlaceholder       = { fg = c.fg_muted },
     GrugFarResultsChangeIndicator = { fg = c.git.change },
-    GrugFarResultsHeader          = { fg = c.orange },
-    GrugFarResultsLineColumn      = { fg = c.dark3 },
-    GrugFarResultsLineNo          = { fg = c.dark3 },
-    GrugFarResultsMatch           = { fg = c.black, bg = c.red },
+    GrugFarResultsHeader          = { fg = c.primary },
+    GrugFarResultsLineColumn      = { fg = c.fg_muted },
+    GrugFarResultsLineNo          = { fg = c.fg_muted },
+    GrugFarResultsMatch           = { fg = c.black, bg = c.gold },
     GrugFarResultsStats           = { fg = c.blue },
   }
 end

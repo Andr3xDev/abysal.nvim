@@ -10,39 +10,39 @@ function M.get(style)
 
   hl.normal = {
     a = { bg = colors.blue, fg = colors.black },
-    b = { bg = colors.fg_gutter, fg = colors.blue },
+    b = { bg = colors.fg_muted, fg = colors.blue },
     c = { bg = colors.bg_statusline, fg = colors.fg_sidebar },
   }
 
   hl.insert = {
     a = { bg = colors.green, fg = colors.black },
-    b = { bg = colors.fg_gutter, fg = colors.green },
+    b = { bg = colors.fg_muted, fg = colors.green },
   }
 
   hl.command = {
-    a = { bg = colors.yellow, fg = colors.black },
-    b = { bg = colors.fg_gutter, fg = colors.yellow },
+    a = { bg = colors.amber, fg = colors.black },
+    b = { bg = colors.fg_muted, fg = colors.amber },
   }
 
   hl.visual = {
-    a = { bg = colors.magenta, fg = colors.black },
-    b = { bg = colors.fg_gutter, fg = colors.magenta },
+    a = { bg = colors.primary, fg = colors.black },
+    b = { bg = colors.fg_muted, fg = colors.primary },
   }
 
   hl.replace = {
-    a = { bg = colors.red, fg = colors.black },
-    b = { bg = colors.fg_gutter, fg = colors.red },
+    a = { bg = colors.gold, fg = colors.black },
+    b = { bg = colors.fg_muted, fg = colors.gold },
   }
 
   hl.terminal = {
-    a = { bg = colors.green1, fg = colors.black },
-    b = { bg = colors.fg_gutter, fg = colors.green1 },
+    a = { bg = colors.green_anchor, fg = colors.black },
+    b = { bg = colors.fg_muted, fg = colors.green_anchor },
   }
 
   hl.inactive = {
     a = { bg = colors.bg_statusline, fg = colors.blue },
-    b = { bg = colors.bg_statusline, fg = colors.fg_gutter, gui = "bold" },
-    c = { bg = colors.bg_statusline, fg = colors.fg_gutter },
+    b = { bg = colors.bg_statusline, fg = colors.fg_muted, gui = "bold" },
+    c = { bg = colors.bg_statusline, fg = colors.fg_muted },
   }
 
   if config.lualine_bold then

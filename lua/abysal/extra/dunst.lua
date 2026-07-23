@@ -10,7 +10,7 @@ function M.generate(colors)
 # For more configuration options see https://github.com/dunst-project/dunst/blob/master/dunstrc
 
 [urgency_low]
-    background = "${bg_dark}"
+    background = "${bg_elevated}"
     foreground = "${fg}"
     frame_color = "${fg}"
 

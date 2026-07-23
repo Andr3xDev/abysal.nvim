@@ -108,7 +108,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${comment}</string>
+				<string>${fg_muted}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -119,7 +119,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${comment}</string>
+				<string>${fg_muted}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -130,7 +130,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${orange}</string>
+				<string>${primary}</string>
 			</dict>
 		</dict>
     <dict>
@@ -143,7 +143,7 @@ M.template = [[
         <key>fontStyle</key>
         <string></string>
         <key>foreground</key>
-        <string>${green1}</string>
+        <string>${green_anchor}</string>
       </dict>
     </dict>
 		<dict>
@@ -217,7 +217,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${red}</string>
+				<string>${gold}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -228,7 +228,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${magenta}</string>
+				<string>${primary}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -239,7 +239,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${magenta}</string>
+				<string>${primary}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -250,7 +250,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${purple}</string>
+				<string>${blue}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -261,7 +261,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${cyan}</string>
+				<string>${blue}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -274,7 +274,7 @@ M.template = [[
 				<key>fontStyle</key>
 				<string>bold</string>
 				<key>foreground</key>
-				<string>${red}</string>
+				<string>${gold}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -285,7 +285,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${blue5}</string>
+				<string>${fg_muted}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -296,7 +296,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${cyan}</string>
+				<string>${blue}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -307,7 +307,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${magenta}</string>
+				<string>${primary}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -318,7 +318,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${cyan}</string>
+				<string>${blue}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -329,7 +329,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${magenta}</string>
+				<string>${primary}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -340,7 +340,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${red}</string>
+				<string>${gold}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -373,7 +373,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${blue2}</string>
+				<string>${blue}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -395,7 +395,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${blue1}</string>
+				<string>${primary_anchor}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -439,7 +439,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${green1}</string>
+				<string>${green_anchor}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -450,7 +450,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${cyan}</string>
+				<string>${blue}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -472,7 +472,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${green2}</string>
+				<string>${green}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -483,7 +483,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${red}</string>
+				<string>${gold}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -494,7 +494,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${red}</string>
+				<string>${gold}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -538,7 +538,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${magenta}</string>
+				<string>${primary}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -549,7 +549,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${magenta}</string>
+				<string>${primary}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -562,7 +562,7 @@ M.template = [[
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>${magenta}</string>
+				<string>${primary}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -573,7 +573,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${blue2}</string>
+				<string>${blue}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -595,7 +595,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${blue1}</string>
+				<string>${primary_anchor}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -650,7 +650,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${blue2}</string>
+				<string>${blue}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -694,7 +694,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${magenta}</string>
+				<string>${primary}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -705,7 +705,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${purple}</string>
+				<string>${blue}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -727,7 +727,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${orange}</string>
+				<string>${primary}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -749,7 +749,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${red}</string>
+				<string>${gold}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -771,7 +771,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${red}</string>
+				<string>${gold}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -782,7 +782,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${magenta}</string>
+				<string>${primary}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -793,7 +793,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${magenta}</string>
+				<string>${primary}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -804,7 +804,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${blue5}</string>
+				<string>${fg_muted}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -826,7 +826,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${magenta}</string>
+				<string>${primary}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -870,7 +870,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${blue6}</string>
+				<string>${blue}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -881,7 +881,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${red}</string>
+				<string>${gold}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -892,7 +892,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${magenta}</string>
+				<string>${primary}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -914,7 +914,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${blue5}</string>
+				<string>${fg_muted}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -936,7 +936,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${blue5}</string>
+				<string>${fg_muted}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -958,7 +958,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${red}</string>
+				<string>${gold}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -980,7 +980,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${blue2}</string>
+				<string>${blue}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -991,7 +991,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${cyan}</string>
+				<string>${blue}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1002,7 +1002,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${magenta}</string>
+				<string>${primary}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1024,7 +1024,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${blue2}</string>
+				<string>${blue}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1035,7 +1035,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${green1}</string>
+				<string>${green_anchor}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1046,7 +1046,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${red}</string>
+				<string>${gold}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1123,7 +1123,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${magenta}</string>
+				<string>${primary}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1147,7 +1147,7 @@ M.template = [[
 				<key>fontStyle</key>
 				<string>bold</string>
 				<key>foreground</key>
-				<string>${blue5}</string>
+				<string>${fg_muted}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1295,7 +1295,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${green1}</string>
+				<string>${green_anchor}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1306,7 +1306,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${blue5}</string>
+				<string>${fg_muted}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1341,7 +1341,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${blue2}</string>
+				<string>${blue}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1363,7 +1363,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${red1}</string>
+				<string>${red}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1385,7 +1385,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${red}</string>
+				<string>${gold}</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1396,7 +1396,7 @@ M.template = [[
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>${green1}</string>
+				<string>${green_anchor}</string>
 			</dict>
 		</dict>
 		<dict>

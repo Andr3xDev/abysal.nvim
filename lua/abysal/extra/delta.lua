@@ -5,8 +5,8 @@ local M = {}
 --- @param colors ColorScheme
 function M.generate(colors)
   colors.delta = {
-    add = util.blend_bg(colors.green2, 0.45),
-    delete = util.blend_bg(colors.red1, 0.45),
+    add = util.blend_bg(colors.green, 0.45),
+    delete = util.blend_bg(colors.red, 0.45),
   }
   local delta = util.template(
     [[
@@ -21,7 +21,7 @@ function M.generate(colors)
   plus-emph-style               = syntax "${delta.add}"
   plus-empty-line-marker-style  = syntax "${diff.add}"
   line-numbers-plus-style       = "${git.add}"
-  line-numbers-zero-style       = "${fg_gutter}"
+  line-numbers-zero-style       = "${fg_muted}"
 ]],
     colors
   )

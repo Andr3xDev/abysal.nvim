@@ -16,14 +16,14 @@ function M.generate(colors)
 # Abysal Color Palette
 set -l foreground ${fg}
 set -l selection ${bg_visual}
-set -l comment ${comment}
-set -l red ${red}
-set -l orange ${orange}
-set -l yellow ${yellow}
+set -l comment ${fg_muted}
+set -l red ${gold}
+set -l orange ${primary}
+set -l yellow ${amber}
 set -l green ${green}
-set -l purple ${purple}
-set -l cyan ${cyan}
-set -l pink ${magenta}
+set -l purple ${blue}
+set -l cyan ${blue}
+set -l pink ${primary}
 
 # Syntax Highlighting Colors
 set -g fish_color_normal $foreground

@@ -18,14 +18,14 @@ theme[main_fg]="${fg}"
 theme[title]="${fg}"
 
 # Highlight color for keyboard shortcuts
-theme[hi_fg]="${orange}"
+theme[hi_fg]="${primary}"
 
 # Selected item in processes box
 theme[selected_bg]="${bg_highlight}"
-theme[selected_fg]="${cyan}"
+theme[selected_fg]="${blue}"
 
 # Misc colors for processes box including mini cpu graphs, details memory graph and details status text
-theme[proc_misc]="${cyan}"
+theme[proc_misc]="${blue}"
 
 # Cpu box outline color
 theme[cpu_box]="${border_highlight}"
@@ -44,43 +44,43 @@ theme[div_line]="${border_highlight}"
 
 # Temperature graph colors
 theme[temp_start]="${green}"
-theme[temp_mid]="${yellow}"
-theme[temp_end]="${red}"
+theme[temp_mid]="${amber}"
+theme[temp_end]="${gold}"
 
 # CPU graph colors
 theme[cpu_start]="${green}"
-theme[cpu_mid]="${yellow}"
-theme[cpu_end]="${red}"
+theme[cpu_mid]="${amber}"
+theme[cpu_end]="${gold}"
 
 # Mem/Disk free meter
 theme[free_start]="${green}"
-theme[free_mid]="${yellow}"
-theme[free_end]="${red}"
+theme[free_mid]="${amber}"
+theme[free_end]="${gold}"
 
 # Mem/Disk cached meter
 theme[cached_start]="${green}"
-theme[cached_mid]="${yellow}"
-theme[cached_end]="${red}"
+theme[cached_mid]="${amber}"
+theme[cached_end]="${gold}"
 
 # Mem/Disk available meter
 theme[available_start]="${green}"
-theme[available_mid]="${yellow}"
-theme[available_end]="${red}"
+theme[available_mid]="${amber}"
+theme[available_end]="${gold}"
 
 # Mem/Disk used meter
 theme[used_start]="${green}"
-theme[used_mid]="${yellow}"
-theme[used_end]="${red}"
+theme[used_mid]="${amber}"
+theme[used_end]="${gold}"
 
 # Download graph colors
 theme[download_start]="${green}"
-theme[download_mid]="${yellow}"
-theme[download_end]="${red}"
+theme[download_mid]="${amber}"
+theme[download_end]="${gold}"
 
 # Upload graph colors
 theme[upload_start]="${green}"
-theme[upload_mid]="${yellow}"
-theme[upload_end]="${red}"]],
+theme[upload_mid]="${amber}"
+theme[upload_end]="${gold}"]],
     colors
   )
 

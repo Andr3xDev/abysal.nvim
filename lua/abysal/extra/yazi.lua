@@ -8,7 +8,7 @@ function M.generate(colors)
     [[
 [manager]
 border_symbol = "│"
-border_style  = { fg = "${cyan}" }
+border_style  = { fg = "${blue}" }
 
 [status]
 overall   = { fg = "${fg}", bg = "${bg}" }
@@ -19,23 +19,23 @@ sep_right = { open = "", close = "" }
 
 rules = [
 	# Images
-	{ mime = "image/*", fg = "${yellow}" },
+	{ mime = "image/*", fg = "${amber}" },
 
 	# Media
-	{ mime = "{audio,video}/*", fg = "${magenta}" },
+	{ mime = "{audio,video}/*", fg = "${primary}" },
 
 	# Archives
-	{ mime = "application/*zip", fg = "${red}" },
-	{ mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", fg = "${red}" },
+	{ mime = "application/*zip", fg = "${gold}" },
+	{ mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", fg = "${gold}" },
 
 	# Documents
-	{ mime = "application/{pdf,doc,rtf,vnd.*}", fg = "${cyan}" },
+	{ mime = "application/{pdf,doc,rtf,vnd.*}", fg = "${blue}" },
 
 	# Empty files
-	# { mime = "inode/x-empty", fg = "${red}" },
+	# { mime = "inode/x-empty", fg = "${gold}" },
 
 	# Special files
-	{ name = "*", is = "orphan", bg = "${red}" },
+	{ name = "*", is = "orphan", bg = "${gold}" },
 	{ name = "*", is = "exec"  , fg = "${green}" },
 
 	# Fallback

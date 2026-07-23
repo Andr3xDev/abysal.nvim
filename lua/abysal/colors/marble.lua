@@ -1,57 +1,51 @@
 ---@type Palette
 return {
   -- Backgrounds
-  bg            = "#dcdcdc", -- base: main editor background
-  bg_dark       = "#cfcfcf", -- surface: panels/sidebars (slightly darker)
-  bg_dark1      = "#c4c4c4", -- highlight2: deeper panel layer
-  bg_highlight  = "#c4c4c4", -- cursor line (highlight2: medium selection)
+  bg              = "#F0F3F4", -- base: main editor background
+  bg_dark         = "#FFFFFF", -- lightest layer
+  bg_elevated     = "#D8E0E3", -- surface: panels, popups, statusline
+  bg_highlight    = "#C2CDD1", -- cursor line, medium selection
 
-  -- Foregrounds
-  fg            = "#2f2f2f", -- main text
-  fg_dark       = "#555555", -- secondary text, statusline (dark gray secondary)
-  fg_gutter     = "#8c8c8c", -- line numbers, gutter (visible on light bg)
+  -- Borders
+  border_subtle   = "#AEB9BD", -- barely visible separators
+  border          = "#8F9DA2", -- default window borders
+  border_strong   = "#66777D", -- emphasized borders
+  border_emphasis = "#425258", -- focused/active borders
 
-  -- Grays
-  comment       = "#737373", -- comments (equal contrast in both variants)
-  dark3         = "#737373", -- NonText, SpecialKey
-  dark5         = "#555555", -- Conceal, qfLineNr (dark gray secondary)
+  -- Text
+  fg              = "#0D1518", -- main text
+  fg_secondary    = "#33424A", -- secondary text, statusline
+  fg_muted        = "#54646A", -- comments, gutter, disabled text
 
-  -- Blue family (color5: steel blue, darkened for light bg)
-  blue          = "#365ca8", -- constants, properties, numbers, booleans
-  blue0         = "#4a6dc0", -- bg_visual source, bg_search
-  blue1         = "#2a4d94", -- Special, Type, border highlight
-  blue2         = "#2c9279", -- info diagnostics
-  blue5         = "#5878b8", -- operators, punctuation (medium blue)
-  blue6         = "#8090c0", -- regex strings (muted blue)
-  blue7         = "#bfcce0", -- diff change bg source, inlay hints (very light)
+  -- Identity turquoise
+  primary         = "#0D9488", -- keywords, functions: primary accent
+  primary_text    = "#0A6F64", -- primary accent on text
+  primary_anchor  = "#14B8A6", -- links, deeper turquoise anchor
+  primary_muted   = "#2E8078", -- structural/secondary turquoise accent
+  mauve           = "#6B3D7B", -- mauve: property/field/member access (distinct hue, ~285°, unused territory)
 
-  -- Teal/green family (color1: turquoise, darkened for light bg)
-  cyan          = "#2c9279", -- functions, methods, tags, headings, YAML/JSON root keys
-  teal          = "#2c9279", -- markup links
-  green         = "#2c9279", -- strings, characters
-  green1        = "#2c9279", -- @property, @variable.member, healthSuccess
-  green2        = "#237864", -- diff add bg source (slightly muted)
+  -- Functional
+  amber           = "#A6701F", -- warnings
+  amber_mid       = "#8A5A1D", -- numbers, constants, booleans
+  coral           = "#C43D22", -- vivid warm accent
+  red             = "#C13034", -- errors, tags, builtins
+  red_anchor      = "#E5484D", -- deeper red anchor
+  green           = "#2A8049", -- success, diagnostics ok
+  green_anchor    = "#3DB667", -- deeper green anchor
+  seafoam         = "#2E8A63", -- seafoam: numbers/booleans/constants (distinct from strings/types on gold)
+  blue            = "#2F4EA8", -- generic detail accent
+  gold            = "#8A7818", -- strings, types
 
-  -- Warm colors
-  orange        = "#a04e1e", -- keywords, control flow, MatchParen
-  yellow        = "#7a6020", -- strings, warnings (dark sand)
+  -- Detail
+  text_on_solid   = "#F5F6F5", -- text painted on solid accent backgrounds
 
-  -- Red family (color4: soft red, darkened for light bg)
-  red           = "#a8474a", -- @tag, @variable.builtin
-  red1          = "#8c2d30", -- errors, diff delete bg source
-
-  -- Purple family (color6: lavender, darkened for light bg)
-  magenta       = "#824699", -- constructors, @keyword.function
-  magenta2      = "#a83280", -- vivid accent (rarely seen)
-  purple        = "#824699", -- @keyword
-
-  -- Terminal
-  terminal_black = "#bcbcbc", -- terminal black, markdown inline code bg (light)
+  -- Selection
+  selection_bg    = "#CBE4E1", -- visual selection background
 
   -- Git indicators (shown in gutter)
   git = {
-    add    = "#2c9279", -- color1: turquoise (darkened)
-    change = "#365ca8", -- color5: steel blue (darkened)
-    delete = "#a8474a", -- color4: soft red (darkened)
+    add    = "#2A8049",
+    change = "#A6701F",
+    delete = "#C13034",
   },
 }

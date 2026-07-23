@@ -35,8 +35,8 @@ color14: ${terminal.cyan_bright}
 color15: ${terminal.white_bright}
 
 # Extended colors
-color16: ${orange}
-color17: ${red1}
+color16: ${primary}
+color17: ${red}
 ]],
     colors
   )

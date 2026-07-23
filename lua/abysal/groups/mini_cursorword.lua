@@ -6,8 +6,8 @@ M.url = "https://github.com/echasnovski/mini.cursorword"
 function M.get(c)
   -- stylua: ignore
   return {
-    MiniCursorword        = { bg = c.fg_gutter },
-    MiniCursorwordCurrent = { bg = c.fg_gutter },
+    MiniCursorword        = { bg = c.fg_muted },
+    MiniCursorwordCurrent = { bg = c.fg_muted },
   }
 end
 

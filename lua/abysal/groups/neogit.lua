@@ -8,11 +8,11 @@ M.url = "https://github.com/TimUntersberger/neogit"
 function M.get(c)
   -- stylua: ignore
   return {
-    NeogitBranch               = { fg = c.magenta },
-    NeogitRemote               = { fg = c.purple },
+    NeogitBranch               = { fg = c.primary },
+    NeogitRemote               = { fg = c.blue },
     NeogitHunkHeader           = { bg = c.bg_highlight, fg = c.fg },
-    NeogitHunkHeaderHighlight  = { bg = c.fg_gutter, fg = c.blue },
-    NeogitDiffContextHighlight = { bg = Util.blend_bg(c.fg_gutter, 0.5), fg = c.fg_dark },
+    NeogitHunkHeaderHighlight  = { bg = c.fg_muted, fg = c.blue },
+    NeogitDiffContextHighlight = { bg = Util.blend_bg(c.fg_muted, 0.5), fg = c.fg_secondary },
     NeogitDiffDeleteHighlight  = { fg = c.git.delete, bg = c.diff.delete },
     NeogitDiffAddHighlight     = { fg = c.git.add, bg = c.diff.add },
   }
