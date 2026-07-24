@@ -8,6 +8,7 @@ function M.get(c, opts)
   local ret = {
     ["@annotation"]                 = { fg = c.seafoam, italic = true }, -- decorators/annotations: like @attribute
     ["@attribute"]                  = { fg = c.seafoam, italic = true },
+    ["@attribute.builtin"]          = { fg = c.seafoam, italic = true }, -- classmethod/property/staticmethod: seafoam italic (was falling back to Special/no-italic by accident)
     ["@boolean"]                    = "Boolean",
     ["@character"]                  = "Character",
     ["@character.printf"]           = "SpecialChar",
@@ -89,7 +90,7 @@ function M.get(c, opts)
     ["@none"]                       = {},
     ["@number"]                     = "Number",
     ["@number.float"]               = "Float",
-    ["@operator"]                   = { fg = c.fg_muted }, -- For any operator: `+`, but also `->` and `*` in C.
+    ["@operator"]                   = { fg = c.seafoam }, -- For any operator: `+`, but also `->` and `*` in C. seafoam — also fixes LSP semantic-token 'operator' type divergence for word-operators like Python's in/not/is, since semantic_tokens.lua links @lsp.type.operator to @operator
     ["@parameter"]                  = { fg = c.fg }, -- function parameters: plain text
     ["@property"]                   = { fg = c.mauve }, -- field access, properties
     ["@punctuation.bracket"]        = { fg = c.fg_secondary }, -- For brackets and parens.
@@ -156,7 +157,7 @@ function M.get(c, opts)
     ["@variable.bash"]              = { fg = c.fg_secondary }, -- $VARIABLES in uppercase: fg_secondary
     ["@string.bash"]                = { fg = c.gold }, -- strings: gold
     ["@number.bash"]                = { fg = c.seafoam }, -- numbers: seafoam
-    ["@operator.bash"]              = { fg = c.fg_muted }, -- operators: fg_muted
+    ["@operator.bash"]              = { fg = c.seafoam }, -- operators: seafoam
     -- ───────────────────────────────────
     -- JavaScript / TypeScript / TSX
     ["@type.typescript"]              = { fg = c.gold, italic = true },
@@ -218,7 +219,7 @@ function M.get(c, opts)
     ["@function.sql"]                 = { fg = c.blue }, -- COUNT() SUM(): blue
     ["@string.sql"]                   = { fg = c.gold },
     ["@number.sql"]                   = { fg = c.seafoam },
-    ["@operator.sql"]                 = { fg = c.fg_muted },
+    ["@operator.sql"]                 = { fg = c.seafoam },
     -- ───────────────────────────────────
     -- Dockerfile
     ["@keyword.dockerfile"]           = { fg = c.primary }, -- FROM RUN COPY CMD: primary

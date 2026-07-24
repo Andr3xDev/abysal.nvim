@@ -94,7 +94,7 @@ function M.get(c, opts)
     Label                       = { fg = c.blue }, -- labels in C/Lua
     Macro                       = { fg = c.primary }, -- macro definitions
     Number                      = { fg = c.seafoam }, -- numeric constants
-    Operator                    = { fg = c.fg_muted }, -- "sizeof", "+", "*", etc.
+    Operator                    = { fg = c.seafoam }, -- "sizeof", "+", "*", etc.
     PreProc                     = { fg = c.primary }, -- (preferred) generic Preprocessor
     Repeat                      = { fg = c.primary }, -- for, while, loop
     Special                     = { fg = c.seafoam }, -- (preferred) any special symbol
