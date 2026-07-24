@@ -6,8 +6,8 @@ local M = {}
 function M.get(c, opts)
   -- stylua: ignore
   local ret = {
-    ["@annotation"]                 = { fg = c.blue, italic = true }, -- decorators/annotations: like @attribute
-    ["@attribute"]                  = { fg = c.blue, italic = true },
+    ["@annotation"]                 = { fg = c.seafoam, italic = true }, -- decorators/annotations: like @attribute
+    ["@attribute"]                  = { fg = c.seafoam, italic = true },
     ["@boolean"]                    = "Boolean",
     ["@character"]                  = "Character",
     ["@character.printf"]           = "SpecialChar",
@@ -25,7 +25,7 @@ function M.get(c, opts)
     ["@constant.macro"]             = "Define",
     ["@constructor"]                = { fg = c.blue }, -- instanciar es llamar: blue, no primary
     ["@constructor.tsx"]            = { fg = c.blue }, -- TSX constructor: blue (DOM instanciation)
-    ["@decorator"]                  = { fg = c.blue, italic = true }, -- decorators (Python, TypeScript)
+    ["@decorator"]                  = { fg = c.seafoam, italic = true }, -- decorators (Python, TypeScript)
     ["@diff.delta"]                 = "DiffChange",
     ["@diff.minus"]                 = "DiffDelete",
     ["@diff.plus"]                  = "DiffAdd",
@@ -200,14 +200,14 @@ function M.get(c, opts)
     ["@keyword.coroutine.python"]     = { fg = c.primary }, -- async/await
     ["@type.python"]                  = { fg = c.gold, italic = true },
     ["@type.builtin.python"]          = { fg = c.amber, italic = true }, -- builtin exceptions (Exception, RuntimeError, etc) AND primitive type names (str, int, bool...) share this capture in tree-sitter-python's grammar, no way to split them: amber
-    ["@attribute.python"]             = { fg = c.blue, italic = true }, -- @decorators
+    ["@attribute.python"]             = { fg = c.seafoam, italic = true }, -- @decorators
     ["@string.documentation.python"]  = { fg = c.fg_muted, italic = true }, -- docstrings
     ["@variable.builtin.python"]      = { fg = c.fg_secondary, italic = true }, -- self/cls: fg_secondary italic (matches base @variable.builtin)
     -- ───────────────────────────────────
     -- Java
     ["@type.java"]                    = { fg = c.gold, italic = true },
     ["@keyword.java"]                 = { fg = c.primary },
-    ["@attribute.java"]               = { fg = c.blue, italic = true }, -- annotations @Override
+    ["@attribute.java"]               = { fg = c.seafoam, italic = true }, -- annotations @Override
     ["@keyword.modifier.java"]        = { fg = c.primary }, -- public/private/static: primary (decisions)
     ["@type.builtin.java"]            = { fg = c.blue, italic = true }, -- String, int: blue italic
     ["@constant.java"]                = { fg = c.seafoam },
