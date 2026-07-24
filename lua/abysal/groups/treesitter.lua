@@ -90,7 +90,7 @@ function M.get(c, opts)
     ["@none"]                       = {},
     ["@number"]                     = "Number",
     ["@number.float"]               = "Float",
-    ["@operator"]                   = { fg = c.seafoam }, -- For any operator: `+`, but also `->` and `*` in C. seafoam — also fixes LSP semantic-token 'operator' type divergence for word-operators like Python's in/not/is, since semantic_tokens.lua links @lsp.type.operator to @operator
+    ["@operator"]                   = { fg = c.primary }, -- For any operator: `+`, but also `->` and `*` in C. primary — also fixes LSP semantic-token 'operator' type divergence for word-operators like Python's in/not/is, since semantic_tokens.lua links @lsp.type.operator to @operator
     ["@parameter"]                  = { fg = c.fg }, -- function parameters: plain text
     ["@property"]                   = { fg = c.mauve }, -- field access, properties
     ["@punctuation.bracket"]        = { fg = c.fg_secondary }, -- For brackets and parens.
@@ -157,7 +157,7 @@ function M.get(c, opts)
     ["@variable.bash"]              = { fg = c.fg_secondary }, -- $VARIABLES in uppercase: fg_secondary
     ["@string.bash"]                = { fg = c.gold }, -- strings: gold
     ["@number.bash"]                = { fg = c.seafoam }, -- numbers: seafoam
-    ["@operator.bash"]              = { fg = c.seafoam }, -- operators: seafoam
+    ["@operator.bash"]              = { fg = c.primary }, -- operators: turquoise
     -- ───────────────────────────────────
     -- JavaScript / TypeScript / TSX
     ["@type.typescript"]              = { fg = c.gold, italic = true },
@@ -219,7 +219,7 @@ function M.get(c, opts)
     ["@function.sql"]                 = { fg = c.blue }, -- COUNT() SUM(): blue
     ["@string.sql"]                   = { fg = c.gold },
     ["@number.sql"]                   = { fg = c.seafoam },
-    ["@operator.sql"]                 = { fg = c.seafoam },
+    ["@operator.sql"]                 = { fg = c.primary },
     -- ───────────────────────────────────
     -- Dockerfile
     ["@keyword.dockerfile"]           = { fg = c.primary }, -- FROM RUN COPY CMD: primary
