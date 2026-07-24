@@ -199,7 +199,7 @@ function M.get(c, opts)
     ["@function.method.python"]       = { fg = c.primary_muted }, -- method definitions: primary_muted (distinct from function calls)
     ["@function.method.call.python"]  = { fg = c.primary_muted }, -- method calls: primary_muted (distinct from function calls)
     ["@keyword.coroutine.python"]     = { fg = c.primary }, -- async/await
-    ["@type.python"]                  = { fg = c.gold, italic = true },
+    ["@type.python"]                  = { fg = c.amber, italic = true },
     ["@type.builtin.python"]          = { fg = c.amber, italic = true }, -- builtin exceptions (Exception, RuntimeError, etc) AND primitive type names (str, int, bool...) share this capture in tree-sitter-python's grammar, no way to split them: amber
     ["@attribute.python"]             = { fg = c.seafoam, italic = true }, -- @decorators
     ["@string.documentation.python"]  = { fg = c.fg_muted, italic = true }, -- docstrings
