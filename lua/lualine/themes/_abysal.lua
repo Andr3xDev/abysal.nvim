@@ -9,43 +9,43 @@ function M.get(style)
   local hl = {}
 
   hl.normal = {
-    a = { bg = colors.blue, fg = colors.black },
-    b = { bg = colors.fg_muted, fg = colors.blue },
-    c = { bg = colors.bg_statusline, fg = colors.fg_sidebar },
-    x = { bg = colors.bg_statusline, fg = colors.fg_sidebar },
-    y = { bg = colors.fg_muted, fg = colors.blue },
-    z = { bg = colors.blue, fg = colors.black },
+    a = { bg = colors.blue, fg = colors.text_on_solid },
+    b = { bg = colors.bg_elevated, fg = colors.fg },
+    c = { bg = colors.bg, fg = colors.fg_muted },
+    x = { bg = colors.bg, fg = colors.fg_muted },
+    y = { bg = colors.bg_elevated, fg = colors.fg },
+    z = { bg = colors.blue, fg = colors.text_on_solid },
   }
 
   hl.insert = {
-    a = { bg = colors.green, fg = colors.black },
-    b = { bg = colors.fg_muted, fg = colors.green },
+    a = { bg = colors.green, fg = colors.text_on_solid },
+    b = { bg = colors.bg_elevated, fg = colors.fg },
   }
 
   hl.command = {
-    a = { bg = colors.amber, fg = colors.black },
-    b = { bg = colors.fg_muted, fg = colors.amber },
+    a = { bg = colors.amber, fg = colors.text_on_solid },
+    b = { bg = colors.bg_elevated, fg = colors.fg },
   }
 
   hl.visual = {
-    a = { bg = colors.primary, fg = colors.black },
-    b = { bg = colors.fg_muted, fg = colors.primary },
+    a = { bg = colors.primary, fg = colors.text_on_solid },
+    b = { bg = colors.bg_elevated, fg = colors.fg },
   }
 
   hl.replace = {
-    a = { bg = colors.gold, fg = colors.black },
-    b = { bg = colors.fg_muted, fg = colors.gold },
+    a = { bg = colors.gold, fg = colors.text_on_solid },
+    b = { bg = colors.bg_elevated, fg = colors.fg },
   }
 
   hl.terminal = {
-    a = { bg = colors.green_anchor, fg = colors.black },
-    b = { bg = colors.fg_muted, fg = colors.green_anchor },
+    a = { bg = colors.green_anchor, fg = colors.text_on_solid },
+    b = { bg = colors.bg_elevated, fg = colors.fg },
   }
 
   hl.inactive = {
-    a = { bg = colors.bg_statusline, fg = colors.blue },
-    b = { bg = colors.bg_statusline, fg = colors.fg_muted, gui = "bold" },
-    c = { bg = colors.bg_statusline, fg = colors.fg_muted },
+    a = { bg = colors.bg, fg = colors.fg_muted },
+    b = { bg = colors.bg, fg = colors.fg_muted },
+    c = { bg = colors.bg, fg = colors.fg_muted },
   }
 
   if config.lualine_bold then
