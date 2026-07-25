@@ -9,26 +9,26 @@ function M.get(style)
   local hl = {}
 
   hl.normal = {
-    a = { bg = colors.blue, fg = colors.text_on_solid },
+    a = { bg = colors.primary, fg = colors.text_on_solid },
     b = { bg = colors.bg_elevated, fg = colors.fg },
     c = { bg = colors.bg, fg = colors.fg_muted },
     x = { bg = colors.bg, fg = colors.fg_muted },
     y = { bg = colors.bg_elevated, fg = colors.fg },
-    z = { bg = colors.blue, fg = colors.text_on_solid },
+    z = { bg = colors.primary, fg = colors.text_on_solid },
   }
 
   hl.insert = {
-    a = { bg = colors.green, fg = colors.text_on_solid },
-    b = { bg = colors.bg_elevated, fg = colors.fg },
-  }
-
-  hl.command = {
     a = { bg = colors.amber, fg = colors.text_on_solid },
     b = { bg = colors.bg_elevated, fg = colors.fg },
   }
 
+  hl.command = {
+    a = { bg = colors.blue, fg = colors.text_on_solid },
+    b = { bg = colors.bg_elevated, fg = colors.fg },
+  }
+
   hl.visual = {
-    a = { bg = colors.primary, fg = colors.text_on_solid },
+    a = { bg = colors.green, fg = colors.text_on_solid },
     b = { bg = colors.bg_elevated, fg = colors.fg },
   }
 
