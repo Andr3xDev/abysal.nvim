@@ -69,7 +69,7 @@ function M.setup(opts)
     colors.gold,
     colors.red,
     colors.primary_muted,
-    colors.amber_mid,
+    colors.seafoam,
   }
 
   -- stylua: ignore
@@ -83,8 +83,8 @@ function M.setup(opts)
     green_bright   = colors.primary,
     yellow         = colors.amber,
     yellow_bright  = Util.brighten(colors.amber),
-    blue           = colors.amber_mid,
-    blue_bright    = Util.brighten(colors.amber_mid),
+    blue           = colors.seafoam,
+    blue_bright    = Util.brighten(colors.seafoam),
     magenta        = colors.primary_anchor,
     magenta_bright = colors.primary,
     cyan           = colors.blue,

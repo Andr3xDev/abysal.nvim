@@ -12,6 +12,9 @@ function M.get(style)
     a = { bg = colors.blue, fg = colors.black },
     b = { bg = colors.fg_muted, fg = colors.blue },
     c = { bg = colors.bg_statusline, fg = colors.fg_sidebar },
+    x = { bg = colors.bg_statusline, fg = colors.fg_sidebar },
+    y = { bg = colors.fg_muted, fg = colors.blue },
+    z = { bg = colors.blue, fg = colors.black },
   }
 
   hl.insert = {
@@ -48,6 +51,9 @@ function M.get(style)
   if config.lualine_bold then
     for _, mode in pairs(hl) do
       mode.a.gui = "bold"
+      if mode.z then
+        mode.z.gui = "bold"
+      end
     end
   end
   return hl

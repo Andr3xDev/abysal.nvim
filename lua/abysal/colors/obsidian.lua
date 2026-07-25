@@ -25,8 +25,7 @@ return {
   mauve           = "#AB8AB7", -- mauve: property/field/member access (distinct hue, ~285°, unused territory)
 
   -- Functional
-  amber           = "#F5B84D", -- warnings
-  amber_mid       = "#D9973A", -- numbers, constants, booleans
+  amber           = "#D9973A", -- warnings, class/type names (Python); merged from former amber_mid
   coral           = "#FF6B52", -- vivid warm accent
   red             = "#FF6369", -- errors, tags, builtins
   red_anchor      = "#E5484D", -- deeper red anchor
@@ -45,7 +44,7 @@ return {
   -- Git indicators (shown in gutter)
   git = {
     add    = "#5FD988", -- green
-    change = "#F5B84D", -- amber (doc: git modified = amber, not blue)
+    change = "#D9973A", -- amber (doc: git modified = amber, not blue)
     delete = "#FF6369", -- red
   },
 }
