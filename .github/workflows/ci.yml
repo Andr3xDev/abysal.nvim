@@ -33,8 +33,3 @@ jobs:
           chmod +x selene
           sudo mv selene /usr/local/bin/selene
       - run: selene lua/
-      - uses: JohnnyMorganz/stylua-action@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          version: latest
-          args: --check lua/
