@@ -21,6 +21,12 @@ function M.load(opts)
   return require("abysal.theme").setup(opts)
 end
 
-M.setup = config.setup
+---@param options? abysal.Config
+function M.setup(options)
+  config.setup(options)
+  if config.options.gnome_theme_sync then
+    require("abysal.sync").setup()
+  end
+end
 
 return M

@@ -23,20 +23,6 @@ function M.table(t)
   return table.concat(lines, "\n")
 end
 
-function M.extras()
-  local Extra = require("abysal.extra")
-  local names = vim.tbl_keys(Extra.extras) ---@type string[]
-  table.sort(names)
-  local t = {
-    { "Tool", "Extra" },
-  }
-  for _, name in ipairs(names) do
-    local info = Extra.extras[name]
-    t[#t + 1] = { link(info.label, info.url), link("extras/" .. name, "extras/" .. name) }
-  end
-  return M.table(t)
-end
-
 function M.plugins()
   local t = {
     { "Plugin", "Source" },
@@ -59,7 +45,6 @@ function M.update()
   config = config:gsub("%s*debug = false.\n", "\n")
   Docs.save({
     config = config,
-    extras = { content = M.extras() },
     plugins = { content = M.plugins() },
   })
 end

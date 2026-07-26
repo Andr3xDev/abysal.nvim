@@ -22,6 +22,14 @@ function M.check()
   else
     vim.health.ok("lazy.nvim not detected, enable plugin groups manually via opts.plugins.<name> = true")
   end
+
+  if require("abysal.config").options.gnome_theme_sync then
+    if require("abysal.sync").available() then
+      vim.health.ok("GNOME theme sync active")
+    else
+      vim.health.warn("gsettings not found on $PATH", "GNOME theme sync disabled for this session")
+    end
+  end
 end
 
 return M

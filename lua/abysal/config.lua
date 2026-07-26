@@ -5,7 +5,6 @@ M.version = "1.0.0"
 ---@field on_highlights fun(highlights: abysal.Highlights, colors: ColorScheme)
 M.defaults = {
   style = "obsidian",
-  light_style = "marble",
   transparent = false,
   terminal_colors = true,
   styles = {
@@ -24,6 +23,7 @@ M.defaults = {
   ---@param colors ColorScheme
   on_highlights = function(highlights, colors) end,
   cache = true,
+  gnome_theme_sync = false,
   ---@type table<string, boolean|{enabled:boolean}>
   plugins = {
     all = package.loaded.lazy == nil,

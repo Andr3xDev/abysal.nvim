@@ -95,12 +95,8 @@ For a consistent look across your whole setup:
 - **GTK** — use `obsidian`/`marble` hex values with
   [oomox](https://github.com/themix-project/oomox) or
   [Gradience](https://github.com/GradienceTeam/Gradience)
-- **VSCode** — export via `extras/sublime` and convert with
-  [theme-converter](https://github.com/microsoft/vscode-theme-converter)
 - **Qt / KDE** — apply the palette through
   [KDE Color Scheme](https://docs.kde.org/stable5/en/plasma-workspace/kcontrol/colors)
-- **Alacritty / Kitty / WezTerm / Tmux / Fish / iTerm / foot** —
-  ready-made configs in `extras/` (45+ tools)
 - **Hyprland** — see rice section below
 
 ### Rice reference
@@ -115,15 +111,6 @@ scratchpad        mauve   #b87bce
 ```
 
 Proportion in bars: ~70% base+grays, ~12% primary, ~8% amber, ~6% blue+red, ~4% mauve.
-
-## Extras
-
-Generated configs for 45+ tools live in `extras/`. Source templates in
-`lua/abysal/extra/`. Rebuild with:
-
-```sh
-./scripts/build
-```
 
 ## License
 
