@@ -27,7 +27,7 @@ jobs:
       - name: Install selene
         run: |
           asset_url=$(curl -sLf https://api.github.com/repos/Kampfkarren/selene/releases/latest \
-            | jq -r '[.assets[] | select(.name | test("light.*linux"; "i"))][0].browser_download_url')
+            | jq -r '[.assets[] | select(.name | test("^selene-[0-9].*linux"; "i"))][0].browser_download_url')
           curl -sLf "$asset_url" -o selene.zip
           unzip selene.zip selene
           chmod +x selene
