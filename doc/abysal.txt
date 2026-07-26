@@ -1,0 +1,108 @@
+*abysal.txt*              Dark and light colorscheme    *abysal.nvim* *abysal*
+
+==============================================================================
+CONTENTS                                                     *abysal-contents*
+
+  1. Introduction                                        |abysal-introduction|
+  2. Styles                                                    |abysal-styles|
+  3. Installation                                        |abysal-installation|
+  4. Usage                                                      |abysal-usage|
+  5. Configuration                                      |abysal-configuration|
+  6. Palette                                                  |abysal-palette|
+  7. Health                                                    |abysal-health|
+
+==============================================================================
+1. Introduction                                          *abysal-introduction*
+
+abysal.nvim is a dark and light Neovim colorscheme with a dual-focus
+palette: primary for functions and amber for control flow. Everything else
+is subordinate.
+
+==============================================================================
+2. Styles                                                      *abysal-styles*
+
+    Style          Background      vim.o.bg ~
+    obsidian       #1c1c1c         dark
+    marble         #dcdcdc         light
+
+==============================================================================
+3. Installation                                          *abysal-installation*
+
+Using lazy.nvim: >lua
+    {
+      "andrex/abysal.nvim",
+      lazy = false,
+      priority = 1000,
+      opts = {},
+    }
+<
+
+==============================================================================
+4. Usage                                                        *abysal-usage*
+
+Set up the plugin and apply the colorscheme: >lua
+    require("abysal").setup({})
+    vim.cmd.colorscheme("abysal")
+<
+Or from Vim commands: >vim
+    colorscheme abysal
+    colorscheme abysal-obsidian
+    colorscheme abysal-marble
+<
+
+==============================================================================
+5. Configuration                                        *abysal-configuration*
+
+Pass options to `require("abysal").setup()`: >lua
+    require("abysal").setup({
+      style = "obsidian",
+      transparent = false,
+      terminal_colors = true,
+      styles = {
+        comments = { italic = true },
+        keywords = {},
+        functions = {},
+        variables = {},
+        sidebars = "dark",
+        floats = "dark",
+      },
+      dim_inactive = false,
+      lualine_bold = false,
+      on_colors = function(colors) end,
+      on_highlights = function(highlights, colors) end,
+      cache = true,
+      plugins = {
+        all = package.loaded.lazy == nil,
+        auto = true,
+      },
+    })
+<
+                                                            *abysal-overrides*
+Override colors and highlights: >lua
+    require("abysal").setup({
+      on_colors = function(c)
+        c.error = "#ff0000"
+      end,
+      on_highlights = function(hl, c)
+        hl.TelescopeNormal = { bg = c.bg_dark, fg = c.fg_muted }
+      end,
+    })
+<
+
+==============================================================================
+6. Palette                                                    *abysal-palette*
+
+See the "Palette" table in the README for the full color reference
+(primary, amber, gold, red, blue, mauve, fg, fg_muted, fg_secondary and
+their roles).
+
+==============================================================================
+7. Health                                                      *abysal-health*
+
+Run: >vim
+    :checkhealth abysal
+<
+This verifies the Neovim version, whether 'termguicolors' is enabled, and
+whether lazy.nvim is available for automatic plugin group detection.
+
+vim:tw=78:ts=8:ft=help:norl:

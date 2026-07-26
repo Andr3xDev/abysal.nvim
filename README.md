@@ -1,7 +1,7 @@
 # abysal.nvim
 
-Dark and light Neovim colorscheme with a dual-focus palette: **cyan** for
-functions and **orange** for control flow. Everything else is subordinate.
+Dark and light Neovim colorscheme with a dual-focus palette: **primary** for
+functions and **amber** for control flow. Everything else is subordinate.
 
 ## Styles
 
@@ -38,22 +38,21 @@ colorscheme abysal-marble
 
 | Color | Hex | Role |
 |-------|-----|------|
-| cyan | `#52c9b0` | functions, methods |
-| orange | `#e28e5a` | control keywords (`if`, `for`, `return`) |
-| sand | `#d1b171` | strings |
+| primary | `#52c9b0` | functions, methods |
+| amber | `#e28e5a` | control keywords (`if`, `for`, `return`) |
+| gold | `#d1b171` | strings |
 | red | `#d47779` | types, classes *(italic)* |
 | blue | `#6b92e3` | constants, properties, numbers |
-| purple | `#b87bce` | `function`/`def` keyword *(italic)* |
+| mauve | `#b87bce` | `function`/`def` keyword *(italic)* |
 | fg | `#d4d4d4` | variables, parameters (no accent) |
-| comment | `#737373` | comments *(italic)* |
-| fg_dark | `#8c8c8c` | operators, punctuation |
+| fg_muted | `#737373` | comments *(italic)* |
+| fg_secondary | `#8c8c8c` | operators, punctuation |
 
 ## Config
 
 ```lua
 require("abysal").setup({
   style = "obsidian",
-  light_style = "marble",
   transparent = false,
   terminal_colors = true,
   styles = {
@@ -65,6 +64,7 @@ require("abysal").setup({
     floats = "dark",
   },
   dim_inactive = false,
+  lualine_bold = false,
   on_colors = function(colors) end,
   on_highlights = function(highlights, colors) end,
   cache = true,
@@ -83,7 +83,7 @@ require("abysal").setup({
     c.error = "#ff0000"
   end,
   on_highlights = function(hl, c)
-    hl.TelescopeNormal = { bg = c.bg_dark, fg = c.fg_dark }
+    hl.TelescopeNormal = { bg = c.bg_dark, fg = c.fg_muted }
   end,
 })
 ```
@@ -106,15 +106,15 @@ For a consistent look across your whole setup:
 ### Rice reference
 
 ```
-workspace-active  cyan    #52c9b0
-window-active     orange  #e28e5a
+workspace-active  primary #52c9b0
+window-active     amber   #e28e5a
 window-inactive   #2e2e2e
 critical-notify   red     #d47779
 system-info       blue    #6b92e3
-scratchpad        purple  #b87bce
+scratchpad        mauve   #b87bce
 ```
 
-Proportion in bars: ~70% base+grays, ~12% cyan, ~8% orange, ~6% blue+red, ~4% purple.
+Proportion in bars: ~70% base+grays, ~12% primary, ~8% amber, ~6% blue+red, ~4% mauve.
 
 ## Extras
 
