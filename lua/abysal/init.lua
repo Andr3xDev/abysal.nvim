@@ -4,6 +4,31 @@ local M = {}
 ---@type {light?: string, dark?: string}
 M.styles = {}
 
+---@type ColorScheme?
+M._colors_cache = nil
+---@type integer?
+M._cache_autocmd = nil
+
+local function ensure_cache_invalidation()
+  if M._cache_autocmd then
+    return
+  end
+  M._cache_autocmd = vim.api.nvim_create_autocmd("ColorScheme", {
+    callback = function()
+      M._colors_cache = nil
+    end,
+  })
+end
+
+---@return ColorScheme
+function M.colors()
+  ensure_cache_invalidation()
+  if not M._colors_cache then
+    M._colors_cache = require("abysal.colors").setup()
+  end
+  return M._colors_cache
+end
+
 ---@param opts? abysal.Config
 function M.load(opts)
   opts = require("abysal.config").extend(opts)

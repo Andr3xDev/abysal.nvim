@@ -4,7 +4,7 @@ M.version = "1.0.0"
 ---@field on_colors fun(colors: ColorScheme)
 ---@field on_highlights fun(highlights: abysal.Highlights, colors: ColorScheme)
 M.defaults = {
-  style = "obsidian",
+  style = "auto",
   transparent = false,
   terminal_colors = true,
   styles = {
@@ -39,7 +39,11 @@ end
 
 ---@param opts? abysal.Config
 function M.extend(opts)
-  return opts and vim.tbl_deep_extend("force", {}, M.options, opts) or M.options
+  local merged = vim.tbl_deep_extend("force", {}, M.options, opts or {})
+  if merged.style == "auto" then
+    merged.style = vim.o.background == "light" and "marble" or "obsidian"
+  end
+  return merged
 end
 
 setmetatable(M, {
