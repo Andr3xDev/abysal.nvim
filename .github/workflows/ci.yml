@@ -12,6 +12,8 @@ jobs:
         neovim-version: [stable, nightly]
     steps:
       - uses: actions/checkout@v4
+      - name: Install hererocks build dependencies
+        run: sudo apt-get update && sudo apt-get install -y libreadline-dev
       - uses: rhysd/action-setup-vim@v1
         with:
           neovim: true
@@ -24,7 +26,9 @@ jobs:
       - uses: actions/checkout@v4
       - name: Install selene
         run: |
-          curl -sL https://github.com/Kampfkarren/selene/releases/latest/download/selene-light-linux.zip -o selene.zip
+          asset_url=$(curl -sLf https://api.github.com/repos/Kampfkarren/selene/releases/latest \
+            | jq -r '[.assets[] | select(.name | test("light.*linux"; "i"))][0].browser_download_url')
+          curl -sLf "$asset_url" -o selene.zip
           unzip selene.zip selene
           chmod +x selene
           sudo mv selene /usr/local/bin/selene
