@@ -15,7 +15,7 @@ local function ensure_cache_invalidation()
   end
   M._cache_autocmd = vim.api.nvim_create_autocmd("ColorScheme", {
     callback = function()
-      M._colors_cache = require("abysal.colors").setup()
+      M._colors_cache = nil
     end,
   })
 end
